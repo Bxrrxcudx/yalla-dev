@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/admin', 'HomeController@index')->name('home');
+
+Route::get('/t', 'MangaController@gettitle');
