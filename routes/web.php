@@ -17,10 +17,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('admin', 'AdminController@index')->name('home');
-
-Route::get('home', 'AdminController@index');
-
-Route::get('admin/logout', 'AdminController@logout');
+Route::group([
+    "prefix" => "admin",
+    "middleware" => "auth",
+    "namespace" => "Admin"],
+    function () {
+        Route::get('/', 'AdminController@index')->name('home');
+        Route::get('logout', 'AdminController@logout');
+    }
+);
 
 Route::get('profil', 'ProfilController@index');
