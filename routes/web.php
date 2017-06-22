@@ -25,6 +25,26 @@ Route::group([
     	Route::get('', 'AdminController@index')->name('home');
         Route::get('home', 'AdminController@index')->name('home');
         Route::get('logout', 'AdminController@logout');
+
+        // Newsletter
+        Route::get('newsletter', 'AdminController@index');
+        Route::get('newsletter/add', 'AdminController@index');
+        Route::get('newsletter/edit/{id}', 'AdminController@index');
+
+        // Actualites
+        Route::get('actualite', 'AdminController@index');
+        Route::get('actualite/add', 'AdminController@index');
+        Route::get('actualite/edit/{id}', 'AdminController@index');
+
+        // Page
+        Route::get('page', 'AdminController@index');
+        Route::get('page/add', 'AdminController@index');
+        Route::get('page/edit/{id}', 'AdminController@index');
+
+        // Subscribers
+        Route::get('subscribers', 'AdminController@index');
+        Route::get('subscribers/add', 'AdminController@index');
+        Route::get('subscribers/edit/{id}', 'AdminController@index');
     }
 );
 		
