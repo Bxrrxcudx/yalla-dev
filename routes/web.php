@@ -22,9 +22,11 @@ Route::group([
     "middleware" => "auth",
     "namespace" => "Admin"],
     function () {
+    	Route::get('', 'AdminController@index')->name('home');
         Route::get('home', 'AdminController@index')->name('home');
         Route::get('logout', 'AdminController@logout');
     }
 );
+		
 
 Route::get('profil', 'ProfilController@index');
