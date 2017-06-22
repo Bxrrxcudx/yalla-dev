@@ -19,4 +19,6 @@ Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('home');
 
-Route::get('/t', 'MangaController@gettitle');
+Route::get('/home', 'HomeController@index');
+
+Route::get('/profil', 'ProfilController@index');
