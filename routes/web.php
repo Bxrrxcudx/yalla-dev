@@ -26,6 +26,11 @@ Route::group([
         Route::get('home', 'AdminController@index')->name('home');
         Route::get('logout', 'AdminController@logout');
 
+        // Messages
+        Route::resource('messages', 'MessagesController', ['except' => [
+            'create', 'edit', 'update'
+        ]]);
+
         // Newsletter
         Route::get('newsletter', 'AdminController@index');
         Route::get('newsletter/add', 'AdminController@index');
