@@ -325,7 +325,7 @@
             <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
                 <li>
-                    <a href="admin/mail">
+                    <a href="admin/messages">
                         <i class="fa fa-envelope"></i>
                         <span>Mailbox</span>
                         <span class="pull-right-container">
