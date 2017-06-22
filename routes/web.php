@@ -18,11 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group([
-    "prefix" => "admin",
+    "prefix" => "admin/",
     "middleware" => "auth",
     "namespace" => "Admin"],
     function () {
-        Route::get('/', 'AdminController@index')->name('home');
+        Route::get('home', 'AdminController@index')->name('home');
         Route::get('logout', 'AdminController@logout');
     }
 );
