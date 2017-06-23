@@ -287,7 +287,7 @@
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="admin/logout" class="btn btn-default btn-flat" >Sign out</a>
+                                    <a href="{{ url('admin/logout') }}" class="btn btn-default btn-flat" >Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -343,7 +343,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="{{ url('admin/newsletter/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Actualité </a></li>
-                        <li><a href="{{ url('amdin/newsletter') }}"><i class="fa fa-circle-o"></i> Listes</a></li>
+                        <li><a href="{{ url('admin/newsletter') }}"><i class="fa fa-circle-o"></i> Listes</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
