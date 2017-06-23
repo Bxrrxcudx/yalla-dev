@@ -32,14 +32,14 @@ Route::group([
         ]]);
 
         // Newsletter
-        Route::get('newsletter', 'AdminController@index');
-        Route::get('newsletter/add', 'AdminController@index');
-        Route::get('newsletter/edit/{id}', 'AdminController@index');
+        Route::get('newsletter', 'NewsletterController@index');
+        Route::get('newsletter/add', 'NewsletterController@index');
+        Route::get('newsletter/edit/{id}', 'NewsletterController@index');
 
         // Actualites
-        Route::get('actualite', 'AdminController@index');
-        Route::get('actualite/add', 'AdminController@index');
-        Route::get('actualite/edit/{id}', 'AdminController@index');
+        Route::get('news', 'NewsController@index');
+        Route::get('actualite/add', 'NewsController@index');
+        Route::get('actualite/edit/{id}', 'NewsController@index');
 
         // Page
         Route::get('page', 'AdminController@index');
