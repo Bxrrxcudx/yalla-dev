@@ -30,6 +30,9 @@ Route::group([
         Route::resource('messages', 'MessagesController', ['except' => [
             'create', 'edit', 'update'
         ]]);
+        Route::post('messages/{id}', 'MessagesController@trash')->name('messages.trash');
+        Route::get('messages-trashed',
+                    'MessagesController@showTrashed')->name('messages.trashed');
 
         // Newsletter
         Route::get('newsletter', 'NewslettersController@index');

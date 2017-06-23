@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Message extends Model
 {
+    use SoftDeletes;
+
     protected $table = 'messages';
 
     protected $fillable = [
@@ -20,5 +23,13 @@ class Message extends Model
         'sent_date'
         , 'created_at'
         , 'updated_at'
+        , 'deleted_at'
+    ];
+
+    protected $dates = [
+        'sent_date'
+        , 'created_at'
+        , 'updated_at'
+        , 'deleted_at'
     ];
 }
