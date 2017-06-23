@@ -287,7 +287,7 @@
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="logout" class="btn btn-default btn-flat" >Sign out</a>
+                                    <a href="admin/logout" class="btn btn-default btn-flat" >Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -325,7 +325,7 @@
             <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
                 <li>
-                    <a href="admin/messages">
+                    <a href="{{ url('admin/messages') }}">
                         <i class="fa fa-envelope"></i>
                         <span>Mailbox</span>
                         <span class="pull-right-container">
@@ -342,8 +342,8 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="admin/newsletter/add"><i class="fa fa-circle-o"></i> Ajouter un Actualité </a></li>
-                        <li><a href="admin/newsletter"><i class="fa fa-circle-o"></i> Listes</a></li>
+                        <li><a href="{{ url('admin/newsletter/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Actualité </a></li>
+                        <li><a href="{{ url('amdin/newsletter') }}"><i class="fa fa-circle-o"></i> Listes</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -355,8 +355,8 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="admin/actualite/add"><i class="fa fa-circle-o"></i> Ajouter un Actualité </a></li>
-                        <li><a href="admin/actualite"><i class="fa fa-circle-o"></i> Listes </a></li>
+                        <li><a href="{{ url('admin/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Actualité </a></li>
+                        <li><a href="{{ url('admin/news') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -368,8 +368,8 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="admin/page/add"><i class="fa fa-circle-o"></i> Ajouter une page </a></li>
-                        <li><a href="admin/page"><i class="fa fa-circle-o"></i> Listes </a></li>
+                        <li><a href="{{ url('admin/page/add') }}"><i class="fa fa-circle-o"></i> Ajouter une page </a></li>
+                        <li><a href="{{ url('admin/page') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -381,8 +381,8 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="admin/subscribers/add"><i class="fa fa-circle-o"></i> Ajouter un Adhérent </a></li>
-                        <li><a href="admin/subscribers"><i class="fa fa-circle-o"></i> Listes </a></li>
+                        <li><a href="{{ url('admin/subscribers/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Adhérent </a></li>
+                        <li><a href="{{ url('admin/subscribers') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
                     </ul>
                 </li>
             </ul>
