@@ -38,8 +38,8 @@ Route::group([
 
         // Actualites
         Route::get('news', 'NewsController@index');
-        Route::get('actualite/add', 'NewsController@index');
-        Route::get('actualite/edit/{id}', 'NewsController@index');
+        Route::get('news/add', 'NewsController@add');
+        Route::get('news/edit/{id}', 'NewsController@index');
 
         // Page
         Route::get('page', 'AdminController@index');
