@@ -42,9 +42,9 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="/home" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>Yalla</b></span>
+        <a href="{{ url('admin/home') }}" class="logo">
+        <span class="logo-mini"><b>Yalla</b></span>
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg"><b>Yalla enfants</b></span>
         </a>
