@@ -50,9 +50,8 @@ Route::group([
         Route::get('page/edit/{id}', 'PagesController@index');
 
         // Subscribers
-        Route::get('subscribers', 'AdminController@index');
-        Route::get('subscribers/add', 'AdminController@index');
-        Route::get('subscribers/edit/{id}', 'AdminController@index');
+        Route::get('subscribers', 'SubscribersController@index');
+        Route::get('subscribers/add', 'SubscribersController@index');
     }
 );
 		
