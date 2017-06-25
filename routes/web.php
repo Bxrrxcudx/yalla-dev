@@ -34,16 +34,17 @@ Route::group([
         Route::get('messages-trashed',
                     'MessagesController@showTrashed')->name('messages.trashed');
 
-        // Newsletter
+        // Abonnés Newsletter
         Route::get('newsletter', 'NewslettersController@index');
         Route::get('newsletter/{id}', 'NewslettersController@show');
         Route::get('newsletter/add', 'NewslettersController@store');
         Route::get('newsletter/edit/{id}', 'NewslettersController@index');
 
         // Actualites
-        Route::get('news', 'NewsController@index');
-        Route::get('news/add', 'NewsController@store');
-        Route::get('news/edit/{id}', 'NewsController@index');
+        //Route::get('news', 'NewsController@index');
+        //Route::get('news/add', 'NewsController@store');
+        //Route::get('news/edit/{id}', 'NewsController@index');
+        Route::resource('news', 'NewsController');
 
         // Page
         Route::get('page', 'PagesController@index');
