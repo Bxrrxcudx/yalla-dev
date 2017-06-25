@@ -5,16 +5,16 @@
         @foreach($data as $info)
             <ul>
                 <li>
-                {{ $info->title }}
+                    {{ $info->city}}
                 </li>
                 <li>
-                    {{ $info->description }}
+                    {{ $info->activity }}
                 </li>
                 <li>
-                    {{ $info->content }}
+                    {{ $info->tel }}
                 </li>
                 <li>
-                    {{ $info->slug }}
+                    {{ $info->mail }}
                 </li>
             </ul>
         @endforeach

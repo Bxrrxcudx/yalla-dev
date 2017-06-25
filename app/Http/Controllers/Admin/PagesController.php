@@ -11,9 +11,9 @@ class PagesController extends Controller
 {
     public function index()
     {
-        $msgs = Page::all();
+        $data = Page::all();
 
-        return view('admin.pages', ['msgs' => $msgs]);
+        return view('admin.pages', ['data' => $data]);
 
     }
 }

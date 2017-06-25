@@ -15,14 +15,7 @@ class CreateNewslettersTable extends Migration
     {
         Schema::create('newsletters', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('authors');
-            $table->string('meta-desc');
-            $table->string('meta-robot');
-            $table->string('slug');
-            $table->text('description');
-            $table->text('content');
-            $table->string('thumbnail');
+            $table->string('mail', 100);
             $table->timestamps();
         });
     }
