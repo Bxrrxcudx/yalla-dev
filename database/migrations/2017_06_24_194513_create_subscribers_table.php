@@ -15,14 +15,14 @@ class CreateSubscribersTable extends Migration
     {
         Schema::create('subscribers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('authors');
-            $table->string('meta-desc');
-            $table->string('meta-robot');
-            $table->string('slug');
+            $table->string('first-name', 50);
+            $table->string('last-name', 50);
+            $table->tinyInteger('tel');
+            $table->string('mail');
+            $table->string('address');
+            $table->string('activity');
+            $table->string('city');
             $table->text('description');
-            $table->text('content');
-            $table->string('thumbnail');
             $table->timestamps();
         });
     }
