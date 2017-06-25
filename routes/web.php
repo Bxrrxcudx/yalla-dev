@@ -30,26 +30,29 @@ Route::group([
         Route::resource('messages', 'MessagesController', ['except' => [
             'create', 'edit', 'update'
         ]]);
+        Route::post('messages/{id}', 'MessagesController@trash')->name('messages.trash');
+        Route::get('messages-trashed',
+                    'MessagesController@showTrashed')->name('messages.trashed');
 
         // Newsletter
-        Route::get('newsletter', 'NewsletterController@index');
-        Route::get('newsletter/add', 'NewsletterController@index');
-        Route::get('newsletter/edit/{id}', 'NewsletterController@index');
+        Route::get('newsletter', 'NewslettersController@index');
+        Route::get('newsletter/{id}', 'NewslettersController@show');
+        Route::get('newsletter/add', 'NewslettersController@store');
+        Route::get('newsletter/edit/{id}', 'NewslettersController@index');
 
         // Actualites
         Route::get('news', 'NewsController@index');
-        Route::get('actualite/add', 'NewsController@index');
-        Route::get('actualite/edit/{id}', 'NewsController@index');
+        Route::get('news/add', 'NewsController@store');
+        Route::get('news/edit/{id}', 'NewsController@index');
 
         // Page
-        Route::get('page', 'AdminController@index');
-        Route::get('page/add', 'AdminController@index');
-        Route::get('page/edit/{id}', 'AdminController@index');
+        Route::get('page', 'PagesController@index');
+        Route::get('page/add', 'PagesController@store');
+        Route::get('page/edit/{id}', 'PagesController@index');
 
         // Subscribers
-        Route::get('subscribers', 'AdminController@index');
-        Route::get('subscribers/add', 'AdminController@index');
-        Route::get('subscribers/edit/{id}', 'AdminController@index');
+        Route::get('subscribers', 'SubscribersController@index');
+        Route::get('subscribers/add', 'SubscribersController@store');
     }
 );
 		

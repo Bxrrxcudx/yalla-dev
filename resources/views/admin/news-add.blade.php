@@ -4,7 +4,7 @@
     <div class="content-wrapper">
         @foreach ($msgs as $msg)
             <ul>
-                <li><a href="{{url('/admin/messages/'.$msg->id)}}">{{ $msg->subject }}</a></li>
+                <li><a href="{{url('admin/messages/'.$msg->id)}}">{{ $msg->subject }}</a></li>
             </ul>
         @endforeach
 
@@ -35,4 +35,3 @@
 
     </div>
 @endsection
-

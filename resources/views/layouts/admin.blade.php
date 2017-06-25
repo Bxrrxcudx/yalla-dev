@@ -42,9 +42,9 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="/home" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>Yalla</b></span>
+        <a href="{{ url('admin/home') }}" class="logo">
+        <span class="logo-mini"><b>Yalla</b></span>
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg"><b>Yalla enfants</b></span>
         </a>
@@ -254,7 +254,7 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
-                            <span class="hidden-xs">Alexander Pierce</span>
+                            <span class="hidden-xs">Barracuda75</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
@@ -262,7 +262,9 @@
                                 <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
 
                                 <p>
-                                    Alexander Pierce - Web Developer
+                                    <!-- Ajouter $data->users -->
+                                    Barracuda75 - Motion Designer
+                                    <!-- Ajouter $data->created_at -->
                                     <small>Member since Nov. 2012</small>
                                 </p>
                             </li>
@@ -287,7 +289,7 @@
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="admin/logout" class="btn btn-default btn-flat" >Sign out</a>
+                                    <a href="{{ url('admin/logout') }}" class="btn btn-default btn-flat" >Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -306,7 +308,7 @@
                     <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Alexander Pierce</p>
+                    <p>Barracuda75</p>
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
@@ -325,9 +327,9 @@
             <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
                 <li>
-                    <a href="{{ url('admin/messages') }}">
+                    <a href="{{ route('messages.index') }}">
                         <i class="fa fa-envelope"></i>
-                        <span>Mailbox</span>
+                        <span>Messages</span>
                         <span class="pull-right-container">
                           <small class="label pull-right bg-yellow">12</small>
                         </span>
@@ -336,14 +338,14 @@
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-pie-chart"></i>
-                        <span>Newsletter</span>
+                        <span>Abonnés Newsletter</span>
                         <span class="pull-right-container">
                           <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ url('admin/newsletter/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Actualité </a></li>
-                        <li><a href="{{ url('amdin/newsletter') }}"><i class="fa fa-circle-o"></i> Listes</a></li>
+                        <li><a href="{{ url('admin/newsletter/add') }}"><i class="fa fa-circle-o"></i> Nouvelle newsletter</a></li>
+                        <li><a href="{{ url('admin/newsletter') }}"><i class="fa fa-circle-o"></i>Tous les abonnés</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -355,34 +357,34 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ url('admin/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Actualité </a></li>
-                        <li><a href="{{ url('admin/news') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
+                        <li><a href="{{ url('admin/add') }}"><i class="fa fa-circle-o"></i> Ajouter une actualité </a></li>
+                        <li><a href="{{ url('admin/news') }}"><i class="fa fa-circle-o"></i> Toutes les actualités</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-pie-chart"></i>
-                        <span>Page</span>
+                        <span>Pages</span>
                         <span class="pull-right-container">
                           <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="{{ url('admin/page/add') }}"><i class="fa fa-circle-o"></i> Ajouter une page </a></li>
-                        <li><a href="{{ url('admin/page') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
+                        <li><a href="{{ url('admin/page') }}"><i class="fa fa-circle-o"></i> Toutes les pages</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-pie-chart"></i>
-                        <span>Adhérents</span>
+                        <span>Adhérents Yalla!</span>
                         <span class="pull-right-container">
                           <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ url('admin/subscribers/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Adhérent </a></li>
-                        <li><a href="{{ url('admin/subscribers') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
+                        <li><a href="{{ url('admin/subscribers/add') }}"><i class="fa fa-circle-o"></i> Ajouter un adhérent </a></li>
+                        <li><a href="{{ url('admin/subscribers') }}"><i class="fa fa-circle-o"></i> Tous les adhérents </a></li>
                     </ul>
                 </li>
             </ul>
