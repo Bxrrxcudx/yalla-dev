@@ -28,9 +28,8 @@ class MessagesController extends Controller
     {
 
         DB::table('messages')->insert($request->except(['_token']));
-        $msgs = Message::all();
 
-        return view('admin.messages.list', compact('msgs'));
+        return redirect()->route('messages.index');
     }
 
     public function show($id)
@@ -40,7 +39,7 @@ class MessagesController extends Controller
         return view('admin.messages.read', compact('msg'));
     }
 
-    public function trash(Request $request, $id)
+    public function trash($id)
     {
         Message::where('id', $id)->delete();
 
@@ -56,8 +55,12 @@ class MessagesController extends Controller
     }
 
 
-    public function destroy(Request $request)
+    public function destroy($id)
     {
+
+        Message::where('id', $id)->forceDelete();
+
+        return redirect()->route('messages.trashed');
 
     }
 
