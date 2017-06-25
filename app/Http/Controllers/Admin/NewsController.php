@@ -11,9 +11,9 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $msgs = News::all();
+        $data = News::all();
 
-        return view('admin.news', ['msgs' => $msgs]);
+        return view('admin.news', ['data' => $data]);
 
     }
 
@@ -21,6 +21,6 @@ class NewsController extends Controller
     {
         DB::table('news')->insert($request->except(['_token']));
 
-        return view('admin.messages', ['msgs' => $msgs = News::all()]);
+        return view('admin.messages', ['data' => $data = News::all()]);
     }
 }

@@ -36,6 +36,7 @@ Route::group([
 
         // Newsletter
         Route::get('newsletter', 'NewslettersController@index');
+        Route::get('newsletter/{id}', 'NewslettersController@show');
         Route::get('newsletter/add', 'NewslettersController@store');
         Route::get('newsletter/edit/{id}', 'NewslettersController@index');
 
@@ -50,9 +51,8 @@ Route::group([
         Route::get('page/edit/{id}', 'PagesController@index');
 
         // Subscribers
-        Route::get('subscribers', 'AdminController@index');
-        Route::get('subscribers/add', 'AdminController@index');
-        Route::get('subscribers/edit/{id}', 'AdminController@index');
+        Route::get('subscribers', 'SubscribersController@index');
+        Route::get('subscribers/add', 'SubscribersController@store');
     }
 );
 		
