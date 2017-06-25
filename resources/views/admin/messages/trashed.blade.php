@@ -6,12 +6,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Mailbox
-                <small>13 new messages</small>
+                Messagerie
             </h1>
             <ol class="breadcrumb">
-                <li><a href="{{ url()->previous() }}"><i class="fa fa-dashboard"></i> Accueil</a></li>
-                <li class="active">Messages</li>
+                <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Accueil</a></li>
+                <li><a href="{{ route('messages.index') }}">Messages</a></li>
+                <li class="active">Corbeille</li>
             </ol>
         </section>
 
@@ -24,16 +24,18 @@
                             <h3 class="box-title">Folders</h3>
 
                             <div class="box-tools">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                            class="fa fa-minus"></i>
                                 </button>
                             </div>
                         </div>
                         <div class="box-body no-padding">
                             <ul class="nav nav-pills nav-stacked">
-                                <li class="active"><a href="{{ route('messages.index') }}"><i class="fa fa-inbox"></i> Inbox
+                                <li><a href="{{ route('messages.index') }}"><i class="fa fa-inbox"></i> Inbox
                                         <span class="label label-primary pull-right">12</span></a></li>
                                 <li><a href="#"><i class="fa fa-envelope-o"></i> Sent</a></li>
-                                <li><a href="{{ route('messages.trashed') }}"><i class="fa fa-trash-o"></i> Trash</a></li>
+                                <li class="active"><a href="{{ route('messages.trashed') }}"><i
+                                                class="fa fa-trash-o"></i> Trash</a></li>
                             </ul>
                         </div>
                         <!-- /.box-body -->
@@ -44,15 +46,6 @@
                     <div class="box box-primary">
                         <div class="box-header with-border">
                             <h3 class="box-title">Inbox</h3>
-                            <!-- barre de rechercher mails
-                            <div class="box-tools pull-right">
-                                <div class="has-feedback">
-                                    <input type="text" class="form-control input-sm" placeholder="Search Mail">
-                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                                </div>
-                            </div>
-                            -->
-                            <!-- /.box-tools -->
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body no-padding">
@@ -61,31 +54,38 @@
                                 <!--<button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
                                 </button>-->
 
-                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i>
+                                </button>
                                 <!-- /.pull-right -->
                             </div>
                             <div class="table-responsive mailbox-messages">
                                 <table class="table table-hover table-striped">
                                     <tbody>
-                                    @foreach ($msgs as $msg)
-                                        <tr>
-                                            <td><input type="checkbox"></td>
-                                            <td class="mailbox-subject"><b><a href="{{ route('messages.show', ['message' => $msg->id]) }}">{{ $msg->subject }}</a></b>
-                                            <td class="mailbox-name">{{ $msg->first_name }} {{ $msg->last_name }}</td>
-                                            </td>
-                                            <td class="mailbox-date">{{ $msg->sent_date }}</td>
-                                            <td class="mailbox-star">
+                                    @if (count($msgs) < 1)
+                                        <p class="text-center">Aucun message dans la corbeille</p>
+                                    @else
+                                        @foreach ($msgs as $msg)
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td class="mailbox-subject"><b><a
+                                                                href="{{ route('messages.show', ['message' => $msg->id]) }}">{{ $msg->subject }}</a></b>
+                                                <td class="mailbox-name">{{ $msg->first_name }} {{ $msg->last_name }}</td>
+                                                </td>
+                                                <td class="mailbox-date">{{ $msg->sent_date }}</td>
+                                                <td class="mailbox-star">
 
-                                                <form action="{{ route('messages.destroy', ['id' => $msg->id]) }}" method="POST">
-                                                    {{ csrf_field() }}
-                                                    {{ method_field('DELETE') }}
-                                                    <button type="submit" class="btn btn-default btn-sm">
-                                                        <i class="fa fa-trash-o"></i>
-                                                    </button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    @endforeach
+                                                    <form action="{{ route('messages.destroy', ['id' => $msg->id]) }}"
+                                                          method="POST">
+                                                        {{ csrf_field() }}
+                                                        {{ method_field('DELETE') }}
+                                                        <button type="submit" class="btn btn-default btn-sm">
+                                                            <i class="fa fa-trash-o"></i>
+                                                        </button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    @endif
 
                                     </tbody>
                                 </table>
@@ -96,14 +96,8 @@
                         <!-- /.box-body -->
                         <div class="box-footer no-padding">
                             <div class="mailbox-controls">
-                                <!-- Check all button -->
-                                <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
+                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i>
                                 </button>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
-                                </div>
-                                <!-- /.btn-group -->
-                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
                                 <div class="pull-right">
                                     <div class="btn-group">
                                         {{ $msgs->render() }}

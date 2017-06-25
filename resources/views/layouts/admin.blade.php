@@ -327,7 +327,7 @@
                 <li>
                     <a href="{{ route('messages.index') }}">
                         <i class="fa fa-envelope"></i>
-                        <span>Mailbox</span>
+                        <span>Messages</span>
                         <span class="pull-right-container">
                           <small class="label pull-right bg-yellow">12</small>
                         </span>
@@ -336,14 +336,14 @@
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-pie-chart"></i>
-                        <span>Newsletter</span>
+                        <span>Abonnés Newsletter</span>
                         <span class="pull-right-container">
                           <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ url('admin/newsletter/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Actualité </a></li>
-                        <li><a href="{{ url('admin/newsletter') }}"><i class="fa fa-circle-o"></i> Listes</a></li>
+                        <li><a href="{{ url('admin/newsletter/add') }}"><i class="fa fa-circle-o"></i> Nouvelle newsletter</a></li>
+                        <li><a href="{{ url('admin/newsletter') }}"><i class="fa fa-circle-o"></i>Tous les abonnés</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -355,34 +355,34 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ url('admin/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Actualité </a></li>
-                        <li><a href="{{ url('admin/news') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
+                        <li><a href="{{ url('admin/add') }}"><i class="fa fa-circle-o"></i> Ajouter une actualité </a></li>
+                        <li><a href="{{ url('admin/news') }}"><i class="fa fa-circle-o"></i> Toutes les actualités</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-pie-chart"></i>
-                        <span>Page</span>
+                        <span>Pages</span>
                         <span class="pull-right-container">
                           <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="{{ url('admin/page/add') }}"><i class="fa fa-circle-o"></i> Ajouter une page </a></li>
-                        <li><a href="{{ url('admin/page') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
+                        <li><a href="{{ url('admin/page') }}"><i class="fa fa-circle-o"></i> Toutes les pages</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-pie-chart"></i>
-                        <span>Adhérents</span>
+                        <span>Adhérents Yalla!</span>
                         <span class="pull-right-container">
                           <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ url('admin/subscribers/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Adhérent </a></li>
-                        <li><a href="{{ url('admin/subscribers') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
+                        <li><a href="{{ url('admin/subscribers/add') }}"><i class="fa fa-circle-o"></i> Ajouter un adhérent </a></li>
+                        <li><a href="{{ url('admin/subscribers') }}"><i class="fa fa-circle-o"></i> Tous les adhérents </a></li>
                     </ul>
                 </li>
             </ul>
