@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,6 +36,9 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- TinyMCE WYSIWYG -->
+    <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini fixed">
 <div class="wrapper">
@@ -343,10 +346,6 @@
                           <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{ url('admin/newsletter/add') }}"><i class="fa fa-circle-o"></i> Nouvelle newsletter</a></li>
-                        <li><a href="{{ url('admin/newsletter') }}"><i class="fa fa-circle-o"></i>Tous les abonnés</a></li>
-                    </ul>
                 </li>
                 <li class="treeview">
                     <a href="#">
@@ -357,8 +356,8 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ url('admin/add') }}"><i class="fa fa-circle-o"></i> Ajouter une actualité </a></li>
-                        <li><a href="{{ url('admin/news') }}"><i class="fa fa-circle-o"></i> Toutes les actualités</a></li>
+                        <li><a href="{{ route('news.create') }}"><i class="fa fa-circle-o"></i> Ajouter une Actualité </a></li>
+                        <li><a href="{{ route('news.index') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -438,5 +437,7 @@
     <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('dist/js/demo.js') }}"></script>
+    <!-- Custom TinyMCE WYSIWYG -->
+    <script src="{{ asset('dist/js/tiny.js') }}"></script>
 </body>
 </html>

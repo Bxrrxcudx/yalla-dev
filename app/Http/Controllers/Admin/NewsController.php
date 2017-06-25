@@ -11,16 +11,25 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $data = News::all();
+        $news = News::orderByDesc('created_at')->paginate(10);
 
-        return view('admin.news', ['data' => $data]);
+        return view('admin.news.list', compact('news'));
 
+    }
+
+    public function create()
+    {
+        return view('admin.news.add', []);
     }
 
     public function store(Request $request)
     {
+        // inserts the data from POST
         DB::table('news')->insert($request->except(['_token']));
 
-        return view('admin.messages', ['data' => $data = News::all()]);
+        $id = DB::getPdo()->lastInsertId();
+        $this->completeNewsInsert($id);
+
+        return redirect()->route('news.index');
     }
 }
