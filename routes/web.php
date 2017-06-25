@@ -37,12 +37,15 @@ Route::group([
         // Newsletter
         Route::get('newsletter', 'NewslettersController@index');
         Route::get('newsletter/{id}', 'NewslettersController@show');
-        Route::get('newsletter/add', 'NewslettersController@store');
+        Route::get('newsletter/add', 'NewslettersController@create');
+        Route::get('newsletter/post', 'NewslettersController@store');
         Route::get('newsletter/edit/{id}', 'NewslettersController@index');
 
         // Actualites
         Route::get('news', 'NewsController@index');
-        Route::get('news/add', 'NewsController@store');
+        //Route::get('news/{id}', 'NewsController@show');
+        Route::get('news/add', 'NewsController@create');
+        Route::get('news/post', 'NewsController@store');
         Route::get('news/edit/{id}', 'NewsController@index');
 
         // Page

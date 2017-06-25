@@ -17,10 +17,16 @@ class NewsController extends Controller
 
     }
 
-    public function store(Request $request)
+    public function create()
     {
-        DB::table('news')->insert($request->except(['_token']));
+        return view('admin.news-add');
+    }
 
-        return view('admin.messages', ['data' => $data = News::all()]);
+    public function store()
+    {
+        dd(request()->all());
+        //DB::table('news')->insert($request->except(['_token']));
+
+        //return view('admin.news-add', ['data' => $data = News::all()]);
     }
 }

@@ -2,36 +2,30 @@
 
 @section('content')
     <div class="content-wrapper">
-        @foreach ($msgs as $msg)
-            <ul>
-                <li><a href="{{url('admin/messages/'.$msg->id)}}">{{ $msg->subject }}</a></li>
-            </ul>
-        @endforeach
-
-        <form action="{{ route('messages.store') }}" method="POST">
+        <form action="{{ url('admin/news/post') }}" method="POST">
             {{ csrf_field() }}
-            <div>
-                <label for="last_name">Nom</label>
-                <input type="text" name="last_name" id="last_name">
+            <div class="form-group">
+                <label for="title">Titre :</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Titre">
             </div>
-            <div>
-                <label for="first_name">Prénom</label>
-                <input type="text" name="first_name" id="first_name">
+            <div class="form-group">
+                <label for="authors">Auteurs :</label>
+                <input type="text" class="form-control" id="authors" name="authors" placeholder="Auteurs">
             </div>
-            <div>
-                <label for="mail">E-mail</label>
-                <input type="text" name="mail" id="mail">
+            <div class="form-group">
+                <label for="slug">Chemin dans l'url :</label>
+                <input type="text" class="form-control" id="slug" name="slug" placeholder="Chemin">
             </div>
-            <div>
-                <label for="subject">Sujet</label>
-                <input type="text" name="subject" id="subject">
+            <div class="form-group">
+                <label for="description">Description :</label>
+                <input type="text" class="form-control" id="description" name="description" placeholder="Décrire en 1 ligne">
             </div>
-            <div>
-                <label for="message">Message</label>
-                <textarea name="message" id="message" cols="50" rows="10"></textarea>
+            <div class="form-group">
+                <label for="content">Contenu du sujet :</label>
+                <textarea name="content" id="" class="form-control" placeholder="Les détails ..."></textarea>
             </div>
-            <input type="submit" value="Envoyer">
-        </form>
 
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
     </div>
 @endsection
