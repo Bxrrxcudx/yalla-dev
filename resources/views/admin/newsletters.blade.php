@@ -5,16 +5,7 @@
         @foreach($msgs as $msg)
             <ul>
                 <li>
-                {{ $msg->title }}
-                </li>
-                <li>
-                    {{ $msg->description }}
-                </li>
-                <li>
-                    {{ $msg->content }}
-                </li>
-                <li>
-                    {{ $msg->authors }}
+                {{ $msg->mail }}
                 </li>
             </ul>
         @endforeach

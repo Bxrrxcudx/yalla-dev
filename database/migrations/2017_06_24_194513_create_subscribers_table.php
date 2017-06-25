@@ -22,7 +22,6 @@ class CreateSubscribersTable extends Migration
             $table->string('address');
             $table->string('activity');
             $table->string('city');
-            $table->text('description');
             $table->timestamps();
         });
     }

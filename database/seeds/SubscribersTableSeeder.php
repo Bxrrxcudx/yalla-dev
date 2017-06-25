@@ -14,12 +14,13 @@ class SubscribersTableSeeder extends Seeder
         $i = 1;
         while($i < 11){
             DB::table('subscribers')->insert([
-                'title' => 'title No : '. $i,
-                'meta-desc' => 'meta-desc no '.$i,
-                'meta-robot' => 'meta-robot no '.$i,
-                'slug' => 'slug No : '.$i,
-                'description' => str_random(50),
-                'content' => str_random(250),
+                'first-name' => "Molika",
+                'last-name' => str_random(10),
+                'tel' => str_random(10),
+                'mail' => str_random(10).'@gmail.com',
+                'address' => str_random(50),
+                'activity' => str_random(15),
+                'city' => str_random(10),
             ]);
             $i++;
         }

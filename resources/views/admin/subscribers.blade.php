@@ -5,16 +5,16 @@
         @foreach($msgs as $msg)
             <ul>
                 <li>
-                {{ $msg->title }}
+                    {{ $msg->city}}
                 </li>
                 <li>
-                    {{ $msg->description }}
+                    {{ $msg->activity }}
                 </li>
                 <li>
-                    {{ $msg->content }}
+                    {{ $msg->tel }}
                 </li>
                 <li>
-                    {{ $msg->slug }}
+                    {{ $msg->mail }}
                 </li>
             </ul>
         @endforeach

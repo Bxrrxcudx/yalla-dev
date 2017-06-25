@@ -14,7 +14,7 @@ class NewslettersTableSeeder extends Seeder
         $i = 1;
         while($i < 11){
             DB::table('newsletters')->insert([
-                'slug' => str_random(10).'@gmail.com',
+                'mail' => str_random(10).'@gmail.com',
             ]);
             $i++;
         }

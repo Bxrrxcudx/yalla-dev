@@ -13,7 +13,7 @@ class SubscribersController extends Controller
     {
         $msgs = Subscriber::all();
 
-        return view('admin.pages', ['msgs' => $msgs]);
+        return view('admin.subscribers', ['msgs' => $msgs]);
 
     }
 }
