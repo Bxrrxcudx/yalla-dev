@@ -11,9 +11,9 @@ class SubscribersController extends Controller
 {
     public function index()
     {
-        $msgs = Subscriber::all();
+        $data = Subscriber::all();
 
-        return view('admin.subscribers', ['msgs' => $msgs]);
+        return view('admin.subscribers', ['data' => $data]);
 
     }
 }

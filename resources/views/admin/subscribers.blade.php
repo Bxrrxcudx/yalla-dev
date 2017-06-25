@@ -2,19 +2,19 @@
 
 @section('content')
     <div class="content-wrapper">
-        @foreach($msgs as $msg)
+        @foreach($data as $info)
             <ul>
                 <li>
-                    {{ $msg->city}}
+                    {{ $info->city}}
                 </li>
                 <li>
-                    {{ $msg->activity }}
+                    {{ $info->activity }}
                 </li>
                 <li>
-                    {{ $msg->tel }}
+                    {{ $info->tel }}
                 </li>
                 <li>
-                    {{ $msg->mail }}
+                    {{ $info->mail }}
                 </li>
             </ul>
         @endforeach

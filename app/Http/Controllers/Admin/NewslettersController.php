@@ -11,9 +11,9 @@ class NewslettersController extends Controller
 {
     public function index()
     {
-        $msgs = Newsletter::all();
+        $data = Newsletter::all();
 
-        return view('admin.newsletters', ['msgs' => $msgs]);
+        return view('admin.newsletters', ['data' => $data]);
 
     }
 }
