@@ -19,9 +19,8 @@ class NewsController extends Controller
 
     public function create()
     {
-        return view('admin.news.add', []);
+        return view('admin.news-add');
     }
-
     public function store(Request $request)
     {
         // inserts the data from POST
