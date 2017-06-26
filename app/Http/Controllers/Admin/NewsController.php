@@ -19,8 +19,9 @@ class NewsController extends Controller
 
     public function create()
     {
-        return view('admin.news-add');
+        return view('admin.news.add');
     }
+
     public function store(Request $request)
     {
         // inserts the data from POST
@@ -45,6 +46,6 @@ class NewsController extends Controller
         $news = News::findOrFail($id);
         $news->fill($request->except(['_token']))->save();
 
-        return view('admin.news.edit', compact('news'));
+        return view('admin.news.list', compact('news'));
     }
 }

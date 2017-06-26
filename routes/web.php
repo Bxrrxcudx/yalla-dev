@@ -34,19 +34,9 @@ Route::group([
         Route::get('messages-trashed', 'MessagesController@showTrashed')->name('messages.trashed');
 
         // Abonnés Newsletter
-        Route::get('newsletter', 'NewslettersController@index');
-        Route::get('newsletter/{id}', 'NewslettersController@show');
-        Route::get('newsletter/add', 'NewslettersController@create');
-        Route::get('newsletter/post', 'NewslettersController@store');
-        Route::get('newsletter/edit/{id}', 'NewslettersController@index');
+        Route::get('newsletters', 'NewslettersController@index')->name('newsletters.index');
 
         // Actualites
-        Route::get('news', 'NewsController@index');
-        //Route::get('news/{id}', 'NewsController@show');
-        Route::get('news/add', 'NewsController@create');
-        //Route::get('news', 'NewsController@index');
-        Route::put('news/post', 'NewsController@store');
-        //Route::get('news/edit/{id}', 'NewsController@index');
         Route::resource('news', 'NewsController', ['except' => ['show']]);
 
         // Page
