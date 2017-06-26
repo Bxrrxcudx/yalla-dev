@@ -27,9 +27,7 @@ Route::group([
         Route::get('logout', 'AdminController@logout');
 
         // Messages
-        Route::resource('messages', 'MessagesController', ['except' => [
-            'create', 'edit', 'update'
-        ]]);
+        Route::resource('messages', 'MessagesController', ['except' => ['create', 'edit', 'update']]);
         Route::post('messages/{id}', 'MessagesController@trash')->name('messages.trash');
         Route::get('messages-trashed', 'MessagesController@showTrashed')->name('messages.trashed');
 
@@ -38,6 +36,8 @@ Route::group([
 
         // Actualites
         Route::resource('news', 'NewsController', ['except' => ['show']]);
+        Route::post('news/{id}/trash', 'NewsController@trash')->name('news.trash');
+        Route::post('news/{id}/restore', 'NewsController@restore')->name('news.restore');
 
         // Page
         Route::get('page', 'PagesController@index');

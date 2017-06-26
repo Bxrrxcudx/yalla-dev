@@ -51,8 +51,9 @@ class MessagesController extends Controller
 
     public function destroy($id)
     {
-
-        Message::where('id', $id)->forceDelete();
+        if ($data = Message::withTrashed()->where('id', $id)->exists() !== false) {
+            Message::withTrashed()->where('id', $id)->forceDelete();
+        }
 
         return redirect()->route('messages.trashed');
 
