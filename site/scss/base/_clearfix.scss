@@ -1,0 +1,18 @@
+/* -- clearfix
+--------------------------------------------------- */
+.clearfix {
+	//pour les navigateurs modernes
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+	
+	//pour IE6/7
+	&{
+		zoom: 1;
+	}
+}

@@ -1,0 +1,1 @@
+var navbar=document.querySelector('.navbar');var burger_icon=document.querySelector('.burger-icon');var mobileNav=document.querySelector('.mobile-nav');burger_icon.addEventListener('click',function(){mobileNav.classList.toggle('is-on');})

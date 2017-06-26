@@ -1,0 +1,9 @@
+@mixin cta {
+	background: $orange;
+	font: 0.8em $oswald;
+	text-transform: uppercase;
+	color: $white;
+	border: 1px;
+	border-radius: 1px;
+	padding: 2%;
+}
