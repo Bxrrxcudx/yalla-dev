@@ -356,8 +356,9 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
+                        <li><a href="{{ route('news.index') }}"><i class="fa fa-circle-o"></i> Toutes les actualités </a></li>
                         <li><a href="{{ route('news.create') }}"><i class="fa fa-circle-o"></i> Ajouter une Actualité </a></li>
-                        <li><a href="{{ route('news.index') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
+                        <li><a href="{{ route('categories.index') }}"><i class="fa fa-circle-o"></i> Catégories </a></li>
                     </ul>
                 </li>
                 <li class="treeview">
