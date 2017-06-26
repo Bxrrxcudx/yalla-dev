@@ -13,7 +13,7 @@ class NewslettersController extends Controller
     {
         $data = Newsletter::all();
 
-        return view('admin.newsletters', ['data' => $data]);
+        return view('admin.newsletters.list', ['data' => $data]);
 
     }
 }

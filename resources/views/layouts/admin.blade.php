@@ -339,7 +339,7 @@
                     </a>
                 </li>
                 <li class="treeview">
-                    <a href="#">
+                    <a href="{{ route('newsletters.index') }}">
                         <i class="fa fa-pie-chart"></i>
                         <span>Abonnés Newsletter</span>
                         <span class="pull-right-container">
@@ -356,12 +356,8 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ url('admin/news/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Actualité </a></li>
-                        <li><a href="{{ url('admin/news') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
-
-                        {{--<li><a href="{{ route('news.create') }}"><i class="fa fa-circle-o"></i> Ajouter une Actualité </a></li>
+                        <li><a href="{{ route('news.create') }}"><i class="fa fa-circle-o"></i> Ajouter une Actualité </a></li>
                         <li><a href="{{ route('news.index') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
---}}
                     </ul>
                 </li>
                 <li class="treeview">
