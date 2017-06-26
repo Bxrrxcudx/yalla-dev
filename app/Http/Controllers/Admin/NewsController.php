@@ -3,16 +3,19 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use App\News;
+use App\Category;
 
 class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::withTrashed()->orderByDesc('created_at')->paginate(10);
-        //$news = News::orderByDesc('created_at')->paginate(10);
+        $news = News::withTrashed()
+            ->with('category')
+            ->orderByDesc('created_at')
+            ->paginate(10);
 
         return view('admin.news.list', compact('news'));
 
@@ -20,7 +23,9 @@ class NewsController extends Controller
 
     public function create()
     {
-        return view('admin.news.add');
+        $categories = Category::pluck('name', 'id');
+
+        return view('admin.news.add', compact('categories'));
     }
 
     public function store(Request $request)
@@ -38,8 +43,9 @@ class NewsController extends Controller
     public function edit($id)
     {
         $news = News::findOrFail($id);
+        $categories = Category::pluck('name', 'id');
 
-        return view('admin.news.edit', compact('news'));
+        return view('admin.news.edit', compact('news', 'categories'));
     }
 
     public function update(Request $request, $id)
@@ -47,7 +53,7 @@ class NewsController extends Controller
         $news = News::findOrFail($id);
         $news->fill($request->except(['_token']))->save();
 
-        return view('admin.news.list', compact('news'));
+        return redirect()->route('news.index');
     }
 
     public function trash($id)

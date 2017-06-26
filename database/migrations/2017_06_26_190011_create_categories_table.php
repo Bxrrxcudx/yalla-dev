@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTestTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,22 @@ class CreateTestTable extends Migration
      */
     public function up()
     {
-        Schema::create('test', function (Blueprint $table) {
+        Schema::create('categories', function(Blueprint $table)
+        {
+
             $table->increments('id');
-            $table->string('titre');
+            $table->string('name');
+            $table->string('slug');
             $table->timestamps();
+
         });
+
+        Schema::table('news', function(Blueprint $table){
+
+            $table->integer('category_id')->unsigned()->index();
+
+        });
+
     }
 
     /**
@@ -27,6 +38,6 @@ class CreateTestTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('test');
+        //
     }
 }

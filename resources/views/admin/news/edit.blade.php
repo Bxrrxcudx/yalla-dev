@@ -45,7 +45,15 @@
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="categories">Catégories</label>
-                                    <input type="text" class="form-control" name="categories" value="{{ $news->categories }}">
+                                    <select class="form-control" name="category_id">
+                                        @foreach ($categories as $id => $category)
+                                            @if($news->category_id === $id)
+                                            <option value="{{ $id }}" selected>{{ $category }}</option>
+                                            @else
+                                            <option value="{{ $id }}">{{ $category }}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="tags">Tags</label>
