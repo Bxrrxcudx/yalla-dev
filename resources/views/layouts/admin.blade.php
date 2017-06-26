@@ -369,8 +369,8 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ url('admin/page/add') }}"><i class="fa fa-circle-o"></i> Ajouter une page </a></li>
-                        <li><a href="{{ url('admin/page') }}"><i class="fa fa-circle-o"></i> Toutes les pages</a></li>
+                        <li><a href="{{ route('pages.create') }}"><i class="fa fa-circle-o"></i> Ajouter une page </a></li>
+                        <li><a href="{{ route('pages.index') }}"><i class="fa fa-circle-o"></i> Toutes les pages</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
