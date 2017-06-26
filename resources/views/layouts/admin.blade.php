@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,6 +36,9 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- TinyMCE WYSIWYG -->
+    <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini fixed">
 <div class="wrapper">
@@ -329,7 +332,7 @@
                 <li>
                     <a href="{{ route('messages.index') }}">
                         <i class="fa fa-envelope"></i>
-                        <span>Mailbox</span>
+                        <span>Messages</span>
                         <span class="pull-right-container">
                           <small class="label pull-right bg-yellow">12</small>
                         </span>
@@ -338,15 +341,11 @@
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-pie-chart"></i>
-                        <span>Newsletter</span>
+                        <span>Abonnés Newsletter</span>
                         <span class="pull-right-container">
                           <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{ url('admin/newsletter/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Actualité </a></li>
-                        <li><a href="{{ url('admin/newsletter') }}"><i class="fa fa-circle-o"></i> Listes</a></li>
-                    </ul>
                 </li>
                 <li class="treeview">
                     <a href="#">
@@ -359,32 +358,36 @@
                     <ul class="treeview-menu">
                         <li><a href="{{ url('admin/news/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Actualité </a></li>
                         <li><a href="{{ url('admin/news') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
+
+                        {{--<li><a href="{{ route('news.create') }}"><i class="fa fa-circle-o"></i> Ajouter une Actualité </a></li>
+                        <li><a href="{{ route('news.index') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
+--}}
                     </ul>
                 </li>
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-pie-chart"></i>
-                        <span>Page</span>
+                        <span>Pages</span>
                         <span class="pull-right-container">
                           <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="{{ url('admin/page/add') }}"><i class="fa fa-circle-o"></i> Ajouter une page </a></li>
-                        <li><a href="{{ url('admin/page') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
+                        <li><a href="{{ url('admin/page') }}"><i class="fa fa-circle-o"></i> Toutes les pages</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-pie-chart"></i>
-                        <span>Adhérents</span>
+                        <span>Adhérents Yalla!</span>
                         <span class="pull-right-container">
                           <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ url('admin/subscribers/add') }}"><i class="fa fa-circle-o"></i> Ajouter un Adhérent </a></li>
-                        <li><a href="{{ url('admin/subscribers') }}"><i class="fa fa-circle-o"></i> Listes </a></li>
+                        <li><a href="{{ url('admin/subscribers/add') }}"><i class="fa fa-circle-o"></i> Ajouter un adhérent </a></li>
+                        <li><a href="{{ url('admin/subscribers') }}"><i class="fa fa-circle-o"></i> Tous les adhérents </a></li>
                     </ul>
                 </li>
             </ul>
@@ -438,5 +441,7 @@
     <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('dist/js/demo.js') }}"></script>
+    <!-- Custom TinyMCE WYSIWYG -->
+    <script src="{{ asset('dist/js/tiny.js') }}"></script>
 </body>
 </html>

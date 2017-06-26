@@ -6,11 +6,10 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Mailbox
-                <small>13 new messages</small>
+                Messagerie
             </h1>
             <ol class="breadcrumb">
-                <li><a href="{{ url()->previous() }}"><i class="fa fa-dashboard"></i> Accueil</a></li>
+                <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Accueil</a></li>
                 <li class="active">Messages</li>
             </ol>
         </section>
@@ -44,15 +43,6 @@
                     <div class="box box-primary">
                         <div class="box-header with-border">
                             <h3 class="box-title">Inbox</h3>
-                            <!-- barre de rechercher mails
-                            <div class="box-tools pull-right">
-                                <div class="has-feedback">
-                                    <input type="text" class="form-control input-sm" placeholder="Search Mail">
-                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                                </div>
-                            </div>
-                            -->
-                            <!-- /.box-tools -->
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body no-padding">
@@ -95,13 +85,6 @@
                         <!-- /.box-body -->
                         <div class="box-footer no-padding">
                             <div class="mailbox-controls">
-                                <!-- Check all button -->
-                                <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
-                                </button>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
-                                </div>
-                                <!-- /.btn-group -->
                                 <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
                                 <div class="pull-right">
                                     <div class="btn-group">

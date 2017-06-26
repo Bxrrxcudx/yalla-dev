@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreateNewsTable extends Migration
 {
@@ -23,7 +24,10 @@ class CreateNewsTable extends Migration
             $table->text('description');
             $table->text('content');
             $table->string('thumbnail');
+            $table->string('categories');
+            $table->string('tags');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
