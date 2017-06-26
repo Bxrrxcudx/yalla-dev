@@ -11,7 +11,8 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::orderByDesc('created_at')->paginate(10);
+        $news = News::withTrashed()->orderByDesc('created_at')->paginate(10);
+        //$news = News::orderByDesc('created_at')->paginate(10);
 
         return view('admin.news.list', compact('news'));
 
@@ -47,5 +48,29 @@ class NewsController extends Controller
         $news->fill($request->except(['_token']))->save();
 
         return view('admin.news.list', compact('news'));
+    }
+
+    public function trash($id)
+    {
+        News::where('id', $id)->delete();
+
+        return redirect()->route('news.index');
+    }
+
+    public function restore($id)
+    {
+        News::withTrashed()->findOrFail($id)->restore();
+
+        return redirect()->route('news.index');
+    }
+
+    public function destroy($id)
+    {
+        if ($data = News::withTrashed()->where('id', $id)->exists() !== false) {
+            News::withTrashed()->where('id', $id)->forceDelete();
+        }
+
+        return redirect()->route('news.index');
+
     }
 }

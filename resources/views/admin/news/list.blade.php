@@ -28,7 +28,8 @@
                                             <th>Titre de l'actualité</th>
                                             <th>Auteur(s)</th>
                                             <th>Crée le</th>
-                                            <th>Corbeille</th>
+                                            <th>Status</th>
+                                            <th>Suppression</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -40,10 +41,28 @@
                                                 </td>
                                                 <td class="mailbox-date">{{ $article->created_at }}</td>
                                                 <td class="mailbox-star">
-                                                    <form action="#" method="POST">
+                                                    @if(is_null($article->deleted_at))
+                                                        <form action="{{ route('news.trash', ['id' => $article->id]) }}" method="POST">
                                                         {{ csrf_field() }}
-                                                        <button type="submit" class="btn btn-default btn-sm">
-                                                            <i class="fa fa-trash-o"></i>
+                                                        <button type="submit" class="btn btn-primary btn-sm">
+                                                            Dépublier
+                                                        </button>
+                                                    </form>
+                                                    @else
+                                                    <form action="{{ route('news.restore', ['id' => $article->id]) }}" method="POST">
+                                                        {{ csrf_field() }}
+                                                        <button type="submit" class="btn btn-success btn-sm">
+                                                            Publier
+                                                        </button>
+                                                    </form>
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    <form action="{{ route('news.destroy', ['news' => $article->id]) }}" method="POST">
+                                                        {{ csrf_field() }}
+                                                        {{ method_field('DELETE') }}
+                                                        <button type="submit" class="btn btn-danger btn-sm">
+                                                            Supprimer définitivement
                                                         </button>
                                                     </form>
                                                 </td>

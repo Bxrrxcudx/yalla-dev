@@ -23,10 +23,10 @@
                             <div class="table-responsive mailbox-messages">
                                 <table class="table table-hover table-striped">
                                     <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Adresse e-Mail</th>
-                                    </tr>
+                                        <tr>
+                                            <th></th>
+                                            <th>Adresse e-Mail</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                     @foreach ($data as $info)
@@ -45,7 +45,6 @@
                                     @endforeach
                                     </tbody>
                                 </table>
-                                <!-- /.table -->
                             </div>
                         </div>
                     </div>
