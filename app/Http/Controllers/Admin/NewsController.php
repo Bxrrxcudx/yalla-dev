@@ -25,11 +25,27 @@ class NewsController extends Controller
     public function store(Request $request)
     {
         // inserts the data from POST
-        DB::table('news')->insert($request->except(['_token']));
-
+        News::create($request->except(['_token']));
+        // gets last insert id
         $id = DB::getPdo()->lastInsertId();
+        // completes slug/meta/description fields in db
         $this->completeNewsInsert($id);
 
         return redirect()->route('news.index');
+    }
+
+    public function edit($id)
+    {
+        $news = News::findOrFail($id);
+
+        return view('admin.news.edit', compact('news'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $news = News::findOrFail($id);
+        $news->fill($request->except(['_token']))->save();
+
+        return view('admin.news.edit', compact('news'));
     }
 }
