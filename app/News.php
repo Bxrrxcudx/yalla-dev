@@ -18,6 +18,7 @@ class News extends Model
         , 'categories'
         , 'tags'
         , 'thumbnail'
+        , 'category_id'
     ];
 
     protected $hidden = [
@@ -35,4 +36,9 @@ class News extends Model
         , 'updated_at'
         , 'deleted_at'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
 }
