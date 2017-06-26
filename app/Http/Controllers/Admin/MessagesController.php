@@ -18,16 +18,10 @@ class MessagesController extends Controller
 
     }
 
-    public function create()
-    {
-
-
-    }
-
     public function store(Request $request)
     {
 
-        DB::table('messages')->insert($request->except(['_token']));
+        Message::create($request->except(['_token']));
 
         return redirect()->route('messages.index');
     }
