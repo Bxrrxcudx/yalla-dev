@@ -91,14 +91,13 @@ header #hamburger-content {
         color: #000;
         list-style: none; }
         header #hamburger-content nav ul li a {
-          color: #fff;
+          color: #FF7152;
           font-family: "Open Sans", sans-serif;
           font-size: 1.7em;
           text-decoration: none; }
           header #hamburger-content nav ul li a:hover {
             color: #FF7152; }
 
-/*----- MENU HAMBURGER -------*/
 #hamburger, #hamburger-content {
   display: inline; }
 
@@ -130,7 +129,7 @@ header #hamburger-content {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #FF7152;
   transform: translateX(-100%);
   transition: transform .2s ease-out;
   text-align: center;
@@ -149,25 +148,57 @@ header #hamburger-content {
   #hamburger-sidebar-body:hover {
     color: #FF7152; }
 
+@media screen and (max-width: 480px) {
+  header #hamburger ul {
+    display: block; }
+
+  #hamburger-content {
+    display: none; }
+
+  #hamburger-button, #hamburger-sidebar,
+  .hamburger-activated #hamburger-overlay {
+    display: block; }
+
+  .hamburger-activated #hamburger-sidebar {
+    transform: translateX(0); } }
 /* -- HOME body
 --------------------------------------------------- */
-.home-body header nav {
-  text-align: center;
-  width: 100%; }
-  .home-body header nav ul li {
-    display: inline-block;
-    padding: 30px;
-    font: #000 bold 1.8em/2.5em;
+.home-body {
+  	/* header {
+  		nav {
+  		text-align: center;
+      	width: 100%;
+  			ul li {
+  			    display: inline-block;
+  			    padding: 30px;
+  			    font: #000 bold 1.8em/1.5em;
+  			    text-transform: uppercase;
+  			    a {
+  			    	text-decoration: none;
+  				    color: #000;
+  				    cursor: pointer;
+  			    }
+  			}
+  		}
+  	} */ }
+  .home-body main .presentation {
+    background-image: url("../img-layout/background-home.png");
+    background-size: cover;
+    height: 20vh; }
+    .home-body main .presentation a {
+      background: #FF7152;
+      font: 0.8em "Oswald", sans-serif;
+      text-transform: uppercase;
+      color: #fff;
+      border: 1px;
+      border-radius: 1px;
+      padding: 2%; }
+  .home-body main h2 {
+    text-align: center;
+    font: 1.5em "Oswald", sans-serif;
+    color: #FF7152;
     text-transform: uppercase; }
-    .home-body header nav ul li a {
-      text-decoration: none;
-      color: #000;
-      cursor: pointer; }
-.home-body main .presentation {
-  background-image: url("../img-layout/background-home.png");
-  background-size: cover;
-  height: 20vh; }
-  .home-body main .presentation a {
+  .home-body main .who a {
     background: #FF7152;
     font: 0.8em "Oswald", sans-serif;
     text-transform: uppercase;
@@ -175,18 +206,5 @@ header #hamburger-content {
     border: 1px;
     border-radius: 1px;
     padding: 2%; }
-.home-body main h2 {
-  text-align: center;
-  font: 1.5em "Oswald", sans-serif;
-  color: #FF7152;
-  text-transform: uppercase; }
-.home-body main .who a {
-  background: #FF7152;
-  font: 0.8em "Oswald", sans-serif;
-  text-transform: uppercase;
-  color: #fff;
-  border: 1px;
-  border-radius: 1px;
-  padding: 2%; }
 
 /*# sourceMappingURL=style.css.map */
