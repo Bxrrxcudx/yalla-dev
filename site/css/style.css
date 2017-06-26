@@ -70,39 +70,85 @@ a {
 
 /* -- Burger menu
 --------------------------------------------------- */
-.mobile-nav {
-  width: 100%;
-  height: 0vh;
-  visibility: hidden;
-  margin: 0 auto; }
+header #hamburger-content {
+  position: relative;
+  width: 100%; }
+  header #hamburger-content nav {
+    width: 100%; }
+    header #hamburger-content nav ul {
+      z-index: 2;
+      width: 100%;
+      height: 45px;
+      text-align: center;
+      padding-left: 7%;
+      background-color: #20201F;
+      box-shadow: 0px 0px 1.5px 0px #000; }
+      header #hamburger-content nav ul li {
+        float: left;
+        width: 10%;
+        opacity: 0.8;
+        margin-left: 10%;
+        color: #000;
+        list-style: none; }
+        header #hamburger-content nav ul li a {
+          color: #fff;
+          font-family: "Open Sans", sans-serif;
+          font-size: 1.7em;
+          text-decoration: none; }
+          header #hamburger-content nav ul li a:hover {
+            color: #FF7152; }
 
-.burger-icon {
+/*----- MENU HAMBURGER -------*/
+#hamburger, #hamburger-content {
+  display: inline; }
+
+#hamburger-button {
   display: none;
-  cursor: pointer; }
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.7em;
+  color: white;
+  margin: 0 5% 0 0;
+  vertical-align: top;
+  float: right; }
 
-@media screen and (max-width: 720px) {
-  .navbar {
-    display: none; }
+#hamburger-overlay {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); }
 
-  .is-on {
-    visibility: visible;
-    height: 100vh; }
-
-  .mobile-nav ul {
-    margin-top: 150px; }
-    .mobile-nav ul li {
-      margin: 60px;
-      display: block;
-      text-align: center; }
-      .mobile-nav ul li a {
-        text-align: center; }
-
-  .burger-icon {
+#hamburger-sidebar {
+  position: fixed;
+  width: 84%;
+  z-index: 20;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  transform: translateX(-100%);
+  transition: transform .2s ease-out;
+  text-align: center;
+  opacity: 1; }
+  #hamburger-sidebar li {
     display: block;
-    max-width: 50px;
-    position: absolute;
-    top: 40px;
-    right: 20px; } }
+    padding-top: 10%; }
+
+#hamburger-sidebar-body {
+  padding: 16px 8px; }
+  #hamburger-sidebar-body ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8em; }
+  #hamburger-sidebar-body:hover {
+    color: #FF7152; }
+
 /* -- HOME body
 --------------------------------------------------- */
 .home-body header nav {
