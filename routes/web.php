@@ -31,8 +31,7 @@ Route::group([
             'create', 'edit', 'update'
         ]]);
         Route::post('messages/{id}', 'MessagesController@trash')->name('messages.trash');
-        Route::get('messages-trashed',
-                    'MessagesController@showTrashed')->name('messages.trashed');
+        Route::get('messages-trashed', 'MessagesController@showTrashed')->name('messages.trashed');
 
         // Abonnés Newsletter
         Route::get('newsletter', 'NewslettersController@index');

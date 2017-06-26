@@ -11,7 +11,7 @@ class Message extends Model
 
     protected $table = 'messages';
 
-    protected $timestamps = false;
+    //protected $timestamps = false;
 
     protected $fillable = [
         'last_name'
