@@ -12,8 +12,6 @@ class NewsController extends Controller
     public function index()
     {
         $news = News::withTrashed()->orderByDesc('created_at')->paginate(10);
-        //$news = News::orderByDesc('created_at')->paginate(10);
-
         return view('admin.news.list', compact('news'));
 
     }

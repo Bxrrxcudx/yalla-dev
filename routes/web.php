@@ -40,9 +40,9 @@ Route::group([
         Route::post('news/{id}/restore', 'NewsController@restore')->name('news.restore');
 
         // Page
-        Route::get('page', 'PagesController@index');
-        Route::get('page/add', 'PagesController@store');
-        Route::get('page/edit/{id}', 'PagesController@index');
+        Route::resource('pages', 'PagesController', ['except' => ['show']]);
+        Route::post('pages/{id}/trash', 'PagesController@trash')->name('pages.trash');
+        Route::post('pages/{id}/restore', 'PagesController@restore')->name('pages.restore');
 
         // Subscribers
         Route::get('subscribers', 'SubscribersController@index');
