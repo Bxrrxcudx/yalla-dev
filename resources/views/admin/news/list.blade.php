@@ -35,7 +35,7 @@
                                         @foreach ($news as $article)
                                             <tr>
                                                 <td><input type="checkbox"></td>
-                                                <td class="mailbox-subject"><b><a href="{{ route('news.show', ['news' => $article->id]) }}">{{ $article->title }}</a></b>
+                                                <td class="mailbox-subject"><b><a href="{{ route('news.edit', ['news' => $article->id]) }}">{{ $article->title }}</a></b>
                                                 <td class="mailbox-name">{{ $article->authors ?: 'Non spécifié' }}</td>
                                                 </td>
                                                 <td class="mailbox-date">{{ $article->created_at }}</td>
