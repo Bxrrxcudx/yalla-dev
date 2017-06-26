@@ -45,7 +45,7 @@ Route::group([
         //Route::get('news/{id}', 'NewsController@show');
         Route::get('news/add', 'NewsController@create');
         //Route::get('news', 'NewsController@index');
-        //Route::get('news/add', 'NewsController@store');
+        Route::put('news/post', 'NewsController@store');
         //Route::get('news/edit/{id}', 'NewsController@index');
         Route::resource('news', 'NewsController');
 
