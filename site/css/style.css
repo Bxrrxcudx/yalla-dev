@@ -70,114 +70,109 @@ a {
 
 /* -- Burger menu
 --------------------------------------------------- */
-header #hamburger-content {
-  position: relative;
-  width: 100%; }
-  header #hamburger-content nav {
-    width: 100%; }
-    header #hamburger-content nav ul {
-      z-index: 2;
-      width: 100%;
-      height: 45px;
-      text-align: center;
-      padding-left: 7%;
-      background-color: #20201F;
-      box-shadow: 0px 0px 1.5px 0px #000; }
-      header #hamburger-content nav ul li {
-        float: left;
-        width: 10%;
-        opacity: 0.8;
-        margin-left: 10%;
+header {
+  display: inline-block; }
+  header h1 {
+    margin: 5%;
+    /* display: inline-block; */
+    width: 20%; }
+    header h1 img {
+      /* width: 10%; */ }
+  header nav {
+    /* display: inline-block; */
+    width: 80%; }
+    header nav ul li {
+      margin: 0 4%; }
+      header nav ul li a {
         color: #000;
-        list-style: none; }
-        header #hamburger-content nav ul li a {
-          color: #FF7152;
-          font-family: "Open Sans", sans-serif;
-          font-size: 1.7em;
-          text-decoration: none; }
-          header #hamburger-content nav ul li a:hover {
-            color: #FF7152; }
+        font-size: 1.2em; }
 
-#hamburger, #hamburger-content {
-  display: inline; }
-
-#hamburger-button {
+header .burger-menu {
   display: none;
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-size: 1.7em;
-  color: #FF7152;
-  margin: 0 5% 0 0;
-  vertical-align: top;
-  float: right; }
+  position: relative;
+  height: 40px;
+  width: 45px;
+  margin-right: 5%;
+  z-index: 5; }
 
-#hamburger-overlay {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
+.rect1,
+.rect2,
+.rect3 {
+  height: 20%;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); }
+  background: #FF7152;
+  border-radius: 20px; }
 
-#hamburger-sidebar {
-  position: fixed;
-  width: 84%;
-  z-index: 20;
-  height: 100%;
+.rect1 {
+  position: absolute;
   top: 0;
+  left: 0; }
+
+.rect2 {
+  position: absolute;
+  top: 50%;
   left: 0;
-  background-color: #FF7152;
-  transform: translateX(-100%);
-  transition: transform .2s ease-out;
-  text-align: center;
-  opacity: 1; }
-  #hamburger-sidebar li {
-    display: block;
-    padding-top: 10%; }
+  transform: translateY(-50%); }
 
-#hamburger-sidebar-body {
-  padding: 16px 8px; }
-  #hamburger-sidebar-body ul li a {
-    text-decoration: none;
-    color: #000;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.8em; }
-  #hamburger-sidebar-body:hover {
-    color: #FF7152; }
+.rect3 {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
 
-@media screen and (max-width: 480px) {
-  header #hamburger ul {
-    display: block; }
+.appear {
+  top: 0;
+  z-index: 1;
+  width: 100%; }
 
-  #hamburger-content {
-    display: none; }
-
-  #hamburger-button, #hamburger-sidebar,
-  .hamburger-activated #hamburger-overlay {
-    display: block; }
-
-  .hamburger-activated #hamburger-sidebar {
-    transform: translateX(0); } }
+@media screen and (max-width: 550px) {
+  header {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header h1 {
+      display: block;
+      width: 50%; }
+      header h1 img {
+        width: 60%; }
+    header .burger-menu {
+      display: block;
+      cursor: pointer; }
+    header nav {
+      position: absolute;
+      top: -100%;
+      width: 100%;
+      background: #fff;
+      filter: opacity(50%);
+      transition: .5s ease-in-out;
+      height: 100vh; }
+      header nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        header nav ul li a {
+          color: #000;
+          font-size: 1.2em; } }
 /* -- HOME body
 --------------------------------------------------- */
 .home-body {
   margin: 0 auto; }
   .home-body main {
-    margin-top: 15%;
     text-align: center; }
     .home-body main section {
-      margin: 15% 0; }
+      margin: 15% 0 0 0; }
       .home-body main section p {
-        margin-bottom: 5%;
+        margin: 0 15% 5% 15%;
         line-height: 150%; }
       .home-body main section span {
         font-weight: bold;
-        color: #979797; }
+        line-height: 200%;
+        color: #FF7152; }
     .home-body main .presentation {
-      position: relative; }
+      position: relative;
+      margin: 5% 0 15% 0;
+      z-index: -1; }
       .home-body main .presentation img {
         filter: contrast(40%);
         width: 100%;
@@ -186,7 +181,8 @@ header #hamburger-content {
         position: absolute;
         top: 30%;
         left: 5%;
-        z-index: 1; }
+        z-index: 1;
+        color: #fff; }
       .home-body main .presentation a {
         position: absolute;
         bottom: 5%;
@@ -197,14 +193,15 @@ header #hamburger-content {
         color: #fff;
         border: 1px;
         border-radius: 1px;
-        padding: 2%; }
+        padding: 3%; }
     .home-body main .separation {
       height: 2px;
       color: #979797; }
     .home-body main h2 {
       text-align: center;
       font: 1.5em "Oswald", sans-serif;
-      color: #FF7152;
+      color: #000;
+      font-weight: bold;
       text-transform: uppercase; }
     .home-body main .picto {
       width: 8%; }
@@ -215,21 +212,21 @@ header #hamburger-content {
       color: #fff;
       border: 1px;
       border-radius: 1px;
-      padding: 2%; }
-    .home-body main .action .action-desc img {
-      				     /* 
-      					width: 10%;
-       */ }
+      padding: 3%; }
     .home-body main .action .action-call img {
-      width: 80%; }
-    .home-body main .action .action-call a {
-      background: #FF7152;
-      font: 0.8em "Oswald", sans-serif;
-      text-transform: uppercase;
-      color: #fff;
-      border: 1px;
-      border-radius: 1px;
-      padding: 2%; }
+      width: 100%; }
+    .home-body main .action .action-call div {
+      padding: 1em;
+      border: 1em solid transparent;
+      background: -webkit-linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, #FF7152 0, #FF7152 12.5%, transparent 0, transparent 25%, #979797 0, #979797 37.5%, transparent 0, transparent 50%) 0/5em 5em; }
+      .home-body main .action .action-call div a {
+        background: #FF7152;
+        font: 0.8em "Oswald", sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+        border: 1px;
+        border-radius: 1px;
+        padding: 3%; }
     .home-body main .valeurs a {
       background: #FF7152;
       font: 0.8em "Oswald", sans-serif;
@@ -237,9 +234,16 @@ header #hamburger-content {
       color: #fff;
       border: 1px;
       border-radius: 1px;
-      padding: 2%; }
+      padding: 3%; }
+    .home-body main .actus div h2 {
+      margin-bottom: 4%; }
     .home-body main .actus div img {
-      width: 80%; }
+      width: 100%; }
+    .home-body main .actus article h3 {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #FF7152;
+      margin-top: 4%; }
     .home-body main .actus a {
       background: #FF7152;
       font: 0.8em "Oswald", sans-serif;
@@ -247,19 +251,24 @@ header #hamburger-content {
       color: #fff;
       border: 1px;
       border-radius: 1px;
-      padding: 2%; }
-    .home-body main .partenaires .partners div {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center; }
-      .home-body main .partenaires .partners div div {
-        width: 30%; }
-        .home-body main .partenaires .partners div div a {
-          text-align: center; }
-          .home-body main .partenaires .partners div div a img {
-            width: 80%; }
+      padding: 3%; }
+    .home-body main .partenaires {
+      margin-bottom: 15%; }
+      .home-body main .partenaires .partners div {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        .home-body main .partenaires .partners div div {
+          width: 30%; }
+          .home-body main .partenaires .partners div div a {
+            text-align: center; }
+            .home-body main .partenaires .partners div div a img {
+              width: 80%; }
 
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .home-body header h1 {
+    margin: 5%; } }
 /* -- Footer
 --------------------------------------------------- */
 footer {

@@ -1,25 +1,19 @@
 //MENU BURGER
+var smartMenu = document.querySelector('.burger-menu'),
+	smartNav = document.querySelector('header nav');
+	fake = 0;
 
-var content = document.querySelector('#hamburger-content');
-var sidebarBody = document.querySelector('#hamburger-sidebar-body');
-
-sidebarBody.innerHTML = content.innerHTML;
-
-var button = document.querySelector('#hamburger-button');
-var overlay = document.querySelector('#hamburger-overlay');
-var activatedClass ='hamburger-activated';
-
-button.addEventListener('click', function(e) {
-   e.preventDefault();
-   this.parentNode.classList.add(activatedClass);
+smartMenu.addEventListener('mousedown', function () {
+	fake = 1;
+	smartNav.classList.toggle('appear');
 });
 
-overlay.addEventListener('click', function(e) {
-    e.preventDefault();
-    this.parentNode.classList.remove(activatedClass);
+smartMenu.addEventListener('mouseup', function () {
+	fake = 0;
 });
-var nav = document.querySelector('#hamburger-sidebar');
 
-button.addEventListener('click', function(){
-    nav.classList.toggle('closed');
+window.addEventListener('mousedown', function () {
+	if (fake !== 1) {
+		smartNav.classList.remove('appear');
+	}
 });

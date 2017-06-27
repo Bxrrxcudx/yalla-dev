@@ -3,21 +3,23 @@
 .home-body {
 	margin: 0 auto;
 	main {
-		margin-top: 15%;
 		text-align: center;
 		section {
-			margin: 15% 0;
+			margin: 15% 0 0 0;
 			p {
-				margin-bottom: 5%;
+				margin: 0 15% 5% 15%;
 				line-height: 150%;
 			}
 			span {
 				font-weight: bold;
-				color: $grey;
+				line-height: 200%;
+				color: $orange;
 			}
 		}
 		.presentation {
 			position: relative;
+			margin: 5% 0 15% 0;
+			z-index: -1;
 			img {
 				filter: contrast(40%);
 				width: 100%;
@@ -28,6 +30,7 @@
 				top: 30%;
 				left: 5%;
 				z-index: 1;
+				color: $white;
 			}
 			a {
 				position: absolute;
@@ -43,16 +46,14 @@
 		h2 {
 			text-align: center;
 			font: 1.5em $oswald;
-			color: $orange;
+			color: $black;
+			font-weight: bold;
 			text-transform: uppercase;
 		}
 		.picto {
 			width: 8%;
 		}
 		.who {
-			p {
-
-			}
 			a {
 				@include cta;
 			}
@@ -61,16 +62,25 @@
 		}
 		.action {
 			.action-desc {
-				img {/* 
-					width: 10%;
- */				}
+				img {				
+				}
 			}
 			.action-call {
 				img {
-					width: 80%;
+					width: 100%;
 				}
-				a {
-					@include cta;
+				div {
+					padding: 1em;
+					border: 1em solid transparent;
+					background: -webkit-linear-gradient(white, white) padding-box,
+					repeating-linear-gradient(-45deg, $orange 0, $orange 12.5%,
+						transparent 0, transparent 25%,
+						$grey 0, $grey 37.5%,
+						transparent 0, transparent 50%)
+						0 / 5em 5em;
+					a {
+						@include cta;
+					}					
 				}
 			}
 		}
@@ -81,18 +91,27 @@
 		}
 		.actus {
 			div {
-				img {
-					width: 80%;
+				h2 {
+					margin-bottom: 4%;
 				}
-			}			
+				img {
+					width: 100%;
+				}
+			}
+			article {				
+				h3 {
+					font-weight: bold;
+					font-size: 1.2em;
+					color: $orange;
+					margin-top: 4%;
+				}
+			}		
 			a {
 				@include cta;
 			}
 		}
 		.partenaires {
-			h2 {
-
-			}
+			margin-bottom: 15%;
 			.partners{
 				div {
 					width: 100%;
@@ -112,4 +131,14 @@
 			}
 		}
 	}
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+	.home-body {
+		header {
+			h1 {
+				margin: 5%;
+			}			
+		}
+	}   
 }
