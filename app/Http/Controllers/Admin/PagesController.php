@@ -28,7 +28,7 @@ class PagesController extends Controller
         // gets last insert id
         $id = DB::getPdo()->lastInsertId();
         // completes slug/meta/description fields in db
-        $this->completeNewsInsert($id);
+        $this->completeNewsInsert($id, 'pages');
 
         return redirect()->route('pages.index');
     }

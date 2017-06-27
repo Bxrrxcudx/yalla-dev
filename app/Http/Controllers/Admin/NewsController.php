@@ -30,7 +30,7 @@ class NewsController extends Controller
         // gets last insert id
         $id = DB::getPdo()->lastInsertId();
         // completes slug/meta/description fields in db
-        $this->completeNewsInsert($id);
+        $this->completeNewsInsert($id, 'news');
 
         return redirect()->route('news.index');
     }

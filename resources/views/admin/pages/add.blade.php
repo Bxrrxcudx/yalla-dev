@@ -5,7 +5,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Ajouter une nouvelle actualité
+                Ajouter une nouvelle page
             </h1>
             <ol class="breadcrumb">
                 <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Accueil</a></li>
@@ -22,15 +22,11 @@
                             <div class="box-body">
 
                                 <div class="form-group">
-                                    <label for="title">Titre de l'actualité</label>
+                                    <label for="title">Titre de la page</label>
                                     <input type="text" class="form-control" name="title">
                                 </div>
                                 <div class="form-group">
-                                    <label for="authors">Chemin dans l'URL :</label>
-                                    <input type="text" class="form-control" id="slug" name="slug">
-                                </div>
-                                <div class="form-group">
-                                    <label for="authors">Description :</label>
+                                    <label for="description">Description :</label>
                                     <input type="text" class="form-control" id="description" name="description">
                                 </div>
                                 <div class="form-group">
@@ -38,25 +34,6 @@
                                     <textarea class="form-control" id="tinyMCE" name="content"></textarea>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="box box-solid">
-                            <div class="box-header with-border">
-                                <h3 class="box-title">Options</h3>
-                            </div>
-                            <div class="box-body">
-                                <div class="form-group">
-                                    <label for="categories">Catégories</label>
-                                    <input type="text" class="form-control" name="categories">
-                                </div>
-                                <div class="form-group">
-                                    <label for="tags">Tags</label>
-                                    <input type="text" class="form-control" name="tags">
-                                </div>
-                                <input type="submit" value="Publier la page">
-                            </div>
-                            <!-- /.box-body -->
                         </div>
                     </div>
                 </form>
