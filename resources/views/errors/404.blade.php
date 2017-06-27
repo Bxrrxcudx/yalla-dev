@@ -1,10 +1,7 @@
-@if(session_status() == 1)
-    @extends('layouts.admin')
-@elseif (session_status() == 0)
-    @extends('layouts.app')
-@endif
+@extends('layouts.home')
 @section('content')
     <div class="content-wrapper">
         Page is not defined
+        <a href="{{ url('/') }}">Back to Home</a>
     </div>
 @endsection
