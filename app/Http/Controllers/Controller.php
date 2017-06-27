@@ -7,10 +7,18 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\DB;
+
+use App\Admin;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    public function __construct()
+    {
+        $data = Admin::all();
+
+        return view('admin.home', compact('data'));
+    }
 
     /**
      * takes title + content fields of the last inserted id
