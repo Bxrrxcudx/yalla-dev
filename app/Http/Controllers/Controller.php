@@ -17,7 +17,7 @@ class Controller extends BaseController
     {
         $data = Admin::all();
 
-        return view('admin', ['data' => $data]);
+        return view('admin.home', compact('data'));
     }
 
     /**
