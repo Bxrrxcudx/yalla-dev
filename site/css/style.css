@@ -207,4 +207,40 @@ header #hamburger-content {
     border-radius: 1px;
     padding: 2%; }
 
+/* -- Footer
+--------------------------------------------------- */
+footer {
+  text-align: center;
+  padding-top: 6%; }
+  footer .newsletter {
+    background-color: #FF7152;
+    padding: 5% 0; }
+    footer .newsletter p {
+      margin-bottom: 4%;
+      text-transform: uppercase; }
+  footer .socials {
+    background-color: #000; }
+    footer .socials p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.2em;
+      color: #fff;
+      padding-top: 3%; }
+    footer .socials div {
+      display: inline-block;
+      width: 15%;
+      height: 15%;
+      margin: 5%;
+      padding: 2%;
+      background: #fff;
+      border-radius: 100%; }
+      footer .socials div img {
+        /* width: 50%; */ }
+  footer nav {
+    background: #000; }
+    footer nav li {
+      font-weight: 200;
+      margin: 5%; }
+      footer nav li a {
+        color: #fff; }
+
 /*# sourceMappingURL=style.css.map */
