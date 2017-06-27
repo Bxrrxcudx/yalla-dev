@@ -18,14 +18,14 @@ class Controller extends BaseController
      * slug, meta-desc and description
      * @param $id : last insert id
      */
-    protected function completeNewsInsert($id)
+    protected function completeNewsInsert($id, $table)
     {
         $srcData = [
-            'title' => DB::table('news')->where('id', $id)->value('title')
-            , 'content' => DB::table('news')->where('id', $id)->value('content')
+            'title' => DB::table("$table")->where('id', $id)->value('title')
+            , 'content' => DB::table("$table")->where('id', $id)->value('content')
         ];
 
-        DB::table('news')->where('id', $id)->update([
+        DB::table("$table")->where('id', $id)->update([
             'slug' => str_slug($srcData['title'], '-')
             , 'description' => str_limit(strip_tags($srcData['content']), $limit = 50, $end = ' ...')
             , 'meta-desc' => str_limit(strip_tags($srcData['content']), $limit = 157, $end = ' ...')

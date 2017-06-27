@@ -5,11 +5,11 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Liste des actualités publiées
+                Liste des pages publiées
             </h1>
             <ol class="breadcrumb">
                 <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Accueil</a></li>
-                <li class="active">Actualités</li>
+                <li class="active">Pages</li>
             </ol>
         </section>
         <section class="content">
@@ -17,7 +17,7 @@
                 <div class="col-xs-12">
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Actualités</h3>
+                            <h3 class="box-title">Pages</h3>
                         </div>
                         <div class="box-body">
                             <div class="table-responsive mailbox-messages">
@@ -28,30 +28,28 @@
                                         <th>Titre de la page</th>
                                         <th>Chemin dans l'URL</th>
                                         <th>Description</th>
-                                        <th>Content</th>
                                         <th>Status</th>
                                         <th>Suppression</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach ($pages as $article)
+                                    @foreach ($pages as $page)
                                         <tr>
                                             <td><input type="checkbox"></td>
-                                            <td class="mailbox-subject"><b><a href="{{ route('pages.edit', ['pages' => $article->id]) }}">{{ $article->title }}</a></b>
-                                            <td class="mailbox-name">{{ $article->slug ?: 'Non spécifié' }}</td>
+                                            <td class="mailbox-subject"><b><a href="{{ route('pages.edit', ['pages' => $page->id]) }}">{{ $page->title }}</a></b>
+                                            <td class="mailbox-name">{{ $page->slug ?: 'Non spécifié' }}</td>
                                             </td>
-                                            <td class="mailbox-date">{{ $article->description }}</td>
-                                            <td class="mailbox-date">{{ $article->content }}</td>
+                                            <td class="mailbox-date">{{ $page->description }}</td>
                                             <td class="mailbox-star">
-                                                @if(is_null($article->deleted_at))
-                                                    <form action="{{ route('pages.trash', ['id' => $article->id]) }}" method="POST">
+                                                @if(is_null($page->deleted_at))
+                                                    <form action="{{ route('pages.trash', ['id' => $page->id]) }}" method="POST">
                                                         {{ csrf_field() }}
                                                         <button type="submit" class="btn btn-primary btn-sm">
                                                             Dépublier
                                                         </button>
                                                     </form>
                                                 @else
-                                                    <form action="{{ route('pages.restore', ['id' => $article->id]) }}" method="POST">
+                                                    <form action="{{ route('pages.restore', ['id' => $page->id]) }}" method="POST">
                                                         {{ csrf_field() }}
                                                         <button type="submit" class="btn btn-success btn-sm">
                                                             Publier
@@ -60,7 +58,7 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                <form action="{{ route('pages.destroy', ['pages' => $article->id]) }}" method="POST">
+                                                <form action="{{ route('pages.destroy', ['pages' => $page->id]) }}" method="POST">
                                                     {{ csrf_field() }}
                                                     {{ method_field('DELETE') }}
                                                     <button type="submit" class="btn btn-danger btn-sm">
