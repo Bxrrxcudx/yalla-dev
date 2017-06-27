@@ -44,11 +44,7 @@
 			color: $grey;
 		}
 		h2 {
-			text-align: center;
-			font: 1.5em $oswald;
-			color: $black;
-			font-weight: bold;
-			text-transform: uppercase;
+			@include customh2;			
 		}
 		.picto {
 			width: 8%;
@@ -138,6 +134,7 @@
 		header {
 			h1 {
 				margin: 5%;
+				font-size: 3em;
 			}			
 		}
 	}   

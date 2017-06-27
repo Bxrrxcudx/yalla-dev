@@ -71,15 +71,13 @@ a {
 /* -- Burger menu
 --------------------------------------------------- */
 header {
-  display: inline-block; }
+  display: inline-block;
+   /* position: fixed;
+*/ }
   header h1 {
     margin: 5%;
-    /* display: inline-block; */
     width: 20%; }
-    header h1 img {
-      /* width: 10%; */ }
   header nav {
-    /* display: inline-block; */
     width: 80%; }
     header nav ul li {
       margin: 0 4%; }
@@ -122,7 +120,8 @@ header .burger-menu {
 .appear {
   top: 0;
   z-index: 1;
-  width: 100%; }
+  width: 100%;
+  padding-top: 50%; }
 
 @media screen and (max-width: 550px) {
   header {
@@ -142,8 +141,8 @@ header .burger-menu {
       position: absolute;
       top: -100%;
       width: 100%;
-      background: #fff;
-      filter: opacity(50%);
+      background: #000;
+      filter: opacity(80%);
       transition: .5s ease-in-out;
       height: 100vh; }
       header nav ul {
@@ -151,9 +150,12 @@ header .burger-menu {
         flex-direction: column;
         justify-content: center;
         align-items: center; }
-        header nav ul li a {
-          color: #000;
-          font-size: 1.2em; } }
+        header nav ul li {
+          margin-top: 5%; }
+          header nav ul li a {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2em; } }
 /* -- HOME body
 --------------------------------------------------- */
 .home-body {
@@ -268,7 +270,31 @@ header .burger-menu {
 
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .home-body header h1 {
-    margin: 5%; } }
+    margin: 5%;
+    font-size: 3em; } }
+/* -- MENTIONS LEGALES body
+--------------------------------------------------- */
+.mentions-body main {
+  margin: 3% 5% 0 5%;
+  text-align: center; }
+  .mentions-body main h2 {
+    text-align: center;
+    font: 1.5em "Oswald", sans-serif;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 4%; }
+  .mentions-body main p {
+    margin-bottom: 5%;
+    line-height: 150%; }
+    .mentions-body main p span {
+      font-weight: bold; }
+  .mentions-body main div {
+    margin-bottom: 5%; }
+
+@media screen and (min-width: 768px) {
+  .mentions-body main p {
+    margin-bottom: 2%; } }
 /* -- Footer
 --------------------------------------------------- */
 footer {
