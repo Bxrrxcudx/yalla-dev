@@ -39,6 +39,9 @@ Route::group([
         Route::post('news/{id}/trash', 'NewsController@trash')->name('news.trash');
         Route::post('news/{id}/restore', 'NewsController@restore')->name('news.restore');
 
+        // Catégories
+        Route::resource('categories', 'CategoriesController', ['except' => ['create', 'show']]);
+
         // Page
         Route::resource('pages', 'PagesController', ['except' => ['show']]);
         Route::post('pages/{id}/trash', 'PagesController@trash')->name('pages.trash');
