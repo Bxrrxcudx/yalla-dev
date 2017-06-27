@@ -164,28 +164,51 @@ header #hamburger-content {
 /* -- HOME body
 --------------------------------------------------- */
 .home-body {
-  	/* header {
-  		nav {
-  		text-align: center;
-      	width: 100%;
-  			ul li {
-  			    display: inline-block;
-  			    padding: 30px;
-  			    font: #000 bold 1.8em/1.5em;
-  			    text-transform: uppercase;
-  			    a {
-  			    	text-decoration: none;
-  				    color: #000;
-  				    cursor: pointer;
-  			    }
-  			}
-  		}
-  	} */ }
-  .home-body main .presentation {
-    background-image: url("../img-layout/background-home.png");
-    background-size: cover;
-    height: 20vh; }
-    .home-body main .presentation a {
+  margin: 0 auto; }
+  .home-body main {
+    margin-top: 15%;
+    text-align: center; }
+    .home-body main section {
+      margin: 15% 0; }
+      .home-body main section p {
+        margin-bottom: 5%;
+        line-height: 150%; }
+      .home-body main section span {
+        font-weight: bold;
+        color: #979797; }
+    .home-body main .presentation {
+      position: relative; }
+      .home-body main .presentation img {
+        filter: contrast(40%);
+        width: 100%;
+        z-index: 0; }
+      .home-body main .presentation h2 {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        z-index: 1; }
+      .home-body main .presentation a {
+        position: absolute;
+        bottom: 5%;
+        left: 70%;
+        background: #FF7152;
+        font: 0.8em "Oswald", sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+        border: 1px;
+        border-radius: 1px;
+        padding: 2%; }
+    .home-body main .separation {
+      height: 2px;
+      color: #979797; }
+    .home-body main h2 {
+      text-align: center;
+      font: 1.5em "Oswald", sans-serif;
+      color: #FF7152;
+      text-transform: uppercase; }
+    .home-body main .picto {
+      width: 8%; }
+    .home-body main .who a {
       background: #FF7152;
       font: 0.8em "Oswald", sans-serif;
       text-transform: uppercase;
@@ -193,19 +216,49 @@ header #hamburger-content {
       border: 1px;
       border-radius: 1px;
       padding: 2%; }
-  .home-body main h2 {
-    text-align: center;
-    font: 1.5em "Oswald", sans-serif;
-    color: #FF7152;
-    text-transform: uppercase; }
-  .home-body main .who a {
-    background: #FF7152;
-    font: 0.8em "Oswald", sans-serif;
-    text-transform: uppercase;
-    color: #fff;
-    border: 1px;
-    border-radius: 1px;
-    padding: 2%; }
+    .home-body main .action .action-desc img {
+      				     /* 
+      					width: 10%;
+       */ }
+    .home-body main .action .action-call img {
+      width: 80%; }
+    .home-body main .action .action-call a {
+      background: #FF7152;
+      font: 0.8em "Oswald", sans-serif;
+      text-transform: uppercase;
+      color: #fff;
+      border: 1px;
+      border-radius: 1px;
+      padding: 2%; }
+    .home-body main .valeurs a {
+      background: #FF7152;
+      font: 0.8em "Oswald", sans-serif;
+      text-transform: uppercase;
+      color: #fff;
+      border: 1px;
+      border-radius: 1px;
+      padding: 2%; }
+    .home-body main .actus div img {
+      width: 80%; }
+    .home-body main .actus a {
+      background: #FF7152;
+      font: 0.8em "Oswald", sans-serif;
+      text-transform: uppercase;
+      color: #fff;
+      border: 1px;
+      border-radius: 1px;
+      padding: 2%; }
+    .home-body main .partenaires .partners div {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .home-body main .partenaires .partners div div {
+        width: 30%; }
+        .home-body main .partenaires .partners div div a {
+          text-align: center; }
+          .home-body main .partenaires .partners div div a img {
+            width: 80%; }
 
 /* -- Footer
 --------------------------------------------------- */
@@ -230,9 +283,9 @@ footer {
       width: 15%;
       height: 15%;
       margin: 5%;
-      padding: 2%;
+      padding: 3%;
       background: #fff;
-      border-radius: 100%; }
+      border-radius: 100%/100%; }
       footer .socials div img {
         /* width: 50%; */ }
   footer nav {

@@ -1,32 +1,44 @@
 /* -- HOME body
 --------------------------------------------------- */
 .home-body {
-	/* header {
-		nav {
+	margin: 0 auto;
+	main {
+		margin-top: 15%;
 		text-align: center;
-    	width: 100%;
-			ul li {
-			    display: inline-block;
-			    padding: 30px;
-			    font: #000 bold 1.8em/1.5em;
-			    text-transform: uppercase;
-			    a {
-			    	text-decoration: none;
-				    color: #000;
-				    cursor: pointer;
-			    }
+		section {
+			margin: 15% 0;
+			p {
+				margin-bottom: 5%;
+				line-height: 150%;
+			}
+			span {
+				font-weight: bold;
+				color: $grey;
 			}
 		}
-	} */
-	main {
 		.presentation {
-			background-image: url('../img-layout/background-home.png');
-			background-size: cover;
-			height: 20vh;
-
+			position: relative;
+			img {
+				filter: contrast(40%);
+				width: 100%;
+				z-index: 0;
+			}
+			h2 {
+				position: absolute;
+				top: 30%;
+				left: 5%;
+				z-index: 1;
+			}
 			a {
+				position: absolute;
+				bottom: 5%;
+				left: 70%;
 				@include cta;
 			}	
+		}
+		.separation {
+			height: 2px;
+			color: $grey;
 		}
 		h2 {
 			text-align: center;
@@ -34,9 +46,69 @@
 			color: $orange;
 			text-transform: uppercase;
 		}
+		.picto {
+			width: 8%;
+		}
 		.who {
+			p {
+
+			}
 			a {
 				@include cta;
+			}
+		}
+		.conflit {
+		}
+		.action {
+			.action-desc {
+				img {/* 
+					width: 10%;
+ */				}
+			}
+			.action-call {
+				img {
+					width: 80%;
+				}
+				a {
+					@include cta;
+				}
+			}
+		}
+		.valeurs {
+			a {
+				@include cta;
+			}
+		}
+		.actus {
+			div {
+				img {
+					width: 80%;
+				}
+			}			
+			a {
+				@include cta;
+			}
+		}
+		.partenaires {
+			h2 {
+
+			}
+			.partners{
+				div {
+					width: 100%;
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					div {
+						width: 30%;
+						a {
+							text-align: center;
+							img {
+								width: 80%;
+							}
+						}
+					}	
+				}
 			}
 		}
 	}
