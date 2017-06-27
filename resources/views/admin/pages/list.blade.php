@@ -23,14 +23,14 @@
                             <div class="table-responsive mailbox-messages">
                                 <table class="table table-hover table-striped">
                                     <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Titre de la page</th>
-                                        <th>Chemin dans l'URL</th>
-                                        <th>Description</th>
-                                        <th>Status</th>
-                                        <th>Suppression</th>
-                                    </tr>
+                                            <tr>
+                                                <th></th>
+                                                <th>Titre de la page</th>
+                                                <th>Chemin dans l'URL</th>
+                                                <th>Description</th>
+                                                <th>Status</th>
+                                                <th>Suppression</th>
+                                            </tr>
                                     </thead>
                                     <tbody>
                                     @foreach ($pages as $page)
