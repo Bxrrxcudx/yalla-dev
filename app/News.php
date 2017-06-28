@@ -16,9 +16,9 @@ class News extends Model
         , 'authors'
         , 'content'
         , 'categories'
-        , 'tags'
         , 'thumbnail'
         , 'category_id'
+        , 'tags_list'
     ];
 
     protected $hidden = [
@@ -45,5 +45,44 @@ class News extends Model
     public function tags()
     {
         return $this->belongsToMany('App\Tag');
+    }
+
+    public function getTagsListAttribute()
+    {
+        if($this->id)
+        {
+            return $this->tags->pluck('id');
+        }
+    }
+
+    public function setTagsListAttribute($value)
+    {
+
+        return $this->tags()->sync($value);
+    }
+
+    public function syncTags($article, $tags)
+    {
+        $tagsToSync = $this->checkTags($tags);
+
+        $article->tags()->sync($tagsToSync);
+    }
+
+    public function checkTags($tags){
+
+        $currentTagIds = array_filter($tags, 'is_numeric');
+
+        $newTags = array_diff($tags, $currentTagIds);
+
+        foreach ($newTags as $newTag)
+        {
+            if ($tag = Tag::create( ['name' => $newTag, 'slug' => str_slug($newTag, '-')] )) {
+
+                $currentTagIds[] = $tag->id;
+
+            }
+        }
+
+        return $currentTagIds;
     }
 }

@@ -59,9 +59,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="tags_list[]">Tags</label>
-                                    <select class="form-control" name="tags_list[]" multiple>
+                                    <select class="form-control" name="tags_list[]" id="tags_list" multiple>
                                         @foreach ($tags as $id => $tag)
-                                            <option value="{{ $id }}">{{ $tag }}</option>
+                                            @if(in_array($id, $tagIds))
+                                                <option value="{{ old('id', $id) }}" selected>{{ old('tag', $tag) }}</option>
+                                            @else
+                                                <option value="{{ old('id', $id) }}">{{ old('tag', $tag) }}</option>
+                                            @endif
                                         @endforeach
                                     </select>
                                 </div>
@@ -74,4 +78,16 @@
             </div>
         </section>
     </div>
+@endsection
+
+@section('scripts')
+
+    <script>
+
+        $('#tags_list').select2({
+            placeholder: 'Entrez vos tags et libellés',
+            tags: true
+        });
+    </script>
+
 @endsection
