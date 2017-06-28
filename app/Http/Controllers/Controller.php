@@ -15,9 +15,6 @@ class Controller extends BaseController
 
     public function __construct()
     {
-        $data = Admin::all();
-
-        return view('admin.home', ['data' => $data]);
     }
 
     /**
