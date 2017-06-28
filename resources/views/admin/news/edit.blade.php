@@ -15,29 +15,26 @@
         </section>
         <section class="content">
             <div class="row">
-                <div class="col-xs-12">
-                    @include ('admin.errors')
-                </div>
-                <form action="{{ route('news.update', ['news' => $news->id]) }}" method="POST">
+                @include ('admin.errors')
+                <form action="{{ route('news.update', $news->id) }}" method="POST">
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
-                    <div class="col-xs-9">
+                    <div class="col-md-9">
                         <div class="box box-primary">
                             <div class="box-body">
-
                                 <div class="form-group">
                                     <label for="title">Titre de l'actualité</label>
-                                    <input type="text" class="form-control" name="title" value="{{ $news->title }}">
+                                    <input type="text" class="form-control" name="title" value="{{ old('title', $news->title) }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="authors">Auteur(s) :</label>
                                     <input type="text" class="form-control" id="authors" name="authors"
-                                           value="{{ $news->authors }}">
+                                           value="{{ old('authors', $news->authors) }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="content">Contenu</label>
                                     <textarea class="form-control" id="tinyMCE"
-                                              name="content">{{ $news->content }}</textarea>
+                                              name="content">{{ old('content', $news->content) }}</textarea>
                                 </div>
                             </div>
                         </div>

@@ -26,7 +26,7 @@ class Controller extends BaseController
      * slug, meta-desc and description
      * @param $id : last insert id
      */
-    protected function completeNewsInsert($id, $table)
+    protected function completeInsert($id, $table)
     {
         $srcData = [
             'title' => DB::table("$table")->where('id', $id)->value('title')

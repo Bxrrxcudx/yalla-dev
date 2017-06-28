@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\PageFormRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Page;
@@ -12,6 +12,7 @@ class PagesController extends Controller
     public function index()
     {
         $pages = Page::withTrashed()->orderByDesc('created_at')->paginate(10);
+
         return view('admin.pages.list', compact('pages'));
 
     }
@@ -21,14 +22,16 @@ class PagesController extends Controller
         return view('admin.pages.add');
     }
 
-    public function store(Request $request)
+    public function store(PageFormRequest $request)
     {
         // inserts the data from POST
         Page::create($request->except(['_token']));
+
         // gets last insert id
         $id = DB::getPdo()->lastInsertId();
+
         // completes slug/meta/description fields in db
-        $this->completeNewsInsert($id, 'pages');
+        $this->completeInsert($id, 'pages');
 
         return redirect()->route('pages.index');
     }
@@ -40,10 +43,11 @@ class PagesController extends Controller
         return view('admin.pages.edit', compact('pages'));
     }
 
-    public function update(Request $request, $id)
+    public function update(PageFormRequest $request, $id)
     {
         $news = Page::findOrFail($id);
-        $news->fill($request->except(['_token']))->save();
+
+        $news->update($request->except(['_token']));
 
         return view('admin.pages.list', compact('pages'));
     }
@@ -65,7 +69,9 @@ class PagesController extends Controller
     public function destroy($id)
     {
         if ($data = Page::withTrashed()->where('id', $id)->exists() !== false) {
+
             Page::withTrashed()->where('id', $id)->forceDelete();
+
         }
 
         return redirect()->route('pages.index');

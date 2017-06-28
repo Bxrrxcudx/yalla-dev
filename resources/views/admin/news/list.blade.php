@@ -44,7 +44,7 @@
                                         <tr>
                                             <td><input type="checkbox"></td>
                                             <td class="mailbox-subject"><b><a
-                                                            href="{{ route('news.edit', ['news' => $article->id]) }}">{{ $article->title }}</a></b>
+                                                            href="{{ route('news.edit', $article->id) }}">{{ $article->title }}</a></b>
                                             <td class="mailbox-name">{{ $article->authors }}</td>
                                             <td class="mailbox-name">
                                                     {{ $article->category ? $article->category->name : 'Non' }}
@@ -53,7 +53,7 @@
                                             <td class="mailbox-date">{{ $article->created_at }}</td>
                                             <td class="mailbox-star">
                                                 @if(is_null($article->deleted_at))
-                                                    <form action="{{ route('news.trash', ['id' => $article->id]) }}"
+                                                    <form action="{{ route('news.trash', $article->id) }}"
                                                           method="POST">
                                                         {{ csrf_field() }}
                                                         <button type="submit" class="btn btn-primary btn-sm">
@@ -61,7 +61,7 @@
                                                         </button>
                                                     </form>
                                                 @else
-                                                    <form action="{{ route('news.restore', ['id' => $article->id]) }}"
+                                                    <form action="{{ route('news.restore', $article->id) }}"
                                                           method="POST">
                                                         {{ csrf_field() }}
                                                         <button type="submit" class="btn btn-success btn-sm">
@@ -71,7 +71,7 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                <form action="{{ route('news.destroy', ['news' => $article->id]) }}"
+                                                <form action="{{ route('news.destroy', $article->id) }}"
                                                       method="POST">
                                                     {{ csrf_field() }}
                                                     {{ method_field('DELETE') }}

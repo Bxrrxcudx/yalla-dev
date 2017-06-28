@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\NewsFormRequest;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\News;
@@ -15,6 +14,7 @@ class NewsController extends Controller
     public function index()
     {
         $news = News::withTrashed()->orderByDesc('created_at')->paginate(10);
+
         return view('admin.news.list', compact('news'));
     }
 
@@ -36,7 +36,7 @@ class NewsController extends Controller
         $id = DB::getPdo()->lastInsertId();
 
         // completes slug/meta/description fields in db
-        $this->completeNewsInsert($id, 'news');
+        $this->completeInsert($id, 'news');
 
         return redirect()->route('news.index');
     }
