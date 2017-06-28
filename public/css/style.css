@@ -1,0 +1,1051 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block; }
+
+body {
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif; }
+
+ol, ul {
+    list-style: none; }
+
+blockquote, q {
+    quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none; }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box; }
+
+li {
+    display: inline-block; }
+
+a {
+    text-decoration: none;
+    cursor: pointer; }
+
+/* -- clearfix
+--------------------------------------------------- */
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+.clearfix:after {
+    clear: both; }
+.clearfix {
+    zoom: 1; }
+
+/* -- Header & Burger menu
+--------------------------------------------------- */
+header {
+    display: flex;
+    align-items: center; }
+header h1 {
+    margin: 5%;
+    width: 20%; }
+header nav {
+    width: 70%; }
+header nav ul li {
+    margin: 0 2%;
+    padding: 2%; }
+header nav ul li:hover {
+    border-bottom: 4px solid #FF7152;
+    transition: .15s;
+    font-weight: 600;
+    margin: -4px 2%; }
+header nav ul li a {
+    color: #000;
+    font-size: 1.2em; }
+
+header .burger-menu {
+    display: none;
+    position: relative;
+    height: 40px;
+    width: 45px;
+    margin-right: 5%;
+    z-index: 5; }
+
+.rect1,
+.rect2,
+.rect3 {
+    height: 20%;
+    width: 100%;
+    background: #FF7152;
+    border-radius: 20px; }
+
+.rect1 {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.rect2 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); }
+
+.rect3 {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+
+.appear {
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding-top: 50%;
+    position: fixed; }
+
+@media screen and (max-width: 550px) {
+    header {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+    header h1 {
+        display: block;
+        width: 30%; }
+    header h1 img {
+        width: 60%; }
+    header .burger-menu {
+        display: block;
+        cursor: pointer; }
+    header nav {
+        position: absolute;
+        top: -103%;
+        width: 100%;
+        background: #000;
+        filter: opacity(80%);
+        transition: .5s ease-in-out;
+        height: 100vh; }
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+    header nav ul li {
+        margin-top: 5%; }
+    header nav ul li a {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.2em; } }
+/* -- Footer
+--------------------------------------------------- */
+footer {
+    text-align: center;
+    padding-top: 6%; }
+footer .newsletter {
+    background-color: #FF7152;
+    padding: 5% 0; }
+footer .newsletter p {
+    margin-bottom: 4%;
+    text-transform: uppercase; }
+footer .newsletter input[type="email"] {
+    width: 50%;
+    height: 35%;
+    padding: 15px;
+    background: white;
+    border-radius: 2px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8em;
+    box-shadow: -8px 8px grey; }
+footer .newsletter input[type="submit"] {
+    width: 17%;
+    height: 35%;
+    padding: 15px;
+    background: #979797;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8em;
+    font-weight: bolder; }
+footer .newsletter input[type="submit"]:hover {
+    background: #bbb;
+    cursor: pointer; }
+footer .socials {
+    background-color: #000; }
+footer .socials p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+    padding-top: 3%; }
+footer .socials div {
+    display: inline-block;
+    width: 15%;
+    height: 15%;
+    margin: 5%;
+    padding: 3%;
+    background: #fff;
+    border-radius: 100%/100%; }
+footer .socials div:hover {
+    background: #FF7152;
+    transition: .2s; }
+footer nav {
+    background: #000; }
+footer nav li {
+    font-weight: 200;
+    margin: 2%;
+    padding: 1%; }
+footer nav li:hover {
+    border-bottom: 4px solid #FF7152;
+    transition: .2s ease-in-out; }
+footer nav li:hover a {
+    font-weight: 600; }
+footer nav li a {
+    color: #fff; }
+
+@media screen and (min-width: 768px) {
+    footer {
+        padding-top: 0; }
+    footer .newsletter p {
+        font-size: 1.5em;
+        font-weight: bold; }
+    footer .newsletter form input[type="email"] {
+        width: 30%; }
+    footer .newsletter form input[type="submit"] {
+        width: 5%; }
+    footer .socials p {
+        padding-top: 1.5%; }
+    footer .socials div {
+        width: 5%;
+        height: 5%;
+        margin: 2%;
+        padding: 1%; }
+    footer .socials div a {
+        width: 100%; }
+    footer nav ul li {
+        margin: 1% 2%; } }
+@media screen and (min-width: 551px) {
+    footer input[type="submit"] {
+        width: 15%;
+        font-size: 1.5em; }
+    footer input[type="email"] {
+        font-size: 1.5em; } }
+/* -- HOME body
+--------------------------------------------------- */
+.home-body {
+    margin: 0 auto; }
+.home-body main {
+    text-align: center; }
+.home-body main section {
+    margin: 15% 0 0 0; }
+.home-body main section p {
+    margin: 0 15% 5% 15%;
+    line-height: 150%; }
+.home-body main section span {
+    font-weight: bold;
+    line-height: 200%;
+    color: #FF7152; }
+.home-body main .presentation {
+    position: relative;
+    margin: 5% 0 15% 0;
+    z-index: -1; }
+.home-body main .presentation img {
+    filter: contrast(40%);
+    width: 100%;
+    z-index: 0; }
+.home-body main .presentation h2 {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    z-index: 1;
+    color: #fff; }
+.home-body main .presentation a {
+    position: absolute;
+    bottom: 5%;
+    left: 70%;
+    background: #FF7152;
+    font: 0.8em "Oswald", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px;
+    border-radius: 1px;
+    padding: 3%; }
+.home-body main .separation {
+    height: 2px;
+    color: #979797; }
+.home-body main h2 {
+    text-align: center;
+    font: 1.5em "Oswald", sans-serif;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase; }
+.home-body main .picto {
+    width: 8%; }
+.home-body main .who a {
+    background: #FF7152;
+    font: 0.8em "Oswald", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px;
+    border-radius: 1px;
+    padding: 3%; }
+.home-body main .action .action-call img {
+    width: 100%; }
+.home-body main .action .action-call div {
+    padding: 1em;
+    border: 1em solid transparent;
+    background: -webkit-linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, #FF7152 0, #FF7152 12.5%, transparent 0, transparent 25%, #979797 0, #979797 37.5%, transparent 0, transparent 50%) 0/5em 5em; }
+.home-body main .action .action-call div a {
+    background: #FF7152;
+    font: 0.8em "Oswald", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px;
+    border-radius: 1px;
+    padding: 3%; }
+.home-body main .valeurs a {
+    background: #FF7152;
+    font: 0.8em "Oswald", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px;
+    border-radius: 1px;
+    padding: 3%; }
+.home-body main .actus div h2 {
+    margin-bottom: 4%; }
+.home-body main .actus div img {
+    width: 100%; }
+.home-body main .actus article h3 {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #FF7152;
+    margin-top: 4%; }
+.home-body main .actus a {
+    background: #FF7152;
+    font: 0.8em "Oswald", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px;
+    border-radius: 1px;
+    padding: 3%; }
+.home-body main .partenaires {
+    margin-bottom: 15%; }
+.home-body main .partenaires .partners div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+.home-body main .partenaires .partners div div {
+    width: 30%; }
+.home-body main .partenaires .partners div div a {
+    text-align: center; }
+.home-body main .partenaires .partners div div a img {
+    width: 80%; }
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+    .home-body header h1 {
+        margin: 5%;
+        font-size: 3em; } }
+.contact-body .contact {
+    position: relative; }
+.contact-body .contact img {
+    width: 100%; }
+.contact-body .coordo {
+    text-align: center;
+    margin: 10% 0 10% 0; }
+.contact-body .coordo .title {
+    position: absolute;
+    background-color: #FF7152;
+    height: 50px;
+    width: 50%;
+    top: 17%;
+    left: 2%; }
+.contact-body .coordo .title h2 {
+    font-family: "Oswald", sans-serif;
+    color: #fff;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 14px; }
+.contact-body .coordo .map iframe {
+    width: 90%;
+    height: 30vh; }
+.contact-body .coordo .postal {
+    width: 60%;
+    margin: 15% 0 0 20%;
+    padding-bottom: 7%;
+    border-bottom: 1px solid #000; }
+.contact-body .coordo .postal img {
+    width: 22%;
+    margin-bottom: 5%; }
+.contact-body .coordo .postal h3 {
+    margin-bottom: 4%;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #FF7152; }
+.contact-body .coordo .postal address {
+    font-family: "Open Sans", sans-serif; }
+.contact-body .coordo .email {
+    width: 60%;
+    margin: 10% 0 0 20%;
+    padding-bottom: 7%;
+    border-bottom: 1px solid #000; }
+.contact-body .coordo .email img {
+    width: 22%;
+    margin-bottom: 5%; }
+.contact-body .coordo .email p {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    line-height: 130%; }
+.contact-body .coordo .email .address-email {
+    margin-top: 8%;
+    color: #FF7152; }
+.contact-body .coordo .email button {
+    width: 60%;
+    height: 35px;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.8em;
+    margin-top: 10%;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid grey; }
+.contact-body .form-contact h2 {
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-bottom: 10%; }
+.contact-body .form-contact .formulaire {
+    margin-left: 20%; }
+.contact-body .form-contact .formulaire label {
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    color: #979797;
+    margin-bottom: 1%; }
+.contact-body .form-contact .formulaire input {
+    width: 65%;
+    height: 30px;
+    border: 1px solid #979797;
+    margin-bottom: 5%; }
+.contact-body .form-contact .formulaire textarea {
+    border: 1px solid #979797; }
+.contact-body .form-contact .btn-submit {
+    width: 40%;
+    height: 35px;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.8em;
+    margin: 5% 0 5% 30%;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid grey; }
+
+@media screen and (min-width: 481px) {
+    .contact-body main .contact img {
+        height: 70vh; }
+    .contact-body main .coordo {
+        margin: 0 0 5% 11%; }
+    .contact-body main .coordo .title {
+        width: 30%;
+        height: 10vh;
+        margin-top: -8%;
+        top: 80%;
+        left: 2%; }
+    .contact-body main .coordo .title h2 {
+        font-size: 1.8em; }
+    .contact-body main .coordo .map {
+        width: 60%;
+        margin: 5% 0 5% 13%; }
+    .contact-body main .coordo .map iframe {
+        width: 100%;
+        height: 60vh; }
+    .contact-body main .coordo .postal {
+        float: left;
+        width: 50%;
+        margin: 0;
+        border: none; }
+    .contact-body main .coordo .postal img {
+        width: 8%; }
+    .contact-body main .coordo .postal h3 {
+        font-size: 1.4em; }
+    .contact-body main .coordo .postal address {
+        font-size: 1.2em;
+        font-weight: bold; }
+    .contact-body main .coordo .email {
+        margin-top: 0%;
+        width: 50%; }
+    .contact-body main .coordo .email img {
+        width: 8%;
+        margin-bottom: 3%; }
+    .contact-body main .coordo .email p {
+        font-size: 1.2em; }
+    .contact-body main .coordo .email .address-email {
+        margin: 2% 0 0 0; }
+    .contact-body main .coordo .email button {
+        width: 55%;
+        height: 8vh;
+        font-size: 1.2em;
+        margin-top: 0%; }
+    .contact-body main .form-contact h2 {
+        margin-bottom: 5%; }
+    .contact-body main .form-contact .formulaire {
+        margin-left: 38%; }
+    .contact-body main .form-contact .formulaire label {
+        width: 15%;
+        height: 3vh;
+        margin-right: 0; }
+    .contact-body main .form-contact .formulaire input {
+        width: 40%;
+        height: 5vh;
+        margin-bottom: 2%; }
+    .contact-body main .form-contact .formulaire textarea {
+        border: 1px solid #979797;
+        margin-bottom: 3%;
+        width: 40%; }
+    .contact-body main .form-contact .btn-submit {
+        width: 20%;
+        height: 8vh;
+        font-size: 1.2em;
+        margin: 1% 0 5% 41%; } }
+.mission-body main {
+    text-align: center; }
+.mission-body main .title-mission img {
+    width: 22%;
+    margin: 5% 0; }
+.mission-body main .title-mission h3 {
+    margin-bottom: 10%; }
+.mission-body main .article-title {
+    margin-bottom: 4%;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #FF7152; }
+.mission-body main p {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10%;
+    font-family: "Open Sans", sans-serif; }
+.mission-body main button {
+    width: 35%;
+    height: 6vh;
+    background-color: #FF7152;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.9em;
+    margin: 5% 0 15% 0; }
+.mission-body main .element-mission {
+    width: 80%;
+    margin: 10% 0 0 10%;
+    border-bottom: 1px solid #979797; }
+.mission-body main .mission img {
+    width: 100%; }
+.mission-body main .mission .title {
+    position: absolute;
+    background-color: #FF7152;
+    height: 50px;
+    width: 50%;
+    top: 17%;
+    left: 2%; }
+.mission-body main .mission .title h2 {
+    font-family: "Oswald", sans-serif;
+    color: #fff;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 14px; }
+.mission-body main .action .all-actions img {
+    width: 18%;
+    margin-bottom: 5%; }
+.mission-body main .strategy {
+    padding-bottom: 5%; }
+.mission-body main .strategy .title-strategy {
+    width: 100%;
+    height: 10vh;
+    margin: 10% 0;
+    color: #fff;
+    background-color: #FF7152;
+    font-family: "Oswald", sans-serif; }
+.mission-body main .strategy .title-strategy h4 {
+    padding: 4% 0 1% 0;
+    font-size: 1.3em;
+    text-transform: uppercase; }
+.mission-body main .goal .part-goal {
+    padding-bottom: 5%; }
+.mission-body main .goal .part-goal img {
+    width: 18%; }
+.mission-body main .goal .part-goal h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin: 5% 0 2% 0; }
+.mission-body main .goal .part-goal h4 {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 10%; }
+
+@media screen and (min-width: 481px) {
+    .mission-body main .title-mission img {
+        width: 10%; }
+    .mission-body main .title-mission h3 {
+        font-size: 2em;
+        margin-bottom: 5%; }
+    .mission-body main button {
+        width: 20%;
+        height: 10vh;
+        font-size: 1.2em;
+        margin-bottom: 8%; }
+    .mission-body main .mission img {
+        height: 70vh; }
+    .mission-body main .mission .title {
+        width: 35%;
+        height: 10vh;
+        top: 65%; }
+    .mission-body main .mission .title h2 {
+        font-size: 1.8em; }
+    .mission-body main .action {
+        width: 60%;
+        margin: 2% 0 0 20%; }
+    .mission-body main .action .all-actions {
+        width: 90%;
+        margin-left: 2%; }
+    .mission-body main .action .all-actions img {
+        float: left;
+        width: 8%;
+        margin: 0; }
+    .mission-body main .action .all-actions p {
+        padding: 2% 0 0 15%; }
+    .mission-body main .strategy {
+        margin-top: 5%; }
+    .mission-body main .strategy .part-strategy {
+        border: 1px solid #979797;
+        width: 45%; }
+    .mission-body main .strategy .part-strategy .title-strategy {
+        margin-top: 0; }
+    .mission-body main .strategy .target-strategy, .mission-body main .strategy .united-strategy {
+        float: left; }
+    .mission-body main .strategy .target-strategy {
+        margin-left: 2.5%; }
+    .mission-body main .strategy .united-strategy {
+        margin-left: 5%;
+        padding-bottom: 1.6%; }
+    .mission-body main .strategy .action-strategy {
+        margin: 30% 0 0 27%; }
+    .mission-body main .goal {
+        margin-top: 5%; }
+    .mission-body main .goal .part-goal {
+        width: 20%;
+        margin-left: 10%;
+        float: left; }
+    .mission-body main .goal .part-goal img {
+        width: 24%; }
+    .mission-body main .goal .part-goal p {
+        text-align: left; }
+    .mission-body main .goal .help-goal {
+        margin-top: 2%; }
+    .mission-body main .goal .study-goal {
+        margin-top: 1%; }
+    .mission-body main .goal button {
+        margin-top: 0%; } }
+.presentation-body .presentation img {
+    width: 100%; }
+.presentation-body .presentation .title {
+    position: absolute;
+    background-color: #FF7152;
+    height: 50px;
+    width: 50%;
+    top: 17%;
+    left: 2%; }
+.presentation-body .presentation .title h2 {
+    font-family: "Oswald", sans-serif;
+    color: #fff;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 14px; }
+.presentation-body main {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto; }
+.presentation-body main section {
+    border-bottom: 1px solid #979797;
+    padding-bottom: 15%; }
+.presentation-body main section .title-pres h3 {
+    margin-bottom: 10%;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #FF7152; }
+.presentation-body main section p, .presentation-body main section ul, .presentation-body main section span {
+    text-align: left; }
+.presentation-body main section li {
+    margin-bottom: 5%; }
+.presentation-body main section span {
+    color: #FF7152; }
+.presentation-body main img {
+    width: 16%;
+    margin: 15% 0 10% 0; }
+.presentation-body main .whoweare p {
+    margin-bottom: 2%; }
+.presentation-body main .vision span {
+    display: block;
+    margin: 5% 0 2% 0; }
+
+@media screen and (min-width: 481px) {
+    .presentation-body .presentation img {
+        width: 100%;
+        height: 70vh; }
+    .presentation-body .presentation .title {
+        height: 10vh;
+        width: 35%;
+        top: 65%; }
+    .presentation-body .presentation .title h2 {
+        font-size: 1.8em;
+        margin-top: 5%; }
+    .presentation-body main section {
+        float: left;
+        width: 40%;
+        padding-bottom: 2%;
+        border: none; }
+    .presentation-body main section:nth-child(2n+1) {
+        margin-left: 5%; }
+    .presentation-body main section:nth-child(2n+2) {
+        margin-left: 10%; } }
+.actu-body .actu {
+    width: 100%; }
+.actu-body .actu img {
+    width: 100%;
+    height: 20vh; }
+.actu-body .actu .title {
+    position: absolute;
+    background-color: #FF7152;
+    height: 50px;
+    width: 50%;
+    top: 17%;
+    left: 2%; }
+.actu-body .actu .title h2 {
+    font-family: "Oswald", sans-serif;
+    color: #fff;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 14px; }
+.actu-body main {
+    width: 80%; }
+.actu-body main .article {
+    width: 100%;
+    margin: 10% 0 10% 13%;
+    border-bottom: 1px solid #979797; }
+.actu-body main .article:first-child {
+    margin-top: 15%; }
+.actu-body main .article h3 {
+    text-align: center;
+    color: #FF7152;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 5%; }
+.actu-body main .article img {
+    width: 100%;
+    margin-bottom: 5%; }
+.actu-body main .article p {
+    font-family: "Oswald", sans-serif;
+    margin-left: 3%; }
+.actu-body main .article .detail-article {
+    margin-top: 3%; }
+.actu-body main .article .detail-article img {
+    float: left;
+    width: 5%; }
+.actu-body main .article .detail-article img:first-child {
+    margin-left: 3%; }
+.actu-body main .article .detail-article span {
+    float: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.5em;
+    text-transform: uppercase;
+    margin: 1.2% 3% 0 1%; }
+.actu-body main .article button {
+    display: block;
+    width: 35%;
+    height: 6vh;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.9em;
+    margin: 15% 0 15% 32%; }
+
+@media screen and (min-width: 481px) {
+    .actu-body .actu img {
+        width: 100%;
+        height: 70vh; }
+    .actu-body .actu .title {
+        width: 35%;
+        height: 10vh;
+        top: 67%;
+        left: 2%; }
+    .actu-body .actu .title h2 {
+        font-size: 1.8em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 14px; }
+    .actu-body main {
+        margin: 0 auto; }
+    .actu-body main .article {
+        float: left;
+        width: 35%;
+        margin-bottom: 0; }
+    .actu-body main .article:nth-child(2n+1) {
+        margin: 10% 0 0 10%; }
+    .actu-body main .article h3 {
+        font-size: 1.3em; } }
+.member-body .member img {
+    width: 100%; }
+.member-body .member .title {
+    position: absolute;
+    background-color: #FF7152;
+    height: 50px;
+    width: 50%;
+    top: 20%;
+    left: 2%; }
+.member-body .member .title h2 {
+    font-family: "Oswald", sans-serif;
+    color: #fff;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 14px; }
+.member-body main {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto; }
+.member-body main section {
+    margin-top: 10%;
+    padding-bottom: 15%;
+    border-bottom: 1px solid #979797; }
+.member-body main section img {
+    width: 18%; }
+.member-body main section h3 {
+    margin: 7% 0 7% 0;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #FF7152; }
+.member-body main section p {
+    text-align: left; }
+.member-body main .new-member {
+    margin-top: 20%; }
+.member-body main .new-member img {
+    margin-bottom: 7%; }
+.member-body main .new-member p {
+    margin-bottom: 5%; }
+.member-body main .new-member address {
+    text-align: left;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 5%; }
+.member-body main .new-member .email {
+    color: #FF7152; }
+.member-body main .new-member button {
+    width: 50%;
+    border: none;
+    background-color: #fff; }
+.member-body main .new-member button a {
+    display: block;
+    width: 100%;
+    height: 6vh;
+    background-color: #FF7152;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2em;
+    margin: 10% 0 15% 5%;
+    padding-top: 5%; }
+.member-body main .download a {
+    color: #000;
+    text-decoration: underline; }
+
+@media screen and (min-width: 481px) {
+    .member-body .member img {
+        height: 70vh; }
+    .member-body .member .title {
+        width: 35%;
+        height: 10vh;
+        top: 66%; }
+    .member-body .member .title h2 {
+        font-size: 1.8em; }
+    .member-body main section {
+        float: left;
+        width: 45%;
+        border-bottom: none; }
+    .member-body main section img {
+        width: 18%; }
+    .member-body main section h3 {
+        margin: 7% 0 7% 0;
+        text-transform: uppercase;
+        font-family: "Oswald", sans-serif;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #FF7152; }
+    .member-body main section p {
+        text-align: left; }
+    .member-body main .new-member {
+        margin: 10% 0 0 10%;
+        padding: 0; }
+    .member-body main .new-member button a {
+        height: 7vh;
+        font-size: 1.3em; }
+    .member-body main .download {
+        border-top: 1px solid #979797;
+        margin: 0 0 0 30%; }
+    .member-body main .download h3 {
+        font-size: 1.6em; } }
+/* -- MENTIONS LEGALES body
+--------------------------------------------------- */
+.mentions-body main {
+    margin: 3% 5% 0 5%;
+    text-align: center; }
+.mentions-body main .mentions-title {
+    font: 2em "Oswald", sans-serif;
+    color: #FF7152;
+    border-bottom: 2px solid #FF7152; }
+.mentions-body main h2 {
+    text-align: center;
+    font: 1.5em "Oswald", sans-serif;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 4%; }
+.mentions-body main p {
+    margin-bottom: 5%;
+    line-height: 150%; }
+.mentions-body main p span {
+    font-weight: bold; }
+.mentions-body main div {
+    margin-bottom: 5%; }
+
+@media screen and (min-width: 768px) {
+    .mentions-body main p {
+        margin-bottom: 2%; } }
+/* -- Page NOS SUCCES
+--------------------------------------------------- */
+.succes-body main .presentation {
+    position: relative; }
+.succes-body main .presentation h2 {
+    background: #FF7152;
+    font: 0.8em "Oswald", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px;
+    border-radius: 1px;
+    padding: 3%;
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    font-size: 2em; }
+.succes-body main .presentation img {
+    width: 100%; }
+.succes-body main .about {
+    margin-top: 20%;
+    margin-bottom: 10%; }
+.succes-body main .about #about-div {
+    text-align: center;
+    width: 100%; }
+.succes-body main .about #about-div h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #FF7152;
+    margin-top: 4%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3%; }
+.succes-body main .about #about-div p {
+    margin: 0 15% 5% 15%;
+    line-height: 150%; }
+.succes-body main .about #about-div p span {
+    color: #FF7152;
+    font-weight: bold; }
+.succes-body main .proud {
+    text-align: center; }
+.succes-body main .proud h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #FF7152;
+    margin-top: 4%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3%; }
+.succes-body main .proud span {
+    display: block;
+    width: 100%;
+    font-family: "Oswald", sans-serif;
+    color: #979797;
+    font-size: 1.8em;
+    margin-bottom: 4%; }
+.succes-body main .proud .proud-img img {
+    width: 100%; }
+.succes-body main .proud .read-article {
+    margin-bottom: 5%; }
+.succes-body main .proud .read-article p {
+    margin: 4% 15% 5% 15%;
+    line-height: 150%; }
+.succes-body main .proud .read-article a {
+    background: #FF7152;
+    font: 0.8em "Oswald", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px;
+    border-radius: 1px;
+    padding: 3%; }
+
+@media screen and (min-width: 768px) {
+    .succes-body .presentation img {
+        width: 20%; }
+    .succes-body h2 {
+        font-size: 2.5em; }
+    .succes-body .about {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start; }
+    .succes-body .about div {
+        width: 100%; }
+    .succes-body .proud div {
+        width: 100%; }
+    .succes-body .proud div img {
+        width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */
