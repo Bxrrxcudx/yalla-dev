@@ -36,20 +36,20 @@
                                     @foreach ($pages as $page)
                                         <tr>
                                             <td><input type="checkbox"></td>
-                                            <td class="mailbox-subject"><b><a href="{{ route('pages.edit', ['pages' => $page->id]) }}">{{ $page->title }}</a></b>
+                                            <td class="mailbox-subject"><b><a href="{{ route('pages.edit', $page->id) }}">{{ $page->title }}</a></b>
                                             <td class="mailbox-name">{{ $page->slug ?: 'Non spécifié' }}</td>
                                             </td>
                                             <td class="mailbox-date">{{ $page->description }}</td>
                                             <td class="mailbox-star">
                                                 @if(is_null($page->deleted_at))
-                                                    <form action="{{ route('pages.trash', ['id' => $page->id]) }}" method="POST">
+                                                    <form action="{{ route('pages.trash', $page->id) }}" method="POST">
                                                         {{ csrf_field() }}
                                                         <button type="submit" class="btn btn-primary btn-sm">
                                                             Dépublier
                                                         </button>
                                                     </form>
                                                 @else
-                                                    <form action="{{ route('pages.restore', ['id' => $page->id]) }}" method="POST">
+                                                    <form action="{{ route('pages.restore', $page->id) }}" method="POST">
                                                         {{ csrf_field() }}
                                                         <button type="submit" class="btn btn-success btn-sm">
                                                             Publier
@@ -58,7 +58,7 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                <form action="{{ route('pages.destroy', ['pages' => $page->id]) }}" method="POST">
+                                                <form action="{{ route('pages.destroy', $page->id) }}" method="POST">
                                                     {{ csrf_field() }}
                                                     {{ method_field('DELETE') }}
                                                     <button type="submit" class="btn btn-danger btn-sm">

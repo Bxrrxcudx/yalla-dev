@@ -60,13 +60,13 @@
                                     @foreach ($msgs as $msg)
                                         <tr>
                                             <td><input type="checkbox"></td>
-                                            <td class="mailbox-subject"><b><a href="{{ route('messages.show', ['message' => $msg->id]) }}">{{ $msg->subject }}</a></b>
+                                            <td class="mailbox-subject"><b><a href="{{ route('messages.show', $msg->id) }}">{{ $msg->subject }}</a></b>
                                             <td class="mailbox-name">{{ $msg->first_name }} {{ $msg->last_name }}</td>
                                             </td>
                                             <td class="mailbox-date">{{ $msg->sent_date }}</td>
                                             <td class="mailbox-star">
 
-                                                <form action="{{ route('messages.trash', ['id' => $msg->id]) }}" method="POST">
+                                                <form action="{{ route('messages.trash', $msg->id) }}" method="POST">
                                                     {{ csrf_field() }}
                                                     <button type="submit" class="btn btn-default btn-sm">
                                                         <i class="fa fa-trash-o"></i>

@@ -15,12 +15,10 @@
         </section>
         <section class="content">
             <div class="row">
-                <div class="col-xs-12">
-                    @include('admin.errors')
-                </div>
+                @include('admin.errors')
                 <form action="{{ route('news.store') }}" method="POST">
                     {{ csrf_field() }}
-                    <div class="col-xs-9">
+                    <div class="col-md-9">
                         <div class="box box-primary">
                             <div class="box-body">
 

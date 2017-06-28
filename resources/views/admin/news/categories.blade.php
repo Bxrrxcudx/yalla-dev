@@ -48,7 +48,7 @@
                                                 </a>
                                             </td>
                                             <td>
-                                                <form action="{{ route('categories.destroy', ['category' => $category->id]) }}" method="POST">
+                                                <form action="{{ route('categories.destroy', $category->id) }}" method="POST">
                                                     {{ csrf_field() }}
                                                     {{ method_field('DELETE') }}
                                                     <button type="submit" class="btn btn-danger btn-sm">
