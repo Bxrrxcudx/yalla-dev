@@ -47,8 +47,7 @@ Route::group([
         Route::post('pages/{id}/restore', 'PagesController@restore')->name('pages.restore');
 
         // Subscribers
-        Route::get('subscribers', 'SubscribersController@index');
-        Route::get('subscribers/add', 'SubscribersController@store');
+        Route::resource('subscribers', 'SubscribersController');
     }
 );
 		
