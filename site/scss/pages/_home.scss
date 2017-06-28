@@ -1,43 +1,141 @@
 /* -- HOME body
 --------------------------------------------------- */
 .home-body {
-	/* header {
-		nav {
+	margin: 0 auto;
+	main {
 		text-align: center;
-    	width: 100%;
-			ul li {
-			    display: inline-block;
-			    padding: 30px;
-			    font: #000 bold 1.8em/1.5em;
-			    text-transform: uppercase;
-			    a {
-			    	text-decoration: none;
-				    color: #000;
-				    cursor: pointer;
-			    }
+		section {
+			margin: 15% 0 0 0;
+			p {
+				margin: 0 15% 5% 15%;
+				line-height: 150%;
+			}
+			span {
+				font-weight: bold;
+				line-height: 200%;
+				color: $orange;
 			}
 		}
-	} */
-	main {
 		.presentation {
-			background-image: url('../img-layout/background-home.png');
-			background-size: cover;
-			height: 20vh;
-
+			position: relative;
+			margin: 5% 0 15% 0;
+			z-index: -1;
+			img {
+				filter: contrast(40%);
+				width: 100%;
+				z-index: 0;
+			}
+			h2 {
+				position: absolute;
+				top: 30%;
+				left: 5%;
+				z-index: 1;
+				color: $white;
+			}
 			a {
+				position: absolute;
+				bottom: 5%;
+				left: 70%;
 				@include cta;
 			}	
 		}
+		.separation {
+			height: 2px;
+			color: $grey;
+		}
 		h2 {
-			text-align: center;
-			font: 1.5em $oswald;
-			color: $orange;
-			text-transform: uppercase;
+			@include customh2;			
+		}
+		.picto {
+			width: 8%;
 		}
 		.who {
 			a {
 				@include cta;
 			}
 		}
+		.conflit {
+		}
+		.action {
+			.action-desc {
+				img {				
+				}
+			}
+			.action-call {
+				img {
+					width: 100%;
+				}
+				div {
+					padding: 1em;
+					border: 1em solid transparent;
+					background: -webkit-linear-gradient(white, white) padding-box,
+					repeating-linear-gradient(-45deg, $orange 0, $orange 12.5%,
+						transparent 0, transparent 25%,
+						$grey 0, $grey 37.5%,
+						transparent 0, transparent 50%)
+						0 / 5em 5em;
+					a {
+						@include cta;
+					}					
+				}
+			}
+		}
+		.valeurs {
+			a {
+				@include cta;
+			}
+		}
+		.actus {
+			div {
+				h2 {
+					margin-bottom: 4%;
+				}
+				img {
+					width: 100%;
+				}
+			}
+			article {				
+				h3 {
+					font-weight: bold;
+					font-size: 1.2em;
+					color: $orange;
+					margin-top: 4%;
+				}
+			}		
+			a {
+				@include cta;
+			}
+		}
+		.partenaires {
+			margin-bottom: 15%;
+			.partners{
+				div {
+					width: 100%;
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					div {
+						width: 30%;
+						a {
+							text-align: center;
+							img {
+								width: 80%;
+							}
+						}
+					}	
+				}
+			}
+		}
 	}
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+	.home-body {
+		header {
+			h1 {
+				margin: 5%;
+				font-size: 3em;
+			}			
+		}
+	}   
 }
