@@ -1,0 +1,97 @@
+/* -- Page NOS SUCCES
+--------------------------------------------------- */
+.succes-body {
+	main {
+		.presentation {
+			position: relative;
+			h2 {
+				@include cta;
+				position: absolute;
+				bottom: -20%;
+				left: 0;
+				font-size: 2em;
+			}
+			img {
+				width: 100%;
+			}			
+		}
+		.about {
+			margin-top: 20%;
+			margin-bottom: 10%;
+			#about-div {
+				text-align: center;
+				width: 100%;
+				h3 {					
+					@include customh3;
+				}
+				p {
+					margin: 0 15% 5% 15%;
+					line-height: 150%;
+					span {
+						color: $orange;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		.proud{
+			text-align: center;
+			h3 {
+				@include customh3;
+			}
+			span {
+				display: block;
+				width: 100%;
+				font-family: $oswald;
+				color: $grey;
+				font-size: 1.8em;
+				margin-bottom: 4%;
+
+			}
+			.proud-img {
+				img {
+					width: 100%;
+				}				
+			}
+			.read-article {
+				margin-bottom: 5%;
+				p {
+					margin: 4% 15% 5% 15%;
+					line-height: 150%;
+				}
+				a {
+					@include cta;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.succes-body {
+		.presentation {
+			img {
+				width: 20%;
+			}
+		}
+		h2 {
+			font-size: 2.5em;
+		}
+		.about {
+			display: flex;
+			justify-content: space-around;
+			align-items: flex-start;
+			div {
+				width: 100%;
+			}
+		}
+		.proud {
+			div {
+				width: 100%;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
