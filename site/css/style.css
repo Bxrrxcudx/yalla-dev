@@ -68,7 +68,7 @@ a {
 .clearfix {
   zoom: 1; }
 
-/* -- Burger menu
+/* -- Header & Burger menu
 --------------------------------------------------- */
 header {
   display: flex;
@@ -126,7 +126,8 @@ header .burger-menu {
   top: 0;
   z-index: 1;
   width: 100%;
-  padding-top: 50%; }
+  padding-top: 50%;
+  position: fixed; }
 
 @media screen and (max-width: 550px) {
   header {
@@ -144,7 +145,7 @@ header .burger-menu {
       cursor: pointer; }
     header nav {
       position: absolute;
-      top: -100%;
+      top: -103%;
       width: 100%;
       background: #000;
       filter: opacity(80%);
@@ -304,6 +305,81 @@ header .burger-menu {
 @media screen and (min-width: 768px) {
   .mentions-body main p {
     margin-bottom: 2%; } }
+/* -- Page NOS SUCCES
+--------------------------------------------------- */
+.succes-body main .presentation h2 {
+  text-align: center;
+  font: 1.5em "Oswald", sans-serif;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase; }
+.succes-body main .presentation img {
+  width: 100%; }
+.succes-body main .about {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; }
+  .succes-body main .about div {
+    text-align: center; }
+    .succes-body main .about div h3 {
+      font-family: "Oswald", sans-serif;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #FF7152;
+      margin-top: 4%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 3%; }
+    .succes-body main .about div p {
+      margin: 0 15% 5% 15%;
+      line-height: 150%; }
+      .succes-body main .about div p span {
+        color: #FF7152;
+        font-weight: bold; }
+.succes-body main .who h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #FF7152;
+  margin-top: 4%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 3%; }
+.succes-body main .who div p {
+  margin: 0 15% 5% 15%;
+  line-height: 150%; }
+  .succes-body main .who div p span {
+    font-weight: bold;
+    color: #FF7152; }
+.succes-body main .proud {
+  text-align: center; }
+  .succes-body main .proud h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #FF7152;
+    margin-top: 4%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3%; }
+  .succes-body main .proud span {
+    display: block;
+    width: 100%;
+    font-family: "Oswald", sans-serif;
+    color: #FF7152;
+    font-size: 1.8em; }
+  .succes-body main .proud div p {
+    margin: 0 15% 5% 15%;
+    line-height: 150%; }
+    .succes-body main .proud div p a {
+      background: #FF7152;
+      font: 0.8em "Oswald", sans-serif;
+      text-transform: uppercase;
+      color: #fff;
+      border: 1px;
+      border-radius: 1px;
+      padding: 3%; }
+
 /* -- Footer
 --------------------------------------------------- */
 footer {

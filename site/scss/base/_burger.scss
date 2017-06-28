@@ -1,4 +1,4 @@
-/* -- Burger menu
+/* -- Header & Burger menu
 --------------------------------------------------- */
 header {
     display: flex;
@@ -6,8 +6,6 @@ header {
     h1 {
         margin: 5%;
         width: 20%;
-        img {
-        }
     }
     nav {
         width: 70%;
@@ -72,6 +70,7 @@ header .burger-menu {
     z-index: 1;
     width: 100%;
     padding-top: 50%;
+    position: fixed;
 }
 
 @media screen and (max-width: 550px) {
@@ -93,7 +92,7 @@ header .burger-menu {
         }
         nav {
             position: absolute;
-            top: -100%;
+            top: -103%;
             width: 100%;
             background: $black;
             filter: opacity(80%);

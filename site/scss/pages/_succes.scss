@@ -1,0 +1,71 @@
+/* -- Page NOS SUCCES
+--------------------------------------------------- */
+.succes-body {
+	main {
+		.presentation {
+			h2 {
+				@include customh2;
+			}
+			img {
+				width: 100%;
+			}			
+		}
+		.about {
+			display: flex;
+			justify-content: space-around;
+			align-items: flex-start;
+			div {
+				text-align: center;
+				h3 {					
+					@include customh3;
+				}
+				p {
+					margin: 0 15% 5% 15%;
+					line-height: 150%;
+					span {
+						color: $orange;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		.who{
+			h3 {
+				@include customh3;
+			}
+			div {
+				p {
+					margin: 0 15% 5% 15%;
+					line-height: 150%;
+					span {
+						font-weight: bold;
+						color: $orange;
+					}
+				}
+			}
+		}
+		.proud{
+			text-align: center;
+			h3 {
+				@include customh3;
+			}
+			span {
+				display: block;
+				width: 100%;
+				font-family: $oswald;
+				color: $orange;
+				font-size: 1.8em;
+
+			}
+			div {
+				p {
+					margin: 0 15% 5% 15%;
+					line-height: 150%;
+					a {
+						@include cta;
+					}
+				}
+			}
+		}
+	}
+}

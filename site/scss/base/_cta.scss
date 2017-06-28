@@ -15,3 +15,14 @@
 	font-weight: bold;
 	text-transform: uppercase;
 }
+
+@mixin customh3 {
+	font-family: $oswald;
+	font-weight: bold;
+	font-size: 1.2em;
+	color: $orange;
+	margin-top: 4%;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 3%;
+}
