@@ -17,7 +17,7 @@ footer {
 			background: rgba(255,255,255,1);
 			border-radius: 2px;
 			font-family: $opensans;
-			font-size: 1.2em;
+			font-size: 0.8em;
 			box-shadow: -8px 8px grey;
 		}
 		input[type="submit"]{
@@ -27,7 +27,7 @@ footer {
 			background: $grey;
 			color: $white;
 			font-family: $opensans;
-			font-size: 1.2em;
+			font-size: 0.8em;
 			font-weight: bolder;
 			&:hover {
 				background: #bbb;
@@ -122,6 +122,10 @@ footer {
 	footer {
 		input[type="submit"]{
 			width: 15%;
+			font-size: 1.5em;
+		}
+		input[type="email"]{
+			font-size: 1.5em;
 		}
 	}
 }
