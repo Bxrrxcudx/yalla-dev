@@ -23,7 +23,9 @@ class CreateNewsTable extends Migration
             $table->text('description');
             $table->text('content');
             $table->string('thumbnail');
+            $table->string('tags');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

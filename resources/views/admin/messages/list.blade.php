@@ -43,15 +43,6 @@
                     <div class="box box-primary">
                         <div class="box-header with-border">
                             <h3 class="box-title">Inbox</h3>
-                            <!-- barre de rechercher mails
-                            <div class="box-tools pull-right">
-                                <div class="has-feedback">
-                                    <input type="text" class="form-control input-sm" placeholder="Search Mail">
-                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                                </div>
-                            </div>
-                            -->
-                            <!-- /.box-tools -->
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body no-padding">
@@ -69,13 +60,13 @@
                                     @foreach ($msgs as $msg)
                                         <tr>
                                             <td><input type="checkbox"></td>
-                                            <td class="mailbox-subject"><b><a href="{{ route('messages.show', ['message' => $msg->id]) }}">{{ $msg->subject }}</a></b>
+                                            <td class="mailbox-subject"><b><a href="{{ route('messages.show', $msg->id) }}">{{ $msg->subject }}</a></b>
                                             <td class="mailbox-name">{{ $msg->first_name }} {{ $msg->last_name }}</td>
                                             </td>
                                             <td class="mailbox-date">{{ $msg->sent_date }}</td>
                                             <td class="mailbox-star">
 
-                                                <form action="{{ route('messages.trash', ['id' => $msg->id]) }}" method="POST">
+                                                <form action="{{ route('messages.trash', $msg->id) }}" method="POST">
                                                     {{ csrf_field() }}
                                                     <button type="submit" class="btn btn-default btn-sm">
                                                         <i class="fa fa-trash-o"></i>

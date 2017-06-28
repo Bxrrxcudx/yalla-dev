@@ -11,9 +11,16 @@ class SubscribersController extends Controller
 {
     public function index()
     {
-        $data = Subscriber::all();
+        $data = Subscriber::get();
 
-        return view('admin.subscribers', ['data' => $data]);
+        return view('admin.subscribers.list', ['data' => $data]);
 
+    }
+
+    public function show($id)
+    {
+        $data = Subscriber::findOrFail($id);
+
+        return view('admin.subscribers.read', compact('data'));
     }
 }

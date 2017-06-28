@@ -19,7 +19,7 @@ class PagesTableSeeder extends Seeder
                 'meta-robot' => 'meta-robot no '.$i,
                 'slug' => 'slug No : '.$i,
                 'description' => str_random(50),
-                'content' => str_random(250),
+                'content' => str_random(10).''.str_random(10).''.str_random(10),
             ]);
             $i++;
         }
