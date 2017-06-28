@@ -10,6 +10,29 @@ footer {
 			margin-bottom: 4%;
 			text-transform: uppercase;
 		}
+		input[type="email"]{
+			width: 50%;
+			height: 35%;
+			padding: 15px;
+			background: rgba(255,255,255,0.5);
+			border-radius: 2px;
+			font-family: $opensans;
+			font-size: 1.2em;
+			box-shadow: -8px 8px grey;
+		}
+		input[type="submit"]{
+			width: 17%;
+			height: 35%;
+			padding: 15px;
+			background: $grey;
+			color: $white;
+			font-family: $opensans;
+			font-size: 1.2em;
+			&:hover {
+				background: #bbb;
+				cursor: pointer;
+			}
+		}
 	}
 	.socials {
 		background-color: $black;
@@ -27,20 +50,77 @@ footer {
 			padding: 3%;
 			background: $white;
 			border-radius: 100%/100%;
-			img {
-				/* width: 50%; */
+			&:hover {
+				background: $orange;
+				transition: .2s;
 			}
 		}
 	}
 	nav {
 		background: $black;
-
 		li {
 			font-weight: 200;
-			margin: 5%;
+			margin: 2%;
+			padding: 1%;
+			&:hover {
+				border: 3px dotted $orange;
+                transition: .2s ease-in-out;
+                a {
+                	font-weight: 600;
+                }
+			}
 			a {
 				color: $white;				
 			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	footer {
+		padding-top: 0;
+		.newsletter {
+			p {
+				font-size: 1.5em;
+				font-weight: bold;
+			}
+			form {
+				input[type="email"]{
+					width: 30%;
+				}
+				input[type="submit"]{
+					width: 5%;
+				}
+			}
+		}
+		.socials{
+			p {
+				padding-top: 1.5%;
+			}
+			div {
+				width: 5%;
+				height: 5%;
+				margin: 2%;
+				padding: 1%;
+				a {
+					width: 100%;
+				}
+			}
+		}
+		nav {
+			ul {
+				li {
+					margin: 1% 2%;
+				}					
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 551px){
+	footer {
+		input[type="submit"]{
+			width: 15%;
 		}
 	}
 }

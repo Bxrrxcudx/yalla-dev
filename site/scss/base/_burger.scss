@@ -1,19 +1,25 @@
 /* -- Burger menu
 --------------------------------------------------- */
 header {
-    display: inline-block;
-    /* position: fixed;
- */    h1 {
+    display: flex;
+    align-items: center;
+    h1 {
         margin: 5%;
         width: 20%;
         img {
         }
     }
     nav {
-        width: 80%;
+        width: 70%;
         ul {
             li {
-                margin: 0 4%;
+                margin: 0 2%;
+                padding: 2%;
+                &:hover {
+                    border: 3px dotted $orange;
+                    transition: .2s;
+                    font-weight: 600;
+                }
                 a {
                     color: $black;
                     font-size: 1.2em;
@@ -75,7 +81,7 @@ header .burger-menu {
         align-items: center;
         h1 {
             display: block;
-            width: 50%;
+            width: 30%;
             img {
                 width: 60%;
             }

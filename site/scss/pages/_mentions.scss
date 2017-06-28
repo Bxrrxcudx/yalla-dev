@@ -4,6 +4,11 @@
 	main {
 		margin: 3% 5% 0 5%;
 		text-align: center;
+		.mentions-title {
+			font: 2em $oswald;
+			color: $orange;
+			border-bottom: 2px solid $orange;
+		}
 		h2 {
 			@include customh2;
 			margin-bottom: 4%;
