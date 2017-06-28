@@ -24,8 +24,8 @@ class NewsFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|between:1,140',
-            'authors' => 'nullable|max:30',
+            'title' => 'required|string|between:1,140',
+            'authors' => 'required|string|max:30',
             'content' => 'required',
             'category_id' => 'required',
             'tags_list[]' => 'nullable'
