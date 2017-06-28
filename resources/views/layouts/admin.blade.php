@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,6 +39,11 @@
 
     <!-- TinyMCE WYSIWYG -->
     <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+
+    <!-- Select2.js -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini fixed">
 <div class="wrapper">
@@ -440,5 +445,9 @@
     <script src="{{ asset('dist/js/demo.js') }}"></script>
     <!-- Custom TinyMCE WYSIWYG -->
     <script src="{{ asset('dist/js/tiny.js') }}"></script>
+    <!-- Select2.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+@yield('scripts')
 </body>
 </html>

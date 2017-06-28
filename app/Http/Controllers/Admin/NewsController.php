@@ -13,7 +13,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::withTrashed()->orderByDesc('created_at')->paginate(10);
+        $news = News::withTrashed()->with('category')->orderByDesc('created_at')->paginate(10);
 
         return view('admin.news.list', compact('news'));
     }
@@ -29,14 +29,15 @@ class NewsController extends Controller
 
     public function store(NewsFormRequest $request)
     {
-        // inserts the data from POST
-        News::create($request->except(['_token']));
 
-        // gets last insert id
-        $id = DB::getPdo()->lastInsertId();
+        // inserts the data from POST
+        $news = News::create($request->except(['_token', 'tags_list']));
+
+
+        $news->syncTags($news, $request->input('tags_list'));
 
         // completes slug/meta/description fields in db
-        $this->completeInsert($id, 'news');
+        $this->completeInsert($news->id, 'news');
 
         return redirect()->route('news.index');
     }
@@ -49,14 +50,20 @@ class NewsController extends Controller
 
         $tags = Tag::pluck('name', 'id');
 
-        return view('admin.news.edit', compact('news', 'categories', 'tags'));
+        $tagIds = array_pluck($news->tags->toArray(), 'id');
+
+
+        return view('admin.news.edit', compact('news', 'categories', 'tags', 'tagIds'));
     }
 
     public function update(NewsFormRequest $request, $id)
     {
+
         $news = News::findOrFail($id);
 
-        $news->update($request->except(['_token']));
+        $news->update($request->except(['_token', 'tags_list']));
+
+        $news->syncTags($news, $request->input('tags_list'));
 
         return redirect()->route('news.index');
     }
