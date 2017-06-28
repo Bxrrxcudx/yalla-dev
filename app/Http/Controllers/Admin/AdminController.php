@@ -24,7 +24,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        $user = Auth::user()->first()->getAttributes();
+        return view('admin.home', compact('user'));
     }
 
     public function logout()
