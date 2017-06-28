@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -27,32 +26,28 @@ Route::group([
         Route::get('logout', 'AdminController@logout');
 
         // Messages
-        Route::resource('messages', 'MessagesController', ['except' => [
-            'create', 'edit', 'update'
-        ]]);
+        Route::resource('messages', 'MessagesController', ['except' => ['create', 'edit', 'update']]);
         Route::post('messages/{id}', 'MessagesController@trash')->name('messages.trash');
-        Route::get('messages-trashed',
-                    'MessagesController@showTrashed')->name('messages.trashed');
+        Route::get('messages-trashed', 'MessagesController@showTrashed')->name('messages.trashed');
 
-        // Newsletter
-        Route::get('newsletter', 'NewslettersController@index');
-        Route::get('newsletter/{id}', 'NewslettersController@show');
-        Route::get('newsletter/add', 'NewslettersController@store');
-        Route::get('newsletter/edit/{id}', 'NewslettersController@index');
+        // Abonnés Newsletter
+        Route::get('newsletters', 'NewslettersController@index')->name('newsletters.index');
 
         // Actualites
-        Route::get('news', 'NewsController@index');
-        Route::get('news/add', 'NewsController@store');
-        Route::get('news/edit/{id}', 'NewsController@index');
+        Route::resource('news', 'NewsController', ['except' => ['show']]);
+        Route::post('news/{id}/trash', 'NewsController@trash')->name('news.trash');
+        Route::post('news/{id}/restore', 'NewsController@restore')->name('news.restore');
+
+        // Catégories
+        Route::resource('categories', 'CategoriesController', ['except' => ['create', 'show']]);
 
         // Page
-        Route::get('page', 'PagesController@index');
-        Route::get('page/add', 'PagesController@store');
-        Route::get('page/edit/{id}', 'PagesController@index');
+        Route::resource('pages', 'PagesController', ['except' => ['show']]);
+        Route::post('pages/{id}/trash', 'PagesController@trash')->name('pages.trash');
+        Route::post('pages/{id}/restore', 'PagesController@restore')->name('pages.restore');
 
         // Subscribers
-        Route::get('subscribers', 'SubscribersController@index');
-        Route::get('subscribers/add', 'SubscribersController@store');
+        Route::resource('subscribers', 'SubscribersController');
     }
 );
 		

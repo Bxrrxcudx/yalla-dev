@@ -12,13 +12,12 @@ class NewsTableSeeder extends Seeder
     public function run()
     {
         $i = 1;
-        while($i < 11){
+        while($i < 15){
             DB::table('news')->insert([
-                'title' => str_random(10),
-                'authors' => "blabla",
-                'slug' => str_random(10).'@gmail.com',
-                'description' => 'Subject no '.$i,
-                'content' => str_random(255),
+                'title' => 'Titre no. ' . $i,
+                'authors' => 'Yalla Enfants',
+                'description' => 'Description no. '.$i,
+                'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consectetur deserunt doloremque dolores, eaque eos eum inventore minima mollitia nam nihil non odit possimus quae ratione reiciendis temporibus vitae voluptate.'
             ]);
             $i++;
         }

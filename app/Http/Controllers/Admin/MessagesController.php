@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ContactFormRequest;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
 use App\Message;
 
 
@@ -18,16 +18,10 @@ class MessagesController extends Controller
 
     }
 
-    public function create()
-    {
-
-
-    }
-
     public function store(Request $request)
     {
 
-        DB::table('messages')->insert($request->except(['_token']));
+        Message::create($request->except(['_token']));
 
         return redirect()->route('messages.index');
     }
@@ -57,8 +51,11 @@ class MessagesController extends Controller
 
     public function destroy($id)
     {
+        if ($data = Message::withTrashed()->where('id', $id)->exists() !== false) {
 
-        Message::where('id', $id)->forceDelete();
+            Message::withTrashed()->where('id', $id)->forceDelete();
+
+        }
 
         return redirect()->route('messages.trashed');
 
