@@ -82,9 +82,10 @@ header {
       margin: 0 2%;
       padding: 2%; }
       header nav ul li:hover {
-        border: 3px dotted #FF7152;
-        transition: .2s;
-        font-weight: 600; }
+        border-bottom: 4px solid #FF7152;
+        transition: .15s;
+        font-weight: 600;
+        margin: -4px 2%; }
       header nav ul li a {
         color: #000;
         font-size: 1.2em; }
@@ -318,7 +319,7 @@ footer {
       width: 50%;
       height: 35%;
       padding: 15px;
-      background: rgba(255, 255, 255, 0.5);
+      background: white;
       border-radius: 2px;
       font-family: "Open Sans", sans-serif;
       font-size: 1.2em;
@@ -330,7 +331,8 @@ footer {
       background: #979797;
       color: #fff;
       font-family: "Open Sans", sans-serif;
-      font-size: 1.2em; }
+      font-size: 1.2em;
+      font-weight: bolder; }
       footer .newsletter input[type="submit"]:hover {
         background: #bbb;
         cursor: pointer; }
@@ -359,7 +361,7 @@ footer {
       margin: 2%;
       padding: 1%; }
       footer nav li:hover {
-        border: 3px dotted #FF7152;
+        border-bottom: 4px solid #FF7152;
         transition: .2s ease-in-out; }
         footer nav li:hover a {
           font-weight: 600; }

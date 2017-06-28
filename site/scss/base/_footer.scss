@@ -14,7 +14,7 @@ footer {
 			width: 50%;
 			height: 35%;
 			padding: 15px;
-			background: rgba(255,255,255,0.5);
+			background: rgba(255,255,255,1);
 			border-radius: 2px;
 			font-family: $opensans;
 			font-size: 1.2em;
@@ -28,6 +28,7 @@ footer {
 			color: $white;
 			font-family: $opensans;
 			font-size: 1.2em;
+			font-weight: bolder;
 			&:hover {
 				background: #bbb;
 				cursor: pointer;
@@ -63,7 +64,7 @@ footer {
 			margin: 2%;
 			padding: 1%;
 			&:hover {
-				border: 3px dotted $orange;
+				border-bottom: 4px solid $orange;
                 transition: .2s ease-in-out;
                 a {
                 	font-weight: 600;

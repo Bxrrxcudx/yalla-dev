@@ -16,9 +16,10 @@ header {
                 margin: 0 2%;
                 padding: 2%;
                 &:hover {
-                    border: 3px dotted $orange;
-                    transition: .2s;
+                    border-bottom: 4px solid $orange;
+                    transition: .15s;
                     font-weight: 600;
+                    margin: -4px 2%;
                 }
                 a {
                     color: $black;
