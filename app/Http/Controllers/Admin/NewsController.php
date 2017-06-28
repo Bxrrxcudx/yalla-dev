@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\NewsFormRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\News;
 use App\Category;
+use App\Tag;
 
 class NewsController extends Controller
 {
@@ -20,15 +22,19 @@ class NewsController extends Controller
     {
         $categories = Category::pluck('name', 'id');
 
-        return view('admin.news.add', compact('categories'));
+        $tags = Tag::pluck('name', 'id');
+
+        return view('admin.news.add', compact('categories', 'tags'));
     }
 
-    public function store(Request $request)
+    public function store(NewsFormRequest $request)
     {
         // inserts the data from POST
         News::create($request->except(['_token']));
+
         // gets last insert id
         $id = DB::getPdo()->lastInsertId();
+
         // completes slug/meta/description fields in db
         $this->completeNewsInsert($id, 'news');
 
@@ -37,16 +43,20 @@ class NewsController extends Controller
 
     public function edit($id)
     {
-        $news = News::findOrFail($id);
+        $news = News::withTrashed()->findOrFail($id);
+
         $categories = Category::pluck('name', 'id');
 
-        return view('admin.news.edit', compact('news', 'categories'));
+        $tags = Tag::pluck('name', 'id');
+
+        return view('admin.news.edit', compact('news', 'categories', 'tags'));
     }
 
-    public function update(Request $request, $id)
+    public function update(NewsFormRequest $request, $id)
     {
         $news = News::findOrFail($id);
-        $news->fill($request->except(['_token']))->save();
+
+        $news->update($request->except(['_token']));
 
         return redirect()->route('news.index');
     }
@@ -68,7 +78,9 @@ class NewsController extends Controller
     public function destroy($id)
     {
         if ($data = News::withTrashed()->where('id', $id)->exists() !== false) {
+
             News::withTrashed()->where('id', $id)->forceDelete();
+
         }
 
         return redirect()->route('news.index');

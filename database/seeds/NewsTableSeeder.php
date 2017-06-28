@@ -12,7 +12,7 @@ class NewsTableSeeder extends Seeder
     public function run()
     {
         $i = 1;
-        while($i < 5){
+        while($i < 15){
             DB::table('news')->insert([
                 'title' => 'Titre no. ' . $i,
                 'authors' => 'Yalla Enfants',

@@ -15,6 +15,9 @@
         </section>
         <section class="content">
             <div class="row">
+                <div class="col-xs-12">
+                    @include('admin.errors')
+                </div>
                 <form action="{{ route('news.store') }}" method="POST">
                     {{ csrf_field() }}
                     <div class="col-xs-9">
@@ -46,13 +49,18 @@
                                     <label for="categories">Catégories</label>
                                     <select class="form-control" name="category_id">
                                         @foreach ($categories as $id => $category)
-                                        <option value="{{ $id }}">{{ $category }}</option>
+                                            <option value="{{ $id }}">{{ $category }}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="tags">Tags</label>
-                                    <input type="text" class="form-control" name="tags">
+                                    <label for="tags_list[]">Tags</label>
+                                    <select class="form-control" name="tags_list[]" multiple>
+                                        @foreach ($tags as $id => $tag)
+                                            <option value="{{ $id }}">{{ $tag }}</option>
+                                        @endforeach
+                                    </select>
+
                                 </div>
                                 <input type="submit" value="Publier l'actualité">
                             </div>

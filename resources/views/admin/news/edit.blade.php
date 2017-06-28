@@ -15,6 +15,9 @@
         </section>
         <section class="content">
             <div class="row">
+                <div class="col-xs-12">
+                    @include ('admin.errors')
+                </div>
                 <form action="{{ route('news.update', ['news' => $news->id]) }}" method="POST">
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
@@ -28,11 +31,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="authors">Auteur(s) :</label>
-                                    <input type="text" class="form-control" id="authors" name="authors" value="{{ $news->authors }}">
+                                    <input type="text" class="form-control" id="authors" name="authors"
+                                           value="{{ $news->authors }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="content">Contenu</label>
-                                    <textarea class="form-control" id="tinyMCE" name="content">{{ $news->content }}</textarea>
+                                    <textarea class="form-control" id="tinyMCE"
+                                              name="content">{{ $news->content }}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -44,20 +49,24 @@
                             </div>
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label for="categories">Catégories</label>
+                                    <label for="category_id">Catégories</label>
                                     <select class="form-control" name="category_id">
                                         @foreach ($categories as $id => $category)
                                             @if($news->category_id === $id)
-                                            <option value="{{ $id }}" selected>{{ $category }}</option>
+                                                <option value="{{ $id }}" selected>{{ $category }}</option>
                                             @else
-                                            <option value="{{ $id }}">{{ $category }}</option>
+                                                <option value="{{ $id }}">{{ $category }}</option>
                                             @endif
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="tags">Tags</label>
-                                    <input type="text" class="form-control" name="tags" {{ $news->tags }}>
+                                    <label for="tags_list[]">Tags</label>
+                                    <select class="form-control" name="tags_list[]" multiple>
+                                        @foreach ($tags as $id => $tag)
+                                            <option value="{{ $id }}">{{ $tag }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <input type="submit" value="Publier la modification">
                             </div>

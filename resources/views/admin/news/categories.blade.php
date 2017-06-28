@@ -25,18 +25,6 @@
                         <div class="box-body">
 
                             <div class="table-responsive">
-                                <form action="{{ route('categories.store') }}"
-                                      method="POST">
-                                    {{ csrf_field() }}
-                                    <div class="form-group pull-left">
-                                        <label for="name">Nouvelle catégorie</label>
-                                        <input type="text" name="name" id="name">
-                                    </div>
-
-                                    <button class="btn btn-default pull-right" type="submit">
-                                        Ajouter une catégorie
-                                    </button>
-                                </form>
 
                                 <table class="table table-hover table-striped">
                                     <thead>
