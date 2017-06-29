@@ -10,10 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
 Route::group([
@@ -51,6 +47,11 @@ Route::group([
         Route::resource('subscribers', 'SubscribersController');
     }
 );
+
+Route::get('/',
+    function () {
+    return view('welcome');
+});
 		
 
 Route::get('profil', 'ProfilController@index');
