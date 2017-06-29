@@ -43,8 +43,24 @@ class HomeController extends Controller
         return view('front.article', compact('news'));
     }
 
-    public function show($slug,$id)
+    public function about()
     {
-
+        return view('front.presentation');
     }
+
+    public function missions()
+    {
+        return view('front.mission');
+    }
+
+    public function donate()
+    {
+        return view('front.donations');
+    }
+
+    public function contact()
+    {
+        return view('front.contact');
+    }
+
 }

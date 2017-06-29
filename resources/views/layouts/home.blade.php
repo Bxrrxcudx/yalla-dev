@@ -19,16 +19,16 @@
         </div>
         <nav>
             <ul>
-                <li><a href="{{ url('presentation') }}">Qui sommes-nous ?</a></li>
-                <li><a href="{{ url('mission') }}">Nos actions</a></li>
-                <li><a href="{{ url('donations') }}">Faire un don</a></li>
-                <li><a href="{{ url('actulites') }}">Actualités</a></li>
+                <li><a href="{{ url('about') }}">Qui sommes-nous ?</a></li>
+                <li><a href="{{ url('missions') }}">Nos actions</a></li>
+                <li><a href="{{ url('donate') }}">Faire un don</a></li>
+                <li><a href="{{ url('news') }}">Actualités</a></li>
                 <li><a href="{{ url('contact') }}">Contact</a></li>
             </ul>
         </nav>
     </header>
     @yield('content')
-    <footer>
+    <footer style="margin-top: 3%;">
         <div class="newsletter">
             <p>Restez informé(e)s et recevez notre newsletter</p>
             <form action="">

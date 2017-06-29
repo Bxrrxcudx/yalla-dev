@@ -12,7 +12,7 @@
         <section class="article article-actu">
             <h3>{{ $actu->title }}</h3>
             <img src="img-layout/img-actu.png" alt="image de l'actualité">
-            <p>{{ $actu->content }}</p>
+            <p>{{ str_limit($actu->content, $limit = 100, $end = '...') }}</p>
             <div class="detail-article">
             @if($actu->category)
                 <div class="folder">
