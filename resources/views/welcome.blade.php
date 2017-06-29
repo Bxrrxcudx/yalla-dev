@@ -10,9 +10,9 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet" type="text/css">
         <!-- Fonts -->
-        <link rel="stylesheet" href="{{}}">
+        <link rel="stylesheet" href="#">
     </head>
     <body>
-
+        Coucou tout le monde
     </body>
 </html>
