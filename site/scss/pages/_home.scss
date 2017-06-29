@@ -1,141 +1,331 @@
 /* -- HOME body
 --------------------------------------------------- */
-.home-body {
-	margin: 0 auto;
-	main {
-		text-align: center;
-		section {
-			margin: 15% 0 0 0;
-			p {
-				margin: 0 15% 5% 15%;
-				line-height: 150%;
+body {
+		margin: 0 auto;
+		.home-main {
+			text-align: center;
+			section {
+				margin: 15% 0 0 0;
+				p {
+					margin: 0 15% 5% 15%;
+					line-height: 150%;
+				}
+				span {
+					font-weight: bold;
+					line-height: 200%;
+					color: $orange;
+				}
 			}
-			span {
-				font-weight: bold;
-				line-height: 200%;
-				color: $orange;
-			}
-		}
-		.presentation {
-			position: relative;
-			margin: 5% 0 15% 0;
-			z-index: -1;
-			img {
-				filter: contrast(40%);
-				width: 100%;
-				z-index: 0;
+			.presentation {
+				position: relative;
+				margin: 5% 0 15% 0;
+				z-index: -1;
+				img {
+					filter: contrast(40%);
+					width: 100%;
+					z-index: 0;
+				}
+				h2 {
+					position: absolute;
+					top: 30%;
+					left: 5%;
+					z-index: 1;
+					color: $white;
+				}
+				button {
+					position: absolute;
+					width: 25%;
+					height: 6vh;
+					background-color: $orange;
+					text-transform: uppercase;
+					border: 1px;
+					border-radius: 1px ;
+					top: 71%;
+					left: 70%;
+					a {
+
+						font: 1em $oswald;
+						color: $white;
+						padding: 3%;
+
+					}
+				}
 			}
 			h2 {
-				position: absolute;
-				top: 30%;
-				left: 5%;
-				z-index: 1;
-				color: $white;
+				@include customh2;
 			}
-			a {
-				position: absolute;
-				bottom: 5%;
-				left: 70%;
-				@include cta;
-			}	
-		}
-		.separation {
-			height: 2px;
-			color: $grey;
-		}
-		h2 {
-			@include customh2;			
-		}
-		.picto {
-			width: 8%;
-		}
-		.who {
-			a {
-				@include cta;
+			.picto {
+				width: 8%;
 			}
-		}
-		.conflit {
-		}
-		.action {
-			.action-desc {
-				img {				
-				}
-			}
-			.action-call {
+			.who {
 				img {
-					width: 100%;
+					width: 18%;
 				}
-				div {
-					padding: 1em;
-					border: 1em solid transparent;
-					background: -webkit-linear-gradient(white, white) padding-box,
-					repeating-linear-gradient(-45deg, $orange 0, $orange 12.5%,
-						transparent 0, transparent 25%,
-						$grey 0, $grey 37.5%,
-						transparent 0, transparent 50%)
-						0 / 5em 5em;
+				button {
+					width: 25%;
+					height: 6vh;
+					background-color: $orange;
+					text-transform: uppercase;
+					border: 1px;
+					border-radius: 1px ;
 					a {
-						@include cta;
-					}					
+
+						font: 1em $oswald;
+						color: $white;
+						padding: 3%;
+
+					}
 				}
 			}
-		}
-		.valeurs {
-			a {
-				@include cta;
-			}
-		}
-		.actus {
-			div {
-				h2 {
-					margin-bottom: 4%;
-				}
-				img {
-					width: 100%;
+			.conflit {
+				img{
+					width: 18%;
 				}
 			}
-			article {				
-				h3 {
-					font-weight: bold;
-					font-size: 1.2em;
-					color: $orange;
-					margin-top: 4%;
+			.action {
+				.action-desc {
+					img {
+						width: 18%;
+					}
 				}
-			}		
-			a {
-				@include cta;
-			}
-		}
-		.partenaires {
-			margin-bottom: 15%;
-			.partners{
-				div {
-					width: 100%;
-					display: flex;
-					justify-content: space-around;
-					align-items: center;
+				.action-call {
+					img {
+						width: 100%;
+					}
 					div {
-						width: 30%;
-						a {
-							text-align: center;
-							img {
-								width: 80%;
+						padding: 1em;
+						border: 1em solid transparent;
+						background: -webkit-linear-gradient(white, white) padding-box,
+						repeating-linear-gradient(-45deg, $orange 0, $orange 12.5%,
+														transparent 0, transparent 25%,
+														$grey 0, $grey 37.5%,
+														transparent 0, transparent 50%) 0 / 5em 5em;
+						button {
+							width: 30%;
+							height: 6vh;
+							background-color: $orange;
+							text-transform: uppercase;
+							border: 1px;
+							border-radius: 1px ;
+							a {
+
+								font: 1em $oswald;
+								color: $white;
+								padding: 3%;
+
 							}
 						}
-					}	
+					}
+				}
+			}
+			.valeurs {
+				button {
+					width: 30%;
+					height: 6vh;
+					background-color: $orange;
+					text-transform: uppercase;
+					border: 1px;
+					border-radius: 1px ;
+					a {
+						font: 1em $oswald;
+						color: $white;
+						padding: 3%;
+					}
+				}
+			}
+			.actus {
+				div {
+					h2 {
+						margin-bottom: 4%;
+					}
+					img {
+						width: 100%;
+					}
+				}
+				article {
+					h3 {
+						font-weight: bold;
+						font-size: 1.2em;
+						color: $orange;
+						margin-top: 4%;
+					}
+				}
+				button {
+					width: 30%;
+					height: 6vh;
+					background-color: $orange;
+					text-transform: uppercase;
+					border: 1px;
+					border-radius: 1px ;
+					a {
+						font: 1em $oswald;
+						color: $white;
+						padding: 3%;
+					}
+				}
+			}
+			.partenaires {
+				margin-bottom: 15%;
+				.partners {
+					div {
+						width: 100%;
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
+						div {
+							width: 30%;
+							a {
+								text-align: center;
+								img {
+									width: 80%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+@media screen and (min-width: 481px) {
+	body {
+		.home-main {
+			.presentation {
+				margin-bottom: 0;
+				h2 {
+					font-size: 4em;
+				}
+				button {
+					width: 20%;
+					height: 8vh;
+					background-color: $orange;
+					text-transform: uppercase;
+					border: 1px;
+					border-radius: 1px ;
+					font-size: 1.2em;
+					top: 60%;
+					left:5%;
+				}
+			}
+			.who{
+				float: left;
+				width: 50%;
+				margin-top: 7%;
+				img{
+					width: 10%;
+				}
+				button {
+					height: 8vh;
+					font-size: 1em;
+				}
+			}
+			.conflit {
+				float: left;
+				width: 50%;
+				margin: 7% 0 7% 0;
+				img{
+					width: 10%;
+				}
+			}
+			.action {
+				.action-desc{
+					h2{
+						font-size: 2em;
+					}
+					img{
+						width: 6%;
+						margin: 1% 0 2% 0;
+					}
+				}
+				span{
+					font-family: $oswald;
+					font-size: 1.4em;
+				}
+				.action-call {
+					div {
+						h3{
+							font-family: $oswald;
+							font-size:1.4em;
+							font-weight: bold;
+						}
+						p{
+							font-size: 1.3em;
+							margin-bottom: 2%;
+						}
+						button {
+							width: 25%;
+							height: 10vh;
+							a {
+								font: 1.4em $oswald;
+								color: $white;
+								padding: 3%;
+							}
+						}
+					}
+				}
+			}
+			.valeurs {
+				margin-top:5%;
+				span {
+					font-family: $oswald;
+					font-size:1.5em;
+				}
+				button {
+					width: 20%;
+					height: 10vh;
+					a {
+						font: 1.4em $oswald;
+						color: $white;
+						margin: 0;
+						padding-left: 5%;
+					}
+				}
+				.proximite {
+					float: left;
+					width: 50%;
+				}
+				.transparence {
+					float: left;
+					width: 50%;
+				}
+				a{
+					width: 20%;
+					height: 1vh;
+					margin-left: 40%;
+					padding-bottom: 2%;
+					font-size:1.1em;
+				}
+			}
+			.actus {
+				margin-top:10%;
+				h2{
+					font-size: 1.8em;
+				}
+				div {
+					float: left;
+					width: 50%;
+					margin-top: 5%;
+				}
+				article {
+					float: left;
+					width: 50%;
+					margin-top: 5%;
+				}
+				button{
+					float: left;
+					width: 20%;
+					height: 8vh;
+					margin-left: 15%;
+					font-size: 1.1em;
+				}
+			}
+			.partenaires {
+				h2{
+					font-size:1.8em;
 				}
 			}
 		}
 	}
 }
 
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
-	.home-body {
-		header {
-			h1 {
-				margin: 5%;
-				font-size: 3em;
-			}			
-		}
-	}   
-}
