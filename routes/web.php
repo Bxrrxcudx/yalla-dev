@@ -57,11 +57,16 @@ Route::group([
         // Home
         Route::get('/', 'HomeController@index');
 
-        // About
-        //Route::get('/{slug}', 'HomeController@render');
+        Route::get('/about', 'HomeController@about');
+
+        Route::get('/missions', 'HomeController@missions');
+
+        Route::get('/donate', 'HomeController@donate');
 
         Route::get('/news', 'HomeController@getAllNews');
         Route::get('/news/{id}', 'HomeController@getNewsById');
+
+        Route::get('/contact', 'HomeController@contact');
     }
 );
 
