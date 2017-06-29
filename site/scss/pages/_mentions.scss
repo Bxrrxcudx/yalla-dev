@@ -1,47 +1,37 @@
 /* -- MENTIONS LEGALES body
 --------------------------------------------------- */
-.mentions-main {
-	margin: 3% 5% 0 5%;
-	text-align: center;
-	.title {
-	    background-color: $orange;
-	    width: 60%;
-	    padding: 1%;
+.mentions-body {
+	main {
+		margin: 3% 5% 0 5%;
+		text-align: center;
 		.mentions-title {
-			font-family: $oswald;
-	        color: $white;
-	        font-size: 1.5em;
-	        text-transform: uppercase;
-	        text-align: center;
-	        margin-top: 14px;
+			font: 2em $oswald;
+			color: $orange;
+			border-bottom: 2px solid $orange;
 		}
-	}
-	h2 {
-		@include customh2;
-		margin-bottom: 4%;
-	}
-	p {
-		margin-bottom: 5%;
-		line-height: 150%;
-		span {
-			font-weight: bold;
+		h2 {
+			@include customh2;
+			margin-bottom: 4%;
 		}
-	}
-	div {
-		margin-bottom: 5%;
+		p {
+			margin-bottom: 5%;
+			line-height: 150%;
+			span {
+				font-weight: bold;
+			}
+		}
+		div {
+			margin-bottom: 5%;
+		}
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.mentions-main {
-		.title {
-			width: 35%;
-		}
-		h2 {
-			font-size: 1.5em;
-		}
-		p {
-			margin-bottom: 2%;
+	.mentions-body {
+		main {
+			p {
+				margin-bottom: 2%;
+			}
 		}
 	}
 }

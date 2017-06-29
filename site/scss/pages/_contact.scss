@@ -92,7 +92,7 @@
       margin-bottom: 10%;
     }
     .formulaire {
-      margin-left: 20%;
+      margin-left: 25%;
       label {
         display: block;
         font-family: $opensans;
@@ -108,17 +108,17 @@
       textarea {
         border: 1px solid #979797;
       }
-    }
-    .btn-submit {
-      width:40%;
-      height: 35px;
-      font-family: $oswald;
-      font-size: 0.8em;
-      margin:5% 0 5% 30%;
-      background-color: $black;
-      color: $white;
-      text-transform: uppercase;
-      border: 1px solid grey;
+      .btn-submit {
+        width:40%;
+        height: 35px;
+        font-family: $oswald;
+        font-size: 0.8em;
+        margin:5% 0 5% 15%;
+        background-color: $black;
+        color: $white;
+        text-transform: uppercase;
+        border: 1px solid grey;
+      }
     }
   }
 }
@@ -210,13 +210,13 @@
           margin-bottom: 3%;
           width: 40%;
         }
-      }
-      .btn-submit {
-        width: 20%;
-        height: 8vh;
-        font-size: 1.2em;
-        margin: 1% 0 5% 41%;
+        .btn-submit {
+          width: 20%;
+          height: 8vh;
+          font-size: 1.2em;
+          margin: 1% 0 5% 41%;
 
+        }
       }
     }
   }

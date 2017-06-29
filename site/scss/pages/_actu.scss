@@ -1,20 +1,18 @@
 .actu-main {
-    width: 100%;
+    width: 80%;
   .actu{
     width: 100%;
-    position: relative;
     img {
       width: 100%;
       height: 20vh;
-      margin: 2% auto 0;
     }
     .title {
       position: absolute;
       background-color: $orange;
       height: 50px;
       width: 50%;
-      top: 80%;
-      left: 0;
+      top: 17%;
+      left: 2%;
       h2 {
         font-family: $oswald;
         color: $white;
@@ -36,7 +34,7 @@
       text-align: center;
       color: $orange;
       font-family: $oswald;
-      font-size: 1.3em;
+      font-size: 1.1em;
       margin-bottom: 5%;
     }
     img {
@@ -44,7 +42,7 @@
       margin-bottom:5%;
     }
     p{
-      font-family: $opensans;
+      font-family: $oswald;
       margin-left: 3%;
     }
     .detail-article{
@@ -80,47 +78,37 @@
     }
   }
 }
-@media screen and (min-width: 850px){
+@media screen and (min-width: 481px){
   .actu-main{
-    margin: 2% auto 0 !important;
+    margin: 0 auto;
     .actu {
       img{
-        height: 60vh !important;
+        width: 100%;
+        height: 70vh;
       }
       .title {
-        width: 35% !important;
-        height: 10vh !important;
+        width: 35%;
+        height: 10vh;
+        top: 67%;
+        left: 2%;
         h2 {
-          font-size: 1.8em !important;
-          text-transform: uppercase !important;
-          text-align: center !important; 
-          margin-top: 14px !important;
+          font-size: 1.8em;
+          text-transform: uppercase;
+          text-align: center;
+          margin-top: 14px;
         }
       }
     }
   }
-  .article-actu {
-    float: left !important;
-    width: 35% !important;
-    margin-bottom: 0 !important;
+  #article-actu{
+    float: left;
+    width: 35%;
+    margin-bottom: 0;
     &:nth-child(2n+1){
-      margin: 10% 0 0 10% !important;
+      margin: 10% 0 0 10%;
     }
-    .article-title{
-      font-size: 2.2em !important;
-    }
-    .detail-article {
-      span {
-        font-size: 0.9em !important;
-      }
-    }
-    img.fest-noz {
-      display: block !important;
-      margin: 2% auto 0 !important;
-      max-width: 100% !important;
-    }
-    p {
-      font-size: 1.3em !important;
+    h3{
+      font-size: 1.3em;
     }
   }
 }
