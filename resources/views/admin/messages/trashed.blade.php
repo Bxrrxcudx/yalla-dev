@@ -31,11 +31,9 @@
                         </div>
                         <div class="box-body no-padding">
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="{{ route('messages.index') }}"><i class="fa fa-inbox"></i> Inbox
-                                        <span class="label label-primary pull-right">12</span></a></li>
+                                <li class="active"><a href="{{ route('messages.index') }}"><i class="fa fa-inbox"></i> Inbox</a></li>
                                 <li><a href="#"><i class="fa fa-envelope-o"></i> Sent</a></li>
-                                <li class="active"><a href="{{ route('messages.trashed') }}"><i
-                                                class="fa fa-trash-o"></i> Trash</a></li>
+                                <li><a href="{{ route('messages.trashed') }}"><i class="fa fa-trash-o"></i> Trash</a></li>
                             </ul>
                         </div>
                         <!-- /.box-body -->
@@ -54,8 +52,7 @@
                                 <!--<button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
                                 </button>-->
 
-                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i>
-                                </button>
+                                <a href="{{ route('messages.index') }}" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></a>
                                 <!-- /.pull-right -->
                             </div>
                             <div class="table-responsive mailbox-messages">
@@ -66,7 +63,6 @@
                                     @else
                                         @foreach ($msgs as $msg)
                                             <tr>
-                                                <td><input type="checkbox"></td>
                                                 <td class="mailbox-subject"><b><a
                                                                 href="{{ route('messages.show', $msg->id) }}">{{ $msg->subject }}</a></b>
                                                 <td class="mailbox-name">{{ $msg->first_name }} {{ $msg->last_name }}</td>
@@ -96,8 +92,7 @@
                         <!-- /.box-body -->
                         <div class="box-footer no-padding">
                             <div class="mailbox-controls">
-                                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i>
-                                </button>
+                                <a href="{{ route('messages.index') }}" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></a>
                                 <div class="pull-right">
                                     <div class="btn-group">
                                         {{ $msgs->render() }}
@@ -114,33 +109,6 @@
             </div>
             <!-- /.row -->
         </section>
-
-
-        <form action="{{ route('messages.store') }}" method="POST">
-            {{ csrf_field() }}
-            <div>
-                <label for="last_name">Nom</label>
-                <input type="text" name="last_name" id="last_name">
-            </div>
-            <div>
-                <label for="first_name">Prénom</label>
-                <input type="text" name="first_name" id="first_name">
-            </div>
-            <div>
-                <label for="mail">E-mail</label>
-                <input type="text" name="mail" id="mail">
-            </div>
-            <div>
-                <label for="subject">Sujet</label>
-                <input type="text" name="subject" id="subject">
-            </div>
-            <div>
-                <label for="message">Message</label>
-                <textarea name="message" id="message" cols="50" rows="10"></textarea>
-            </div>
-            <input type="submit" value="Envoyer">
-        </form>
-
     </div>
 @endsection
 

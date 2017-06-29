@@ -24,7 +24,6 @@
                                 <table class="table table-hover table-striped">
                                     <thead>
                                             <tr>
-                                                <th></th>
                                                 <th>Titre de la page</th>
                                                 <th>Chemin dans l'URL</th>
                                                 <th>Description</th>
@@ -35,7 +34,6 @@
                                     <tbody>
                                     @foreach ($pages as $page)
                                         <tr>
-                                            <td><input type="checkbox"></td>
                                             <td class="mailbox-subject"><b><a href="{{ route('pages.edit', $page->id) }}">{{ $page->title }}</a></b>
                                             <td class="mailbox-name">{{ $page->slug ?: 'Non spécifié' }}</td>
                                             </td>
