@@ -4,7 +4,7 @@ header {
     display: flex;
     align-items: center;
     h1 {
-        margin: 5%;
+        margin: 1%;
         width: 20%;
     }
     nav {
@@ -114,4 +114,8 @@ header .burger-menu {
             }
         }
     }
+}
+body {
+    /* max-width: 1440px; */
+    margin: 0 auto;
 }

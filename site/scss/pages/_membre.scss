@@ -1,7 +1,6 @@
 .member-main {
   text-align: center;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   .member {
     img{
       width: 100%;
@@ -25,9 +24,10 @@
   }
   //GENERAL
   .membre-section {
-    margin-top: 10%;
     padding-bottom: 15%;
     border-bottom: 1px solid #979797;
+    width: 80%;
+    margin: 10% auto 0;
     img{
       width: 18%;
     }
