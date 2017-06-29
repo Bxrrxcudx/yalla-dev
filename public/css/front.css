@@ -824,7 +824,7 @@ body .home-main .partenaires .partners div div a img {
   color: #FF7152; }
 .presentation-main img {
   width: 16%;
-  margin: 15% 0 10% 0; }
+  margin: 0 0 10% 0; }
 .presentation-main .whoweare p {
   margin-bottom: 2%; }
 .presentation-main .vision span {
@@ -932,14 +932,14 @@ body .home-main .partenaires .partners div div a img {
     text-align: center;
     margin-top: 14px; }
 
-  #article-actu {
-    float: left;
-    width: 35%;
-    margin-bottom: 0; }
-  #article-actu:nth-child(2n+1) {
-    margin: 10% 0 0 10%; }
-  #article-actu h3 {
-    font-size: 1.3em; } }
+  .article-actu {
+    float: left !important;
+    width: 35% !important;
+    margin-bottom: 0!important; }
+  .article-actu:nth-child(2n+1) {
+    margin: 10% 0 0 10% !important; }
+  .article-actu h3 {
+    font-size: 1.3em !important; } }
 .member-main {
   text-align: center;
   width: 80%;
