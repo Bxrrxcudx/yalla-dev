@@ -5,7 +5,7 @@
         <section class="presentation">
             <h2>Faites l'école pas la guerre</h2>
             <img src="img-layout/background-home.png" alt="">
-            <a href="">Nous soutenir</a>
+            <a href="{{ url('donations') }}">Nous soutenir</a>
         </section>
         <section class="who">
             <div>
@@ -16,7 +16,7 @@
             <p>Yalla! Pour les enfants est une association de droit français indépendante, apolitique, non-confessionnelle et impartiale, créée en juillet 2013.</p>
             <p>Basée au Liban, Yalla! se donne pour mission première de remettre les enfants déscolarisés à la suite d’un conflit sur le chemin de l’école.  </p>
 
-            <a href="">Nous découvrir</a>
+            <a href="{{ url('presentation') }}">Nous découvrir</a>
         </section>
         <div class="separation"></div>
         <section class="conflit">
@@ -39,7 +39,7 @@
                 <div>
                     <h3>L’ECOLE YALLA !</h3>
                     <p>120 enfants réfugiés syriens<br>Entre 6 et 13 ans</p>
-                    <a href="">Nous soutenir</a>
+                    <a href="{{ url('donations') }}">Nous soutenir</a>
                 </div>
             </div>
         </section>
@@ -52,7 +52,7 @@
                 <span>Transparence</span>
                 <p>Les frais administratifs de Yalla ! sont réduits au minimum afin que l’ensemble des dons bénéficient aux enfants et aux bénévoles locaux. 98% des fonds sont dédiés à la mise en oeuvre des projets sur le terrain et 2% pour les dépenses administrative.</p>
             </div>
-            <a href="">En savoir +</a>
+            <a href="{{ url('mission') }}">En savoir +</a>
         </section>
         <section class="actus">
             <div>
@@ -63,31 +63,31 @@
                 <h3>Fest-noz solidaire<br>29 octobre à Poullaouen</h3>
                 <p>Yalla! Pour les Enfants vous convie le samedi 29 octobre à un fest-noz de levée de fonds dont les entiers bénéfices reviendront à son école d’Aley, située au Liban, à quelques kilomètres.</p>
             </article>
-            <a href="">Toutes les actus</a>
+            <a href="{{ url('actualites') }}">Toutes les actus</a>
         </section>
         <section class="partenaires clearfix">
             <h2>Nos partenaires</h2>
             <div class="partners">
                 <div>
                     <div class="clearfix">
-                        <a href=""><img src="img-content/institut-français.png" alt="Institut français"></a>
+                        <a href="http://www.institutfrancais-liban.com/"><img src="img-content/institut-français.png" alt="Institut français"></a>
                     </div>
                     <div class="clearfix">
-                        <a href=""><img src="img-content/codssy.png" alt=""></a>
+                        <a href="http://codssy.org/"><img src="img-content/codssy.png" alt=""></a>
                     </div>
                     <div class="clearfix">
-                        <a href=""><img src="img-content/wwww.png" alt=""></a>
+                        <a href="https://www.w4.org/fr/project/education-enfants-refugies-syrie/"><img src="img-content/wwww.png" alt=""></a>
                     </div>
                 </div>
                 <div>
                     <div class="clearfix">
-                        <a href=""><img src="img-content/kitabna.png" alt=""></a>
+                        <a href="http://www.kitabna.org/"><img src="img-content/kitabna.png" alt=""></a>
                     </div>
                     <div class="clearfix">
                         <a href=""><img src="img-content/bistro-syrien.png" alt=""></a>
                     </div>
                     <div class="clearfix">
-                        <a href=""><img src="img-content/calam.png" alt=""></a>
+                        <a href="http://www.institutcalam.fr/"><img src="img-content/calam.png" alt=""></a>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1><a href="#"><img src="{{ asset('img-layout/logo.png') }}" alt=""></a></h1>
+        <h1><a href="{{ url('') }}"><img src="{{ asset('img-layout/logo.png') }}" alt=""></a></h1>
         <div class="burger-menu">
             <div class="rect1"></div>
             <div class="rect2"></div>
@@ -19,11 +19,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">Qui sommes-nous ?</a></li>
-                <li><a href="#">Nos actions</a></li>
-                <li><a href="#">Faire un don</a></li>
-                <li><a href="#">Actualités</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{{ url('presentation') }}">Qui sommes-nous ?</a></li>
+                <li><a href="{{ url('mission') }}">Nos actions</a></li>
+                <li><a href="{{ url('donations') }}">Faire un don</a></li>
+                <li><a href="{{ url('actulites') }}">Actualités</a></li>
+                <li><a href="{{ url('contact') }}">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -44,11 +44,12 @@
         </div>
         <nav>
             <ul>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Mentions légales</a></li>
+                <li><a href="{{ url('contact') }}">Contact</a></li>
+                <li><a href="{{ url('mentions-legales') }}">Mentions légales</a></li>
             </ul>
         </nav>
     </footer>
 <script src="{{ asset('js/burger.js') }}"></script>
+@yield('scripts')
 </body>
 </html>

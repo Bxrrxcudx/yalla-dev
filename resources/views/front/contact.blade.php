@@ -38,8 +38,8 @@
                 <input id="subject-email" type="text">
                 <label for="message">Message</label>
                 <textarea id="message" type="text" rows="10" cols="35"></textarea>
+                <button class="btn-submit">envoyer</button>
             </form>
-            <button class="btn-submit">envoyer</button>
         </section>
     </main>
 @endsection
