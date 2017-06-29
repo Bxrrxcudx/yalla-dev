@@ -31,6 +31,7 @@ Route::group([
         Route::get('messages-trashed', 'MessagesController@showTrashed')->name('messages.trashed');
 
         // Abonnés Newsletter
+        Route::resource('newsletters', 'NewslettersController', ['only' => ['destroy']]);
         Route::get('newsletters', 'NewslettersController@index')->name('newsletters.index');
 
         // Actualites

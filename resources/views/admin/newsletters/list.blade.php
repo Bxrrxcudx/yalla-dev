@@ -33,8 +33,10 @@
                                         <tr>
                                             <td class="mailbox-date">{{ $info->mail }}</td>
                                             <td class="mailbox-star">
-                                                <form action="#" method="POST">
+                                                <form action="{{ route('newsletters.destroy', $info->id) }}"
+                                                      method="POST">
                                                     {{ csrf_field() }}
+                                                    {{ method_field('DELETE') }}
                                                     <button type="submit" class="btn btn-default btn-sm">
                                                         <i class="fa fa-trash-o"></i>
                                                     </button>
