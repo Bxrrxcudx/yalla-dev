@@ -47,20 +47,11 @@ class News extends Model
         return $this->belongsToMany('App\Tag');
     }
 
-    public function getTagsListAttribute()
-    {
-        if($this->id)
-        {
-            return $this->tags->pluck('id');
-        }
-    }
-
-    public function setTagsListAttribute($value)
-    {
-
-        return $this->tags()->sync($value);
-    }
-
+    /**
+     * synchronises tags to article in the pivot table
+     * @param $article
+     * @param $tags
+     */
     public function syncTags($article, $tags)
     {
         $tagsToSync = $this->checkTags($tags);
@@ -68,16 +59,25 @@ class News extends Model
         $article->tags()->sync($tagsToSync);
     }
 
+    /**
+     * renders array of all tags to synchronise
+     * @param $tags
+     * @return array
+     */
     public function checkTags($tags){
 
+        // array with only numeric values
         $currentTagIds = array_filter($tags, 'is_numeric');
 
+        // array with values that are not numeric, meaning new tags
         $newTags = array_diff($tags, $currentTagIds);
 
         foreach ($newTags as $newTag)
         {
+            // creates for each new tag an entry in the table "tags"
             if ($tag = Tag::create( ['name' => $newTag, 'slug' => str_slug($newTag, '-')] )) {
 
+                // this new tag id is added to the currentTagIds array
                 $currentTagIds[] = $tag->id;
 
             }

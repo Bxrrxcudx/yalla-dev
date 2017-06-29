@@ -1,4 +1,7 @@
-.member-body {
+.member-main {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
   .member {
     img{
       width: 100%;
@@ -20,93 +23,87 @@
       }
     }
   }
-  main {
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-    //GENERAL
-    section{
-      margin-top: 10%;
-      padding-bottom: 15%;
-      border-bottom: 1px solid #979797;
-      img{
-        width: 18%;
-      }
-      h3{
-        margin:7% 0 7% 0;
-        text-transform: uppercase;
-        font-family: $oswald;
-        font-size: 1.3em;
-        font-weight: bold;
-        color: $orange;
-      }
-      p{
-        text-align: left;
-      }
+  //GENERAL
+  .membre-section {
+    margin-top: 10%;
+    padding-bottom: 15%;
+    border-bottom: 1px solid #979797;
+    img{
+      width: 18%;
     }
-    // FIN GENERAL
-    .new-member{
-      margin-top: 20%;
-      img {
-        margin-bottom: 7%;
-      }
-      p{
-        margin-bottom: 5%;
-      }
-      address{
-        text-align: left;
-        font-family: $oswald;
-        font-size: 1.1em;
-        margin-bottom: 5%;
-      }
-      .email {
-        color: $orange;
-      }
-      button{
-        width: 50%;
-        border:none;
-        background-color: $white;
-      }
-      button a {
-        display: block;
-        width:100%;
-        height: 6vh;
-        background-color: $orange;
-        color: $white;
-        border:none;
-        text-transform: uppercase;
-        font-family: $oswald;
-        font-size: 1.2em;
-        margin: 10% 0 15% 5%;
-        padding-top: 5%;
-      }
+    h3{
+      margin:7% 0 7% 0;
+      text-transform: uppercase;
+      font-family: $oswald;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: $orange;
     }
-    .download {
-      a {
-        color: $black;
-        text-decoration: underline;
-      }
+    p{
+      text-align: left;
+    }
+  }
+  // FIN GENERAL
+  .new-member{
+    margin-top: 20%;
+    img {
+      margin-bottom: 7%;
+    }
+    p{
+      margin-bottom: 5%;
+    }
+    address{
+      text-align: left;
+      font-family: $oswald;
+      font-size: 1.1em;
+      margin-bottom: 5%;
+    }
+    .email {
+      color: $orange;
+    }
+    button{
+      width: 50%;
+      border:none;
+      background-color: $white;
+    }
+    button a {
+      display: block;
+      width:100%;
+      height: 6vh;
+      background-color: $orange;
+      color: $white;
+      border:none;
+      text-transform: uppercase;
+      font-family: $oswald;
+      font-size: 1.2em;
+      margin: 10% 0 15% 5%;
+      padding-top: 5%;
+    }
+  }
+  .download {
+    a {
+      color: $black;
+      text-decoration: underline;
     }
   }
 }
 @media screen and (min-width: 481px) {
-.member-body {
-  .member {
-    img {
-      height: 70vh;
-    }
-    .title {
-      width: 35%;
-      height: 10vh;
-      top: 66%;
-      h2 {
-        font-size: 1.8em;
+  .member-main {
+    .member {
+      img {
+        height: 70vh;
+      }
+      .title {
+        width: 35%;
+        height: 10vh;
+        top: 66%;
+        h2 {
+          font-size: 1.8em;
+        }
       }
     }
-  }
-  main {
     //GENERAL
-    section {
+    .membre-section {
       float: left;
       width: 45%;
       border-bottom: none;
@@ -142,5 +139,4 @@
       }
     }
   }
-}
 }

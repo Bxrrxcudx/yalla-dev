@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Subscriber;
 
+
 class SubscribersController extends Controller
 {
     public function index()

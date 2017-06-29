@@ -9,6 +9,13 @@ use Illuminate\Support\Facades\DB;
 
 class CategoriesController extends Controller
 {
+
+
+    /**
+     * Renders the list of categories
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
         $categories = Category::all();
@@ -16,26 +23,62 @@ class CategoriesController extends Controller
         return view('admin.news.categories', compact('categories'));
     }
 
+    /**
+     * Stores in the DB the category entry from the request
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function store(Request $request)
     {
-        Category::create($request->except(['_token']));
-        $id = DB::getPdo()->lastInsertId();
-        $model = Category::findOrFail($id);
-        $model->createSlug($model);
+        // creates a category entry in the DB
+        $category = Category::create($request->except(['_token']));
+
+        // creates the slug for the new category
+        $category->createSlug($category);
 
         return redirect()->route('categories.index');
     }
 
-    public function edit()
+    /**
+     *
+     * Updates in the DB the category name and
+     * updates the corresponding slug
+     *
+     * @param Request $request
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update(Request $request, $id)
     {
+
+        // gets current category
+        $category = Category::findOrFail($id);
+
+        // updates the category name in db
+        $category->update($request->except(['_token']));
+
+        $category->createSlug($category);
+
+        return redirect()->route('categories.index');
 
     }
 
+    /**
+     * Deletes permanently the category from db
+     *
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function destroy($id)
     {
 
-        if(Category::where('id', $id)->exists() !== false){
-            Category::where('id', $id)->delete();
+        if(Category::findOrFail($id) !== false){
+
+            $category = Category::findOrFail($id);
+
+            $category->delete();
+
         }
 
         return redirect()->route('categories.index');

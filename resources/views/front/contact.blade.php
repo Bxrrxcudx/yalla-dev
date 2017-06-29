@@ -1,0 +1,45 @@
+@extends('layouts.home')
+@section('content')
+    <main class="contact-main">
+        <section class="contact">
+            <img src="img-layout/background-home.png" alt="background image">
+        </section>
+        <section class="coordo">
+            <div class="title">
+                <h2>nous contacter</h2>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.8035691798677!2d2.3837967152018167!3d48.861956008410466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66df3beb722bf%3A0x5a3de2a4a7ae3fae!2s13+Rue+Ren%C3%A9+Villerm%C3%A9%2C+75011+Paris!5e0!3m2!1sfr!2sfr!4v1498566642552" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="postal">
+                <img src="img-layout/envelope.png" alt="adresse postale">
+                <h3>adresse postale</h3>
+                <address>Yalla! Pour les Enfants</br>
+                    13, rue René Villerme </br>
+                    75011 PARIS</address>
+            </div>
+            <div class="email">
+                <img src="img-layout/at.png" alt="email">
+                <p>Pour toute demande de renseignements sur notre association, n'hésitez pas à nous contacter !</p>
+                <p class="address-email">yalla.enfants@gmail.com</p>
+                <button class="btn-soutenir">nous soutenir</button>
+            </div>
+        </section>
+        <section class="form-contact">
+            <h2>Laisser un message</h2>
+            <form class="formulaire" action="">
+                <label for="last-name">Nom</label>
+                <input id="last-name" type="text">
+                <label for="first-name">Prénom</label>
+                <input id="first-name" type="text">
+                <label for="address-email">Adresse e-mail</label>
+                <input id="address-email" type="email">
+                <label for="subject-email">Sujet</label>
+                <input id="subject-email" type="text">
+                <label for="message">Message</label>
+                <textarea id="message" type="text" rows="10" cols="35"></textarea>
+            </form>
+            <button class="btn-submit">envoyer</button>
+        </section>
+    </main>
+@endsection
