@@ -21,15 +21,19 @@ class Controller extends BaseController
      * takes title + content fields of the last inserted id
      * and transforms them to generate remaining fields like
      * slug, meta-desc and description
-     * @param $id : last insert id
+     * @param $id
+     * @param $table
      */
     protected function completeInsert($id, $table)
     {
+        // gets source info at specified id
         $srcData = [
             'title' => DB::table("$table")->where('id', $id)->value('title')
             , 'content' => DB::table("$table")->where('id', $id)->value('content')
         ];
 
+        // updates some of this id's fields
+        // after using source data
         DB::table("$table")->where('id', $id)->update([
             'slug' => str_slug($srcData['title'], '-')
             , 'description' => str_limit(strip_tags($srcData['content']), $limit = 50, $end = ' ...')

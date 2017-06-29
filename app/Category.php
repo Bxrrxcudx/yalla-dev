@@ -14,6 +14,12 @@ class Category extends Model
         return $this->hadMany('App\News');
     }
 
+
+    /**
+     * updates 'slug' column in db
+     * @param $model
+     * @return mixed
+     */
     public function createSlug($model)
     {
         $model->slug = str_slug($model->name, '-');
