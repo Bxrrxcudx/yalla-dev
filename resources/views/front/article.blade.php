@@ -29,9 +29,9 @@
             <p>Cette fête traditionnelle bretonne où règnent la bonne humeur, la convivialité, la gaieté fait écho au dialogue interculturel mené par Yalla ! Pour les Enfants qui entend réunir au travers de projets culturels communs la communauté d’accueil libanaise et la communauté syrienne en exil pour construire une paix durable. Avec la participation active de : Maryam Samaan, Cyrille Flejou, AFPS Centre Bretagne, la mairie de Poullaouen, Le Télégramme, Ouest-France, Radio Montagne Noire, Radio Kreiz Breizh, Radio Bleu Breizh Izel</p>
             <a href="">Télécharger le communiquer de presse</a>
             <div class="tag">
-                <span>#defenceDesDroitsDesEnfants</span>
-                <span>#régigiés syriens</span>
-                <span>#aide humanitaire</span>
+                <span>#defenseDesDroitsDesEnfants</span>
+                <span>#refugiesSyriens</span>
+                <span>#aideHumanitaire</span>
                 <span></span>
             </div>
             <button>Faire un don</button>

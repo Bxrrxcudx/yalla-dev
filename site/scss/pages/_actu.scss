@@ -2,6 +2,7 @@
     width: 80%;
   .actu{
     width: 100%;
+    position: relative;
     img {
       width: 100%;
       height: 20vh;
@@ -11,8 +12,8 @@
       background-color: $orange;
       height: 50px;
       width: 50%;
-      top: 17%;
-      left: 2%;
+      top: 80%;
+      left: 0;
       h2 {
         font-family: $oswald;
         color: $white;
@@ -42,7 +43,7 @@
       margin-bottom:5%;
     }
     p{
-      font-family: $oswald;
+      font-family: $opensans;
       margin-left: 3%;
     }
     .detail-article{
@@ -80,7 +81,6 @@
 }
 @media screen and (min-width: 481px){
   .actu-main{
-    margin: 0 auto;
     .actu {
       img{
         width: 100%;
@@ -100,14 +100,22 @@
       }
     }
   }
-  #article-actu{
+  .article-actu{
     float: left;
     width: 35%;
     margin-bottom: 0;
     &:nth-child(2n+1){
       margin: 10% 0 0 10%;
     }
-    h3{
+    .article-title{
+      font-size: 2.2em;
+    }
+    img.fest-noz {
+      display: block;
+      margin: 2% auto 0;
+      max-width: 100%;
+    }
+    p {
       font-size: 1.3em;
     }
   }

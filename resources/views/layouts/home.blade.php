@@ -28,27 +28,27 @@
         </nav>
     </header>
     @yield('content')
-<footer>
-    <div class="newsletter">
-        <p>Restez informé(e)s et recevez notre newsletter</p>
-        <form action="">
-            <input type="email" placeholder="Votre adresse mail">
-            <input type="submit" value="OK">
-        </form>
-    </div>
-    <div class="socials">
-        <p>Suivez-nous sur les réseaux sociaux</p>
-        <div class="fb"><a href=""><img src="{{ asset('img-layout/facebook.svg') }}" alt=""></a></div>
-        <div class="insta"><a href=""><img src="{{ asset('img-layout/instagram.svg') }}" alt=""></a></div>
-        <div class="twitter"><a href=""><img src="{{ asset('img-layout/twitter.svg') }}" alt=""></a></div>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Mentions légales</a></li>
-        </ul>
-    </nav>
-</footer>
+    <footer>
+        <div class="newsletter">
+            <p>Restez informé(e)s et recevez notre newsletter</p>
+            <form action="">
+                <input type="email" placeholder="Votre adresse mail">
+                <input type="submit" value="OK">
+            </form>
+        </div>
+        <div class="socials">
+            <p>Suivez-nous sur les réseaux sociaux</p>
+            <div class="fb"><a href=""><img src="{{ asset('img-layout/facebook.svg') }}" alt=""></a></div>
+            <div class="insta"><a href=""><img src="{{ asset('img-layout/instagram.svg') }}" alt=""></a></div>
+            <div class="twitter"><a href=""><img src="{{ asset('img-layout/twitter.svg') }}" alt=""></a></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Mentions légales</a></li>
+            </ul>
+        </nav>
+    </footer>
 <script src="{{ asset('js/burger.js') }}"></script>
 </body>
 </html>

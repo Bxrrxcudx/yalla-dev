@@ -26,7 +26,7 @@
         </section>
         <section class="article article-actu">
             <h3>Fest-noz solidaire <br>29 octobre à Poullaouen</h3>
-            <img src="img-layout/img-actu.png" alt="image de l'actualité">
+            <img class="fest-noz" src="img-layout/img-actu.png" alt="image de l'actualité">
             <p>Yalla! Pour les Enfants vous convie le samedi 29 octobre à un fest-noz de levée de fonds dont les entiers bénéfices reviendront à son école d’Aley, située au Liban, à quelques kilomètres.</p>
             <div class="detail-article">
                 <div class="folder">

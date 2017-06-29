@@ -753,8 +753,8 @@ footer {
       background-color: #FF7152;
       height: 50px;
       width: 50%;
-      top: 17%;
-      left: 2%; }
+      top: 28.5%;
+      left: 0; }
       .actu-main .actu .title h2 {
         font-family: "Oswald", sans-serif;
         color: #fff;
@@ -806,29 +806,33 @@ footer {
       margin: 15% 0 15% 32%; }
 
 @media screen and (min-width: 481px) {
-  .actu-main {
-    margin: 0 auto; }
-    .actu-main .actu img {
-      width: 100%;
-      height: 70vh; }
-    .actu-main .actu .title {
-      width: 35%;
-      height: 10vh;
-      top: 67%;
-      left: 2%; }
-      .actu-main .actu .title h2 {
-        font-size: 1.8em;
-        text-transform: uppercase;
-        text-align: center;
-        margin-top: 14px; }
+  .actu-main .actu img {
+    width: 100%;
+    height: 70vh; }
+  .actu-main .actu .title {
+    width: 35%;
+    height: 10vh;
+    top: 67%;
+    left: 2%; }
+    .actu-main .actu .title h2 {
+      font-size: 1.8em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 14px; }
 
-  #article-actu {
+  .article-actu[section] {
     float: left;
     width: 35%;
     margin-bottom: 0; }
-    #article-actu:nth-child(2n+1) {
+    .article-actu[section]:nth-child(2n+1) {
       margin: 10% 0 0 10%; }
-    #article-actu h3 {
+    .article-actu[section] h3 {
+      font-size: 2em; }
+    .article-actu[section] img.fest-noz {
+      display: block;
+      margin: 2% auto 0;
+      max-width: 100%; }
+    .article-actu[section] p {
       font-size: 1.3em; } }
 .member-main {
   text-align: center;
@@ -1188,28 +1192,26 @@ footer {
       margin: 15% 0 15% 32%; }
 
 @media screen and (min-width: 481px) {
-  .news-main {
-    margin: 0 auto; }
-    .news-main img {
-      width: 100%;
-      height: 70vh; }
-    .news-main .title {
-      width: 35%;
-      height: 10vh;
-      top: 67%;
-      left: 2%; }
-      .news-main .title h2 {
-        font-size: 1.8em;
-        text-transform: uppercase;
-        text-align: center;
-        margin-top: 14px; }
-    .news-main .article {
-      float: left;
-      width: 35%;
-      margin-bottom: 0; }
-      .news-main .article:nth-child(2n+1) {
-        margin: 10% 0 0 10%; }
-      .news-main .article h3 {
-        font-size: 1.3em; } }
+  .news-main img {
+    width: 100%;
+    height: 70vh; }
+  .news-main .title {
+    width: 35%;
+    height: 10vh;
+    top: 67%;
+    left: 2%; }
+    .news-main .title h2 {
+      font-size: 1.8em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 14px; }
+  .news-main .article {
+    float: left;
+    width: 35%;
+    margin-bottom: 0; }
+    .news-main .article:nth-child(2n+1) {
+      margin: 10% 0 0 10%; }
+    .news-main .article h3 {
+      font-size: 1.3em; } }
 
 /*# sourceMappingURL=style.css.map */

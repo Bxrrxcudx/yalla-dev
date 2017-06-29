@@ -11,7 +11,8 @@
 |
 */
 Route::get('/', function () {
-    return view('front/actu');
+    return view('front/mission
+    ');
 });
 
 Auth::routes();

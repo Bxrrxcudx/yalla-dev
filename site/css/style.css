@@ -744,7 +744,8 @@ footer {
 .actu-main {
   width: 80%; }
   .actu-main .actu {
-    width: 100%; }
+    width: 100%;
+    position: relative; }
     .actu-main .actu img {
       width: 100%;
       height: 20vh; }
@@ -753,8 +754,8 @@ footer {
       background-color: #FF7152;
       height: 50px;
       width: 50%;
-      top: 17%;
-      left: 2%; }
+      top: 80%;
+      left: 0; }
       .actu-main .actu .title h2 {
         font-family: "Oswald", sans-serif;
         color: #fff;
@@ -778,7 +779,7 @@ footer {
       width: 100%;
       margin-bottom: 5%; }
     .actu-main .article-actu p {
-      font-family: "Oswald", sans-serif;
+      font-family: "Open Sans", sans-serif;
       margin-left: 3%; }
     .actu-main .article-actu .detail-article {
       margin-top: 3%; }
@@ -806,29 +807,33 @@ footer {
       margin: 15% 0 15% 32%; }
 
 @media screen and (min-width: 481px) {
-  .actu-main {
-    margin: 0 auto; }
-    .actu-main .actu img {
-      width: 100%;
-      height: 70vh; }
-    .actu-main .actu .title {
-      width: 35%;
-      height: 10vh;
-      top: 67%;
-      left: 2%; }
-      .actu-main .actu .title h2 {
-        font-size: 1.8em;
-        text-transform: uppercase;
-        text-align: center;
-        margin-top: 14px; }
+  .actu-main .actu img {
+    width: 100%;
+    height: 70vh; }
+  .actu-main .actu .title {
+    width: 35%;
+    height: 10vh;
+    top: 67%;
+    left: 2%; }
+    .actu-main .actu .title h2 {
+      font-size: 1.8em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 14px; }
 
-  #article-actu {
+  .article-actu {
     float: left;
     width: 35%;
     margin-bottom: 0; }
-    #article-actu:nth-child(2n+1) {
+    .article-actu:nth-child(2n+1) {
       margin: 10% 0 0 10%; }
-    #article-actu h3 {
+    .article-actu .article-title {
+      font-size: 2.2em; }
+    .article-actu img.fest-noz {
+      display: block;
+      margin: 2% auto 0;
+      max-width: 100%; }
+    .article-actu p {
       font-size: 1.3em; } }
 .member-main {
   text-align: center;
@@ -935,30 +940,37 @@ footer {
       font-size: 1.6em; } }
 /* -- MENTIONS LEGALES body
 --------------------------------------------------- */
-.mentions-body main {
+.mentions-main {
   margin: 3% 5% 0 5%;
   text-align: center; }
-  .mentions-body main .mentions-title {
-    font: 2em "Oswald", sans-serif;
-    color: #FF7152;
-    border-bottom: 2px solid #FF7152; }
-  .mentions-body main h2 {
+  .mentions-main .title {
+    background-color: #FF7152;
+    width: 50%;
+    padding: 1%; }
+    .mentions-main .title .mentions-title {
+      font-family: "Oswald", sans-serif;
+      color: #fff;
+      font-size: 1.3em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 14px; }
+  .mentions-main h2 {
     text-align: center;
     font: 1.5em "Oswald", sans-serif;
     color: #000;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 4%; }
-  .mentions-body main p {
+  .mentions-main p {
     margin-bottom: 5%;
     line-height: 150%; }
-    .mentions-body main p span {
+    .mentions-main p span {
       font-weight: bold; }
-  .mentions-body main div {
+  .mentions-main div {
     margin-bottom: 5%; }
 
 @media screen and (min-width: 768px) {
-  .mentions-body main p {
+  .mentions-main p {
     margin-bottom: 2%; } }
 /* -- Page NOS SUCCES
 --------------------------------------------------- */
@@ -1188,28 +1200,26 @@ footer {
       margin: 15% 0 15% 32%; }
 
 @media screen and (min-width: 481px) {
-  .news-main {
-    margin: 0 auto; }
-    .news-main img {
-      width: 100%;
-      height: 70vh; }
-    .news-main .title {
-      width: 35%;
-      height: 10vh;
-      top: 67%;
-      left: 2%; }
-      .news-main .title h2 {
-        font-size: 1.8em;
-        text-transform: uppercase;
-        text-align: center;
-        margin-top: 14px; }
-    .news-main .article {
-      float: left;
-      width: 35%;
-      margin-bottom: 0; }
-      .news-main .article:nth-child(2n+1) {
-        margin: 10% 0 0 10%; }
-      .news-main .article h3 {
-        font-size: 1.3em; } }
+  .news-main img {
+    width: 100%;
+    height: 70vh; }
+  .news-main .title {
+    width: 35%;
+    height: 10vh;
+    top: 67%;
+    left: 2%; }
+    .news-main .title h2 {
+      font-size: 1.8em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 14px; }
+  .news-main .article {
+    float: left;
+    width: 35%;
+    margin-bottom: 0; }
+    .news-main .article:nth-child(2n+1) {
+      margin: 10% 0 0 10%; }
+    .news-main .article h3 {
+      font-size: 1.3em; } }
 
 /*# sourceMappingURL=style.css.map */
