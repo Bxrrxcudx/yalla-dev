@@ -16,4 +16,12 @@ class NewslettersController extends Controller
         return view('admin.newsletters.list', ['data' => $data]);
 
     }
+
+    public function destroy($id)
+    {
+        Newsletter::find($id)->delete();
+
+        return redirect()->route('newsletters.index');
+
+    }
 }
