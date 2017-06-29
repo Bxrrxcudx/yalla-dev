@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -162,10 +162,6 @@ header .burger-menu {
     color: #fff;
     font-weight: bold;
     font-size: 1.2em; } }
-body {
-  /* max-width: 1440px; */
-  margin: 0 auto; }
-
 /* -- Footer
 --------------------------------------------------- */
 footer {
@@ -259,120 +255,231 @@ footer nav li a {
     font-size: 1.5em; } }
 /* -- HOME body
 --------------------------------------------------- */
-.home-body {
+body {
   margin: 0 auto; }
-.home-body main {
+body .home-main {
   text-align: center; }
-.home-body main section {
+body .home-main section {
   margin: 15% 0 0 0; }
-.home-body main section p {
+body .home-main section p {
   margin: 0 15% 5% 15%;
   line-height: 150%; }
-.home-body main section span {
+body .home-main section span {
   font-weight: bold;
   line-height: 200%;
   color: #FF7152; }
-.home-body main .presentation {
+body .home-main .presentation {
   position: relative;
   margin: 5% 0 15% 0;
   z-index: -1; }
-.home-body main .presentation img {
+body .home-main .presentation img {
   filter: contrast(40%);
   width: 100%;
   z-index: 0; }
-.home-body main .presentation h2 {
+body .home-main .presentation h2 {
   position: absolute;
   top: 30%;
   left: 5%;
   z-index: 1;
   color: #fff; }
-.home-body main .presentation a {
+body .home-main .presentation button {
   position: absolute;
-  bottom: 5%;
-  left: 70%;
-  background: #FF7152;
-  font: 0.8em "Oswald", sans-serif;
+  width: 25%;
+  height: 6vh;
+  background-color: #FF7152;
   text-transform: uppercase;
-  color: #fff;
   border: 1px;
   border-radius: 1px;
+  top: 71%;
+  left: 70%; }
+body .home-main .presentation button a {
+  font: 1em "Oswald", sans-serif;
+  color: #fff;
   padding: 3%; }
-.home-body main .separation {
-  height: 2px;
-  color: #979797; }
-.home-body main h2 {
+body .home-main h2 {
   text-align: center;
-  font: 1.2em "Oswald", sans-serif;
+  font: 1.5em "Oswald", sans-serif;
   color: #000;
   font-weight: bold;
   text-transform: uppercase; }
-.home-body main .picto {
+body .home-main .picto {
   width: 8%; }
-.home-body main .who a {
-  background: #FF7152;
-  font: 0.8em "Oswald", sans-serif;
+body .home-main .who img {
+  width: 18%; }
+body .home-main .who button {
+  width: 25%;
+  height: 6vh;
+  background-color: #FF7152;
   text-transform: uppercase;
-  color: #fff;
   border: 1px;
-  border-radius: 1px;
+  border-radius: 1px; }
+body .home-main .who button a {
+  font: 1em "Oswald", sans-serif;
+  color: #fff;
   padding: 3%; }
-.home-body main .action .action-call img {
+body .home-main .conflit img {
+  width: 18%; }
+body .home-main .action .action-desc img {
+  width: 18%; }
+body .home-main .action .action-call img {
   width: 100%; }
-.home-body main .action .action-call div {
+body .home-main .action .action-call div {
   padding: 1em;
   border: 1em solid transparent;
   background: -webkit-linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, #FF7152 0, #FF7152 12.5%, transparent 0, transparent 25%, #979797 0, #979797 37.5%, transparent 0, transparent 50%) 0/5em 5em; }
-.home-body main .action .action-call div a {
-  background: #FF7152;
-  font: 0.8em "Oswald", sans-serif;
+body .home-main .action .action-call div button {
+  width: 30%;
+  height: 6vh;
+  background-color: #FF7152;
   text-transform: uppercase;
-  color: #fff;
   border: 1px;
-  border-radius: 1px;
+  border-radius: 1px; }
+body .home-main .action .action-call div button a {
+  font: 1em "Oswald", sans-serif;
+  color: #fff;
   padding: 3%; }
-.home-body main .valeurs a {
-  background: #FF7152;
-  font: 0.8em "Oswald", sans-serif;
+body .home-main .valeurs button {
+  width: 30%;
+  height: 6vh;
+  background-color: #FF7152;
   text-transform: uppercase;
-  color: #fff;
   border: 1px;
-  border-radius: 1px;
+  border-radius: 1px; }
+body .home-main .valeurs button a {
+  font: 1em "Oswald", sans-serif;
+  color: #fff;
   padding: 3%; }
-.home-body main .actus div h2 {
+body .home-main .actus div h2 {
   margin-bottom: 4%; }
-.home-body main .actus div img {
+body .home-main .actus div img {
   width: 100%; }
-.home-body main .actus article h3 {
+body .home-main .actus article h3 {
   font-weight: bold;
   font-size: 1.2em;
   color: #FF7152;
   margin-top: 4%; }
-.home-body main .actus a {
-  background: #FF7152;
-  font: 0.8em "Oswald", sans-serif;
+body .home-main .actus button {
+  width: 30%;
+  height: 6vh;
+  background-color: #FF7152;
   text-transform: uppercase;
-  color: #fff;
   border: 1px;
-  border-radius: 1px;
+  border-radius: 1px; }
+body .home-main .actus button a {
+  font: 1em "Oswald", sans-serif;
+  color: #fff;
   padding: 3%; }
-.home-body main .partenaires {
+body .home-main .partenaires {
   margin-bottom: 15%; }
-.home-body main .partenaires .partners div {
+body .home-main .partenaires .partners div {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center; }
-.home-body main .partenaires .partners div div {
+body .home-main .partenaires .partners div div {
   width: 30%; }
-.home-body main .partenaires .partners div div a {
+body .home-main .partenaires .partners div div a {
   text-align: center; }
-.home-body main .partenaires .partners div div a img {
+body .home-main .partenaires .partners div div a img {
   width: 80%; }
 
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
-  .home-body header h1 {
-    margin: 5%;
-    font-size: 3em; } }
+@media screen and (min-width: 481px) {
+  body .home-main .presentation {
+    margin-bottom: 0; }
+  body .home-main .presentation h2 {
+    font-size: 4em; }
+  body .home-main .presentation button {
+    width: 20%;
+    height: 8vh;
+    background-color: #FF7152;
+    text-transform: uppercase;
+    border: 1px;
+    border-radius: 1px;
+    font-size: 1.2em;
+    top: 60%;
+    left: 5%; }
+  body .home-main .who {
+    float: left;
+    width: 50%;
+    margin-top: 7%; }
+  body .home-main .who img {
+    width: 10%; }
+  body .home-main .who button {
+    height: 8vh;
+    font-size: 1em; }
+  body .home-main .conflit {
+    float: left;
+    width: 50%;
+    margin: 7% 0 7% 0; }
+  body .home-main .conflit img {
+    width: 10%; }
+  body .home-main .action .action-desc h2 {
+    font-size: 2em; }
+  body .home-main .action .action-desc img {
+    width: 6%;
+    margin: 1% 0 2% 0; }
+  body .home-main .action span {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.4em; }
+  body .home-main .action .action-call div h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.4em;
+    font-weight: bold; }
+  body .home-main .action .action-call div p {
+    font-size: 1.3em;
+    margin-bottom: 2%; }
+  body .home-main .action .action-call div button {
+    width: 25%;
+    height: 10vh; }
+  body .home-main .action .action-call div button a {
+    font: 1.4em "Oswald", sans-serif;
+    color: #fff;
+    padding: 3%; }
+  body .home-main .valeurs {
+    margin-top: 5%; }
+  body .home-main .valeurs span {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5em; }
+  body .home-main .valeurs button {
+    width: 20%;
+    height: 10vh; }
+  body .home-main .valeurs button a {
+    font: 1.4em "Oswald", sans-serif;
+    color: #fff;
+    margin: 0;
+    padding-left: 5%; }
+  body .home-main .valeurs .proximite {
+    float: left;
+    width: 50%; }
+  body .home-main .valeurs .transparence {
+    float: left;
+    width: 50%; }
+  body .home-main .valeurs a {
+    width: 20%;
+    height: 1vh;
+    margin-left: 40%;
+    padding-bottom: 2%;
+    font-size: 1.1em; }
+  body .home-main .actus {
+    margin-top: 10%; }
+  body .home-main .actus h2 {
+    font-size: 1.8em; }
+  body .home-main .actus div {
+    float: left;
+    width: 50%;
+    margin-top: 5%; }
+  body .home-main .actus article {
+    float: left;
+    width: 50%;
+    margin-top: 5%; }
+  body .home-main .actus button {
+    float: left;
+    width: 20%;
+    height: 8vh;
+    margin-left: 15%;
+    font-size: 1.1em; }
+  body .home-main .partenaires h2 {
+    font-size: 1.8em; } }
 .contact-main .contact {
   position: relative; }
 .contact-main .contact img {
@@ -446,7 +553,7 @@ footer nav li a {
   font-size: 2.5em;
   margin-bottom: 10%; }
 .contact-main .form-contact .formulaire {
-  margin-left: 20%; }
+  margin-left: 25%; }
 .contact-main .form-contact .formulaire label {
   display: block;
   font-family: "Open Sans", sans-serif;
@@ -459,12 +566,12 @@ footer nav li a {
   margin-bottom: 5%; }
 .contact-main .form-contact .formulaire textarea {
   border: 1px solid #979797; }
-.contact-main .form-contact .btn-submit {
+.contact-main .form-contact .formulaire .btn-submit {
   width: 40%;
   height: 35px;
   font-family: "Oswald", sans-serif;
   font-size: 0.8em;
-  margin: 5% 0 5% 30%;
+  margin: 5% 0 5% 15%;
   background-color: #000;
   color: #fff;
   text-transform: uppercase;
@@ -532,7 +639,7 @@ footer nav li a {
     border: 1px solid #979797;
     margin-bottom: 3%;
     width: 40%; }
-  .contact-main .form-contact .btn-submit {
+  .contact-main .form-contact .formulaire .btn-submit {
     width: 20%;
     height: 8vh;
     font-size: 1.2em;
@@ -587,7 +694,7 @@ footer nav li a {
   text-align: center;
   margin-top: 14px; }
 .mission-main .action .all-actions img {
-  width: 18%;
+  width: 13%;
   margin-bottom: 5%; }
 .mission-main .strategy {
   padding-bottom: 5%; }
@@ -682,7 +789,6 @@ footer nav li a {
     margin-top: 0%; } }
 .presentation-main {
   text-align: center;
-  width: 80%;
   margin: 0 auto; }
 .presentation-main .presentation img {
   width: 100%; }
@@ -732,7 +838,7 @@ footer nav li a {
   .presentation-main .presentation .title {
     height: 10vh;
     width: 35%;
-    top: 80%; }
+    top: 65%; }
   .presentation-main .presentation .title h2 {
     font-size: 1.8em;
     margin-top: 5%; }
@@ -746,21 +852,19 @@ footer nav li a {
   .presentation-main .pres-section:nth-child(2n+2) {
     margin-left: 10%; } }
 .actu-main {
-  width: 100%; }
+}
 .actu-main .actu {
-  width: 100%;
-  position: relative; }
+  width: 100%; }
 .actu-main .actu img {
   width: 100%;
-  height: 20vh;
-  margin: 2% auto 0; }
+  height: 20vh; }
 .actu-main .actu .title {
   position: absolute;
   background-color: #FF7152;
   height: 50px;
   width: 50%;
-  top: 80%;
-  left: 0; }
+  top: 17%;
+  left: 2%; }
 .actu-main .actu .title h2 {
   font-family: "Oswald", sans-serif;
   color: #fff;
@@ -778,13 +882,13 @@ footer nav li a {
   text-align: center;
   color: #FF7152;
   font-family: "Oswald", sans-serif;
-  font-size: 1.3em;
+  font-size: 1.1em;
   margin-bottom: 5%; }
 .actu-main .article-actu img {
   width: 100%;
   margin-bottom: 5%; }
 .actu-main .article-actu p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Oswald", sans-serif;
   margin-left: 3%; }
 .actu-main .article-actu .detail-article {
   margin-top: 3%; }
@@ -811,39 +915,35 @@ footer nav li a {
   font-size: 0.9em;
   margin: 15% 0 15% 32%; }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 481px) {
   .actu-main {
-    margin: 2% auto 0 !important; }
+    margin: 0 auto; }
   .actu-main .actu img {
-    height: 60vh !important; }
+    width: 100%;
+    height: 70vh; }
   .actu-main .actu .title {
-    width: 35% !important;
-    height: 10vh !important; }
+    width: 35%;
+    height: 10vh;
+    top: 67%;
+    left: 2%; }
   .actu-main .actu .title h2 {
-    font-size: 1.8em !important;
-    text-transform: uppercase !important;
-    text-align: center !important;
-    margin-top: 14px !important; }
+    font-size: 1.8em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 14px; }
 
-  .article-actu {
-    float: left !important;
-    width: 35% !important;
-    margin-bottom: 0 !important; }
-  .article-actu:nth-child(2n+1) {
-    margin: 10% 0 0 10% !important; }
-  .article-actu .article-title {
-    font-size: 2.2em !important; }
-  .article-actu .detail-article span {
-    font-size: 0.9em !important; }
-  .article-actu img.fest-noz {
-    display: block !important;
-    margin: 2% auto 0 !important;
-    max-width: 100% !important; }
-  .article-actu p {
-    font-size: 1.3em !important; } }
+  #article-actu {
+    float: left;
+    width: 35%;
+    margin-bottom: 0; }
+  #article-actu:nth-child(2n+1) {
+    margin: 10% 0 0 10%; }
+  #article-actu h3 {
+    font-size: 1.3em; } }
 .member-main {
   text-align: center;
-  width: 100%; }
+  width: 80%;
+  margin: 0 auto; }
 .member-main .member img {
   width: 100%; }
 .member-main .member .title {
@@ -861,10 +961,9 @@ footer nav li a {
   text-align: center;
   margin-top: 14px; }
 .member-main .membre-section {
+  margin-top: 10%;
   padding-bottom: 15%;
-  border-bottom: 1px solid #979797;
-  width: 80%;
-  margin: 10% auto 0; }
+  border-bottom: 1px solid #979797; }
 .member-main .membre-section img {
   width: 18%; }
 .member-main .membre-section h3 {
@@ -946,41 +1045,30 @@ footer nav li a {
     font-size: 1.6em; } }
 /* -- MENTIONS LEGALES body
 --------------------------------------------------- */
-.mentions-main {
+.mentions-body main {
   margin: 3% 5% 0 5%;
   text-align: center; }
-.mentions-main .title {
-  background-color: #FF7152;
-  width: 60%;
-  padding: 1%; }
-.mentions-main .title .mentions-title {
-  font-family: "Oswald", sans-serif;
-  color: #fff;
-  font-size: 1.5em;
-  text-transform: uppercase;
+.mentions-body main .mentions-title {
+  font: 2em "Oswald", sans-serif;
+  color: #FF7152;
+  border-bottom: 2px solid #FF7152; }
+.mentions-body main h2 {
   text-align: center;
-  margin-top: 14px; }
-.mentions-main h2 {
-  text-align: center;
-  font: 1.2em "Oswald", sans-serif;
+  font: 1.5em "Oswald", sans-serif;
   color: #000;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 4%; }
-.mentions-main p {
+.mentions-body main p {
   margin-bottom: 5%;
   line-height: 150%; }
-.mentions-main p span {
+.mentions-body main p span {
   font-weight: bold; }
-.mentions-main div {
+.mentions-body main div {
   margin-bottom: 5%; }
 
 @media screen and (min-width: 768px) {
-  .mentions-main .title {
-    width: 35%; }
-  .mentions-main h2 {
-    font-size: 1.5em; }
-  .mentions-main p {
+  .mentions-body main p {
     margin-bottom: 2%; } }
 /* -- Page NOS SUCCES
 --------------------------------------------------- */
@@ -1003,16 +1091,10 @@ footer nav li a {
 .succes-main .about {
   margin-top: 20%;
   margin-bottom: 10%; }
-.succes-main .about .about-div {
+.succes-main .about #about-div {
   text-align: center;
-  width: 100%;
-  margin-bottom: 5%; }
-.succes-main .about .about-div .about-picto {
-  width: 40%;
-  margin: 0 auto; }
-.succes-main .about .about-div .about-picto img {
-  width: inherit; }
-.succes-main .about .about-div h3 {
+  width: 100%; }
+.succes-main .about #about-div h3 {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
   font-size: 1.2em;
@@ -1021,10 +1103,10 @@ footer nav li a {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 3%; }
-.succes-main .about .about-div p {
+.succes-main .about #about-div p {
   margin: 0 15% 5% 15%;
   line-height: 150%; }
-.succes-main .about .about-div p span {
+.succes-main .about #about-div p span {
   color: #FF7152;
   font-weight: bold; }
 .succes-main .proud {
@@ -1046,7 +1128,7 @@ footer nav li a {
   font-size: 1.8em;
   margin-bottom: 4%; }
 .succes-main .proud .proud-img img {
-  width: 50%; }
+  width: 100%; }
 .succes-main .proud .read-article {
   margin-bottom: 5%; }
 .succes-main .proud .read-article p {
@@ -1062,43 +1144,23 @@ footer nav li a {
   padding: 3%; }
 
 @media screen and (min-width: 768px) {
-  .succes-main {
-    overflow-x: hidden; }
   .succes-main .presentation img {
-    width: 100vw;
-    height: 70vh; }
+    width: 20%; }
   .succes-main h2 {
-    font-size: 2.3em !important;
-    bottom: -7% !important;
-    padding: 1% 3% !important; }
+    font-size: 2.5em; }
   .succes-main .about {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
-    margin-top: 14% !important;
-    margin-bottom: 4% !important;
-    border-bottom: 1px solid #aaa !important; }
-  .succes-main .about h3 {
-    font-size: 2.2em !important; }
-  .succes-main .about p {
-    font-size: 1em !important; }
+    align-items: flex-start; }
   .succes-main .about div {
     width: 100%; }
-  .succes-main .proud h3 {
-    font-size: 2.2em !important; }
-  .succes-main .proud p {
-    font-size: 1.5em !important; }
   .succes-main .proud div {
     width: 100%; }
   .succes-main .proud div img {
-    width: 50% !important; }
-  .succes-main .proud .read-article a {
-    padding: 1% !important;
-    font-size: 1.5em; } }
+    width: 100%; } }
 /*-----------Page Dons -------------------------------*/
 .dons-main {
   text-align: center;
-  width: 80%;
   margin: 0 auto; }
 .dons-main .presentation img {
   width: 100%; }
@@ -1118,7 +1180,8 @@ footer nav li a {
   margin-top: 14px; }
 .dons-main .dons-section {
   border-bottom: 1px solid #979797;
-  padding-bottom: 15%; }
+  padding-bottom: 15%;
+  margin-top: 10%; }
 .dons-main .dons-section .title-pres h3 {
   margin-bottom: 10%;
   text-transform: uppercase;
@@ -1126,6 +1189,10 @@ footer nav li a {
   font-size: 1.3em;
   font-weight: bold;
   color: #FF7152; }
+.dons-main .dons-section .title-pres .coo-bank {
+  width: 16%; }
+.dons-main .dons-section .title-pres .tax-img {
+  width: 16%; }
 .dons-main .dons-section p,
 .dons-main .dons-section ul,
 .dons-main .dons-section span {
@@ -1141,14 +1208,21 @@ footer nav li a {
   width: 35%;
   height: 6vh;
   background-color: #FF7152;
-  color: #fff;
   border: none;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
-  font-size: 0.9em;
-  margin: 5% 0 15% 0; }
+  margin: 5% 0 15% 0;
+  font-size: 0.9em; }
+.dons-main .dons-section a {
+  color: #fff; }
 .dons-main .project-donations p {
   margin-bottom: 2%; }
+.dons-main .banque-account .title-pres img {
+  width: 27%; }
+.dons-main .taxe-deductions .title-pres img {
+  width: 27%; }
+.dons-main .support-means {
+  margin-top: 1.5%; }
 
 @media screen and (min-width: 481px) {
   .dons-main .presentation img {
@@ -1165,13 +1239,12 @@ footer nav li a {
     float: left;
     width: 40%;
     padding-bottom: 2%;
-    border: none; }
+    border: none;
+    margin-top: 1%; }
   .dons-main .dons-section:nth-child(2n+1) {
     margin-left: 5%; }
   .dons-main .dons-section:nth-child(2n+2) {
     margin-left: 10%; } }
-.news-main {
-  width: 80%; }
 .news-main .news {
   width: 100%; }
 .news-main .news img {
@@ -1191,10 +1264,14 @@ footer nav li a {
   text-transform: uppercase;
   text-align: center;
   margin-top: 14px; }
+.news-main .ariane {
+  margin: 10% 0 0 3%; }
+.news-main .ariane a {
+  color: #979797;
+  font-size: 0.8em; }
 .news-main .article {
   width: 100%;
-  margin: 10% 0 10% 13%;
-  border-bottom: 1px solid #979797; }
+  margin: 10% 0 10% 0; }
 .news-main .article:first-child {
   margin-top: 15%; }
 .news-main .article h3 {
@@ -1204,24 +1281,40 @@ footer nav li a {
   font-size: 1.1em;
   margin-bottom: 5%; }
 .news-main .article img {
-  width: 100%;
-  margin-bottom: 5%; }
-.news-main .article p {
-  font-family: "Open Sans", sans-serif;
-  margin-left: 3%; }
+  width: 100%; }
+.news-main .article div {
+  clear: both;
+  width: 90%; }
+.news-main .article div p {
+  font-family: "Oswald", sans-serif;
+  margin: 5% 0 0 15%; }
 .news-main .article .detail-article {
-  margin-top: 3%; }
+  display: inline-block;
+  margin: 3% 0 0 35%; }
 .news-main .article .detail-article img {
   float: left;
-  width: 5%; }
+  width: 8%; }
 .news-main .article .detail-article img:first-child {
   margin-left: 3%; }
 .news-main .article .detail-article span {
   float: left;
   font-family: "Open Sans", sans-serif;
-  font-size: 0.5em;
+  font-size: 0.8em;
   text-transform: uppercase;
   margin: 1.2% 3% 0 1%; }
+.news-main .article a {
+  text-align: center;
+  display: block;
+  width: 65%;
+  margin: 5% 0 0 15%;
+  padding-top: 5%;
+  text-decoration: underline;
+  color: #000; }
+.news-main .article .tag {
+  width: 70%;
+  margin: 5% 0 0 15%; }
+.news-main .article .tag span {
+  font-size: 0.8em; }
 .news-main .article button {
   display: block;
   width: 35%;
@@ -1233,28 +1326,81 @@ footer nav li a {
   font-family: "Oswald", sans-serif;
   font-size: 0.9em;
   margin: 15% 0 15% 32%; }
+.news-main .article .next-prec-article button {
+  background-color: #000;
+  width: 40%;
+  height: 6vh;
+  margin: 0;
+  display: inline-block; }
+.news-main .article .next-prec-article button a {
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 15%; }
+.news-main .article .next-prec-article button:first-child {
+  margin-left: 14%; }
+.news-main .article .next-prec-article button:last-child {
+  margin-left: 2%; }
 
 @media screen and (min-width: 481px) {
-  .news-main img {
+  .news-main {
+    margin: 0 auto; }
+  .news-main .news img {
     width: 100%;
     height: 70vh; }
-  .news-main .title {
+  .news-main .news .title {
     width: 35%;
     height: 10vh;
     top: 67%;
     left: 2%; }
-  .news-main .title h2 {
+  .news-main .news .title h2 {
     font-size: 1.8em;
     text-transform: uppercase;
     text-align: center;
     margin-top: 14px; }
-  .news-main .article {
-    float: left;
-    width: 35%;
-    margin-bottom: 0; }
-  .news-main .article:nth-child(2n+1) {
+  .news-main .ariane {
+    margin-top: 7%; }
+  .news-main .ariane a {
+    font-size: 1em; }
+  .news-main section.article {
+    width: 80%;
+    margin: 0; }
+  .news-main section.article:nth-child(2n+1) {
     margin: 10% 0 0 10%; }
-  .news-main .article h3 {
-    font-size: 1.3em; } }
+  .news-main section.article img {
+    width: 80%;
+    margin: 0 0 5% 8%; }
+  .news-main section.article h3 {
+    font-size: 1.5em;
+    margin-bottom: 1%; }
+  .news-main section.article .detail-article {
+    margin: 1% 0 0 11%; }
+  .news-main section.article .detail-article .folder img {
+    width: 3%;
+    margin-bottom: 1%; }
+  .news-main section.article .detail-article .date img {
+    width: 3%; }
+  .news-main section.article div p {
+    font-size: 1.2em;
+    width: 35%;
+    margin: 0 0; }
+  .news-main section.article div p:first-child {
+    float: left;
+    margin-left: 15%; }
+  .news-main section.article div p:last-child {
+    float: left;
+    margin-left: 10%; }
+  .news-main section.article .tag {
+    margin: 2% 0 0 14%; }
+  .news-main section.article .tag span {
+    font-size: 1em; }
+  .news-main section.article a {
+    font-size: 1.2em;
+    margin: 0 0 0 18%; }
+  .news-main section.article button {
+    margin: 5% 0 2% 33%;
+    height: 10vh;
+    font-size: 1.1em; }
+  .news-main section.article .next-prec-article button {
+    height: 10vh; } }
 
 /*# sourceMappingURL=style.css.map */
