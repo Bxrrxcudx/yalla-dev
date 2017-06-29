@@ -19,15 +19,33 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         Category::create($request->except(['_token']));
+
         $id = DB::getPdo()->lastInsertId();
-        $model = Category::findOrFail($id);
-        $model->createSlug($model);
+
+        $category = Category::findOrFail($id);
+
+        $category->createSlug($category);
 
         return redirect()->route('categories.index');
     }
 
     public function edit()
     {
+        $categories = Category::all();
+
+        return view('category-edit', compact($categories));
+    }
+
+    public function update(Request $request, $id)
+    {
+
+        $category = Category::findOrFail($id);
+
+        $category->update($request->except(['_token']));
+
+        $category->createSlug($category);
+
+        return redirect()->route('categories.index');
 
     }
 
