@@ -58,7 +58,10 @@ Route::group([
         Route::get('/', 'HomeController@index');
 
         // About
-        Route::get('/{slug}', 'HomeController@render');
+        //Route::get('/{slug}', 'HomeController@render');
+
+        Route::get('/news', 'HomeController@getAllNews');
+        Route::get('/news/{id}', 'HomeController@getNewsById');
     }
 );
 

@@ -2,6 +2,14 @@
 
 namespace App\Http\Controllers\Front;
 
+use App\Category;
+use App\Message;
+use App\News;
+use App\Newsletter;
+use App\Page;
+use App\Subscriber;
+use App\Tag;
+use App\User;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -19,5 +27,24 @@ class HomeController extends Controller
             return view("front.$slug");
         }
         return view('errors.404');
+    }
+
+    public function getAllNews()
+    {
+        $news = News::with('category', 'tags')->get();
+
+        return view('front.actualites', compact('news'));
+    }
+
+    public function getNewsById($id)
+    {
+        $news = News::findOrFail($id)->get();
+
+        return view('front.article', compact('news'));
+    }
+
+    public function show($slug,$id)
+    {
+
     }
 }
