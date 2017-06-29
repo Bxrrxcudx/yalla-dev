@@ -1,28 +1,27 @@
 @extends('layouts.home')
 
 @section('content')
-    <main>
+    <main class="home-main">
         <section class="presentation">
             <h2>Faites l'école pas la guerre</h2>
-            <img src="img-layout/background-home.png" alt="">
-            <a href="{{ url('donations') }}">Nous soutenir</a>
+            <img src="img-layout/fille.png" alt="">
+            <button><a href="{{ url('donations') }}">Nous soutenir</a></button>
         </section>
         <section class="who">
             <div>
                 <h2>Yalla!</h2>
-                <img src="img-layout/diplome.png" alt="">
+                <img src="img-layout/graduate-cap.svg" alt="">
             </div>
             <span>Qui sommes-nous ?</span>
             <p>Yalla! Pour les enfants est une association de droit français indépendante, apolitique, non-confessionnelle et impartiale, créée en juillet 2013.</p>
             <p>Basée au Liban, Yalla! se donne pour mission première de remettre les enfants déscolarisés à la suite d’un conflit sur le chemin de l’école.  </p>
 
-            <a href="{{ url('presentation') }}">Nous découvrir</a>
+            <button><a href="{{ url('presentation') }}">Nous découvrir</a></button>
         </section>
-        <div class="separation"></div>
         <section class="conflit">
             <div>
                 <h2>Le conflit syrien</h2>
-                <img src="img-layout/loupe.png" class="picto" alt="">
+                <img src="img-layout/magnifier.svg" class="picto" alt="">
             </div>
             <span>130 000 morts<br>4 millions de réfugiés<br>plus six millions de déplacés internes.</span>
             <p>Déscolarisés depuis des mois, voire des années, ces enfants se voient refuser leur droit fondamental à l’éducation, garanti par la Convention relative aux droits de l’enfant de 1989.<p>
@@ -35,16 +34,16 @@
             </div>
             <span>En donnant 15 euros par mois, vous couvrez les frais de scolarisation d’un enfant syrien pendant une semaine.</span>
             <div class="action-call">
-                <img src="img-layout/img-agir.png" alt="">
+                <img src="img-layout/background-home.png" alt="">
                 <div>
                     <h3>L’ECOLE YALLA !</h3>
                     <p>120 enfants réfugiés syriens<br>Entre 6 et 13 ans</p>
-                    <a href="{{ url('donations') }}">Nous soutenir</a>
+                    <button><a href="{{ url('donate') }}">Nous soutenir</a></button>
                 </div>
             </div>
         </section>
         <section class="valeurs">
-            <div class="proximite">
+            <div class="proximite clearfix">
                 <span>Aide de proximité</span>
                 <p>Votre don sert directement à la mise en œuvre des projets de Yalla! sur le terrain et notamment au paiement des indemnités des professeurs et animateurs, du loyer des locaux de l’école, des fournitures scolaires et celles destinées aux activités socio-éducatives.</p>
             </div>
@@ -52,18 +51,18 @@
                 <span>Transparence</span>
                 <p>Les frais administratifs de Yalla ! sont réduits au minimum afin que l’ensemble des dons bénéficient aux enfants et aux bénévoles locaux. 98% des fonds sont dédiés à la mise en oeuvre des projets sur le terrain et 2% pour les dépenses administrative.</p>
             </div>
-            <a href="{{ url('mission') }}">En savoir +</a>
+            <button><a href="{{ url('mission') }}">En savoir +</a></button>
         </section>
-        <section class="actus">
+        <section class="actus clearfix">
             <div>
                 <h2>Actualités</h2>
-                <img src="img-layout/img-actu.png" alt="">
+                <img src="img-layout/ecole-aley.jpg" alt="">
             </div>
             <article>
                 <h3>Fest-noz solidaire<br>29 octobre à Poullaouen</h3>
                 <p>Yalla! Pour les Enfants vous convie le samedi 29 octobre à un fest-noz de levée de fonds dont les entiers bénéfices reviendront à son école d’Aley, située au Liban, à quelques kilomètres.</p>
             </article>
-            <a href="{{ url('actualites') }}">Toutes les actus</a>
+            <button><a href="{{ url('actualites') }}">Toutes les actus</a></button>
         </section>
         <section class="partenaires clearfix">
             <h2>Nos partenaires</h2>

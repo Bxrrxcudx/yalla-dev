@@ -3,7 +3,7 @@
 @section ('content')
     <main class="presentation-main clearfix">
         <section class="presentation">
-            <img src="img-layout/pres-bck.png" alt="background image">
+            <img src="img-layout/connaitre.jpg" alt="background image">
             <div class="title">
                 <h2>nous connaître</h2>
             </div>
