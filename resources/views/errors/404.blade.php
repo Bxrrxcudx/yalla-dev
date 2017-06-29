@@ -5,3 +5,9 @@
         <a href="{{ url('/') }}">Back to Home</a>
     </div>
 @endsection
+
+@section('scripts')
+    <script>
+        document.title = 'Page 404';
+    </script>
+@endsection

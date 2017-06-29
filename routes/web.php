@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Admin Routes
 Auth::routes();
 
 Route::group([
@@ -47,11 +49,17 @@ Route::group([
         Route::resource('subscribers', 'SubscribersController');
     }
 );
+// Front Routes
 
-Route::get('/',
+Route::group([
+    "namespace" => "Front"],
     function () {
-    return view('welcome');
-});
-		
+        // Home
+        Route::get('/', 'HomeController@index');
 
-Route::get('profil', 'ProfilController@index');
+        // About
+        Route::get('/{slug}', 'HomeController@render');
+    }
+);
+
+
