@@ -33,8 +33,7 @@
                         <div class="box-body no-padding">
                             <ul class="nav nav-pills nav-stacked">
                                 <li class="active"><a href="{{ route('messages.index') }}"><i class="fa fa-inbox"></i>
-                                        Inbox
-                                        <span class="label label-primary pull-right">12</span></a></li>
+                                        Inbox</a></li>
                                 <li><a href="#"><i class="fa fa-envelope-o"></i> Sent</a></li>
                                 <li><a href="{{ route('messages.trashed') }}"><i class="fa fa-trash-o"></i> Trash</a>
                                 </li>
@@ -50,9 +49,12 @@
                             <h3 class="box-title">Read Mail</h3>
 
                             <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip"
-                                        data-container="body" title="Delete">
-                                    <i class="fa fa-trash-o"></i></button>
+                                <form action="{{ route('messages.trash', $msg->id) }}" method="POST">
+                                    {{ csrf_field() }}
+                                    <button type="submit" class="btn btn-default btn-sm" title="Delete">
+                                        <i class="fa fa-trash-o"></i>
+                                    </button>
+                                </form>
                             </div>
                         </div>
                         <!-- /.box-header -->

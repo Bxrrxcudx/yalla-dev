@@ -30,7 +30,6 @@
                                 <table class="table table-hover table-striped">
                                     <thead>
                                     <tr>
-                                        <th></th>
                                         <th>Titre de l'actualité</th>
                                         <th>Auteur(s)</th>
                                         <th>Catégorie</th>
@@ -42,7 +41,6 @@
                                     <tbody>
                                     @foreach ($news as $article)
                                         <tr>
-                                            <td><input type="checkbox"></td>
                                             <td class="mailbox-subject"><b><a
                                                             href="{{ route('news.edit', $article->id) }}">{{ $article->title }}</a></b>
                                             <td class="mailbox-name">{{ $article->authors }}</td>
